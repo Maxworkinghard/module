@@ -43,7 +43,7 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git add modules
+          git add modules scripts
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0
