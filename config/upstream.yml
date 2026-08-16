@@ -1,0 +1,52 @@
+# 过滤规则定义: 用于从通用模块中剔除特定 App 相关规则,
+# 避免多个模块重复 MITM 同一批域名导致接口异常(如 B站评论/相关推荐/历史/搜索打不开)
+filters:
+  bilibili:
+    desc: "剔除 bilibili 相关规则, B站去广告只由 BiliUniverse ADBlock 处理"
+    patterns:
+      - "bili(bili|api)\\.(com|net)"
+      - "hdslb\\.com"
+      - "bilivideo\\.(com|cn)"
+      - "manga\\.bilibili"
+
+# 上游模块配置
+# 新增模块: 在 modules 列表下加一项即可, 下次同步会自动处理
+# filter: 可选, 引用上面 filters 中定义的过滤规则
+modules:
+  # 广告拦截合集-重写 (fmz200/wool_scripts, 约730款APP) -> 经 script.hub 转换为 Shadowrocket 模块
+  - name: rewrite
+    desc: "广告拦截合集-重写 (fmz200/wool_scripts)"
+    url: "https://script.hub/file/_start_/https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/rewrite.snippet/_end_/rewrite.sgmodule?type=qx-rewrite&target=shadowrocket-module&del=true&jqEnabled=true"
+    filter: bilibili
+
+  # App&小程序净化合集 (fmz200/wool_scripts, 约88款) -> 经 script.hub 转换为 Shadowrocket 模块
+  - name: cleanup
+    desc: "App&小程序净化合集 (fmz200/wool_scripts)"
+    url: "https://script.hub/file/_start_/https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/cleanup.snippet/_end_/cleanup.sgmodule?type=qx-rewrite&target=shadowrocket-module&del=true&jqEnabled=true"
+    filter: bilibili
+
+  # 去广告集合 (bai1zi/shadowrocket-surge-loon-qx, 替代已删除的墨鱼融合模块)
+  - name: Adblock
+    desc: "去广告集合 (bai1zi/shadowrocket-surge-loon-qx)"
+    url: "https://raw.githubusercontent.com/bai1zi/shadowrocket-surge-loon-qx/main/AD.sgmodule"
+    filter: bilibili
+
+  # FuckAppsAD 多应用去广告 (uxudjs/Shadowrocket, 原生 sgmodule 直接同步)
+  - name: FuckAppsAD
+    desc: "FuckAppsAD 多应用去广告 (uxudjs/Shadowrocket)"
+    url: "https://raw.githubusercontent.com/uxudjs/Shadowrocket/main/modules/fuck_apps_ad_sr.sgmodule"
+    filter: bilibili
+
+  # BiliUniverse 哔哩万象 - B站增强系列模块 (Release 直链, 不应用过滤)
+  - name: ADBlock
+    desc: "BiliUniverse ADBlock B站去广告"
+    url: "https://github.com/BiliUniverse/ADBlock/releases/latest/download/BiliBili.ADBlock.sgmodule"
+  - name: Enhanced
+    desc: "BiliUniverse Enhanced B站界面增强"
+    url: "https://github.com/BiliUniverse/Enhanced/releases/latest/download/BiliBili.Enhanced.sgmodule"
+  - name: Global
+    desc: "BiliUniverse Global B站地区解锁/线路切换"
+    url: "https://github.com/BiliUniverse/Global/releases/latest/download/BiliBili.Global.sgmodule"
+  - name: Redirect
+    desc: "BiliUniverse Redirect B站CDN重定向"
+    url: "https://github.com/BiliUniverse/Redirect/releases/latest/download/BiliBili.Redirect.sgmodule"
