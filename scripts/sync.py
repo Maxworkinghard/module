@@ -7,6 +7,10 @@
 
 支持按模块配置过滤规则(见 config/upstream.yml 中 filters), 用于剔除
 某些上游模块里与特定 App 相关的规则, 避免多模块重复 MITM 造成的接口异常。
+
+BiliUniverse 模块的 bundle 脚本托管在 github.com Release 下载(国内访问
+不稳定, 会导致 Shadowrocket 拉脚本超时、请求被丢弃)。sync.py 会把它们
+下载到 scripts/ 目录并重写 script-path 为 raw.githubusercontent.com 直链。
 """
 
 import hashlib
@@ -20,12 +24,43 @@ import yaml
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONFIG_PATH = os.path.join(ROOT, "config", "upstream.yml")
 OUTPUT_DIR = os.path.join(ROOT, "modules")
+SCRIPTS_DIR = os.path.join(ROOT, "scripts")
+RAW_BASE = "https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/"
+
+# 需要重写的上游脚本地址: github.com Release 资产 -> 同步到本仓库 raw 直链
+SCRIPT_URL_RE = re.compile(r"https://github\.com/[^/]+/[^/]+/releases/download/[^/\s]+/([^\s,]+)")
 
 
 def fetch(url: str) -> bytes:
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (sync-bot)"})
     with urllib.request.urlopen(req, timeout=180) as resp:
         return resp.read()
+
+
+def rewrite_scripts(name: str, content: str) -> str:
+    """把模块内 github.com Release 的 script-path 重写为本仓库 raw 直链,
+    并将对应 bundle 脚本下载保存到 scripts/ 目录(由 workflow 一起提交)。
+    """
+    def repl(m: re.Match) -> str:
+        src = m.group(0)
+        fname = m.group(1)
+        local = os.path.join(SCRIPTS_DIR, f"{name}.{fname}")
+        try:
+            data = fetch(src)
+        except Exception as e:
+            print(f"[WARN]    {name}.sgmodule 脚本下载失败 {src}: {e}")
+            return src
+        changed = True
+        if os.path.exists(local):
+            with open(local, "rb") as f:
+                changed = hashlib.sha256(f.read()).digest() != hashlib.sha256(data).digest()
+        with open(local, "wb") as f:
+            f.write(data)
+        if changed:
+            print(f"[script]  {name}.sgmodule 更新脚本 -> scripts/{name}.{fname}")
+        return RAW_BASE + f"{name}.{fname}"
+
+    return SCRIPT_URL_RE.sub(repl, content)
 
 
 def compile_filters(filters_cfg):
@@ -82,6 +117,7 @@ def main() -> int:
 
     filters = compile_filters(cfg.get("filters", {}))
     os.makedirs(OUTPUT_DIR, exist_ok=True)
+    os.makedirs(SCRIPTS_DIR, exist_ok=True)
 
     for mod in cfg.get("modules", []):
         name = mod["name"]
@@ -102,6 +138,11 @@ def main() -> int:
                 print(f"[FILTER]   {name}.sgmodule 剔除 {removed} 条规则 (filter: {filter_name})")
             content = content.encode("utf-8")
             data = content
+
+        # 重写 github.com Release 脚本直链为仓库 raw 直链并同步脚本
+        content = content.decode("utf-8", errors="replace")
+        content = rewrite_scripts(name, content)
+        data = content.encode("utf-8")
 
         new_hash = hashlib.sha256(data).digest()
         old_hash = None
