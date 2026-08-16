@@ -1,0 +1,40 @@
+name: Sync Upstream Modules
+
+on:
+  schedule:
+    # 每 6 小时同步一次 (UTC)
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Sync modules
+        run: python scripts/sync.py
+
+      - name: Commit and push changes
+        run: |
+          git add modules
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: sync upstream modules $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
