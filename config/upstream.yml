@@ -13,16 +13,18 @@ filters:
 # 新增模块: 在 modules 列表下加一项即可, 下次同步会自动处理
 # filter: 可选, 引用上面 filters 中定义的过滤规则
 modules:
-  # 广告拦截合集-重写 (fmz200/wool_scripts, 约730款APP) -> 经 script.hub 转换为 Shadowrocket 模块
+  # 广告拦截合集-重写 (fmz200/wool_scripts, 约730款APP)
+  # 上游为 QuantumultX snippet, 由 workflow 中本地启动的 Script-Hub 服务转换为 Shadowrocket 模块
   - name: rewrite
     desc: "广告拦截合集-重写 (fmz200/wool_scripts)"
-    url: "https://script.hub/file/_start_/https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/rewrite.snippet/_end_/rewrite.sgmodule?type=qx-rewrite&target=shadowrocket-module&del=true&jqEnabled=true"
+    url: "http://127.0.0.1:9100/file/_start_/https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/rewrite.snippet/_end_/rewrite.sgmodule?type=qx-rewrite&target=shadowrocket-module&del=true&jqEnabled=true"
     filter: bilibili
 
-  # App&小程序净化合集 (fmz200/wool_scripts, 约88款) -> 经 script.hub 转换为 Shadowrocket 模块
+  # App&小程序净化合集 (fmz200/wool_scripts, 约88款)
+  # 上游为 QuantumultX snippet, 由 workflow 中本地启动的 Script-Hub 服务转换为 Shadowrocket 模块
   - name: cleanup
     desc: "App&小程序净化合集 (fmz200/wool_scripts)"
-    url: "https://script.hub/file/_start_/https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/cleanup.snippet/_end_/cleanup.sgmodule?type=qx-rewrite&target=shadowrocket-module&del=true&jqEnabled=true"
+    url: "http://127.0.0.1:9100/file/_start_/https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/cleanup.snippet/_end_/cleanup.sgmodule?type=qx-rewrite&target=shadowrocket-module&del=true&jqEnabled=true"
     filter: bilibili
 
   # 去广告集合 (bai1zi/shadowrocket-surge-loon-qx, 替代已删除的墨鱼融合模块)

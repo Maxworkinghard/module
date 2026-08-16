@@ -24,6 +24,20 @@ jobs:
       - name: Install dependencies
         run: pip install pyyaml
 
+      - name: Start Script-Hub converter
+        run: |
+          git clone --depth 1 https://github.com/Script-Hub-Org/Script-Hub.git /tmp/script-hub
+          cd /tmp/script-hub
+          npm install --no-audit --no-fund
+          nohup node service.js > /tmp/script-hub.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl -s -o /dev/null http://127.0.0.1:9100/ ; then
+              break
+            fi
+            sleep 1
+          done
+          sleep 2
+
       - name: Sync modules
         run: python scripts/sync.py
 
