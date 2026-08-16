@@ -140,7 +140,8 @@ def main() -> int:
             data = content
 
         # 重写 github.com Release 脚本直链为仓库 raw 直链并同步脚本
-        content = content.decode("utf-8", errors="replace")
+        if isinstance(content, bytes):
+            content = content.decode("utf-8", errors="replace")
         content = rewrite_scripts(name, content)
         data = content.encode("utf-8")
 
