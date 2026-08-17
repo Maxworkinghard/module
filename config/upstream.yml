@@ -12,6 +12,9 @@ filters:
 # 上游模块配置
 # 新增模块: 在 modules 列表下加一项即可, 下次同步会自动处理
 # filter: 可选, 引用上面 filters 中定义的过滤规则
+# strip_http_request: true 时剔除 type=http-request 规则行
+#   (BiliUniverse 官方明确不支持 Shadowrocket, 其 http-request 脚本在
+#    Shadowrocket 上执行失败会导致请求被丢弃, 如 B站主页推荐 feed/index 空白)
 modules:
   # 广告拦截合集-重写 (fmz200/wool_scripts, 约730款APP)
   # 上游为 QuantumultX snippet, 由 workflow 中本地启动的 Script-Hub 服务转换为 Shadowrocket 模块
@@ -39,16 +42,22 @@ modules:
     url: "https://raw.githubusercontent.com/uxudjs/Shadowrocket/main/modules/fuck_apps_ad_sr.sgmodule"
     filter: bilibili
 
-  # BiliUniverse 哔哩万象 - B站增强系列模块 (Release 直链, 不应用过滤)
+  # BiliUniverse 哔哩万象 - B站增强系列模块 (Release 直链, 不应用 bilibili 过滤)
+  # 注: BiliUniverse 官方不支持 Shadowrocket, 其 http-request 脚本执行会失败,
+  #     故 strip_http_request: true 剔除前置拦截规则, 只保留响应处理
   - name: ADBlock
     desc: "BiliUniverse ADBlock B站去广告"
     url: "https://github.com/BiliUniverse/ADBlock/releases/latest/download/BiliBili.ADBlock.sgmodule"
+    strip_http_request: true
   - name: Enhanced
     desc: "BiliUniverse Enhanced B站界面增强"
     url: "https://github.com/BiliUniverse/Enhanced/releases/latest/download/BiliBili.Enhanced.sgmodule"
+    strip_http_request: true
   - name: Global
     desc: "BiliUniverse Global B站地区解锁/线路切换"
     url: "https://github.com/BiliUniverse/Global/releases/latest/download/BiliBili.Global.sgmodule"
+    strip_http_request: true
   - name: Redirect
     desc: "BiliUniverse Redirect B站CDN重定向"
     url: "https://github.com/BiliUniverse/Redirect/releases/latest/download/BiliBili.Redirect.sgmodule"
+    strip_http_request: true
