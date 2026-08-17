@@ -63,6 +63,25 @@ def rewrite_scripts(name: str, content: str) -> str:
     return SCRIPT_URL_RE.sub(repl, content)
 
 
+def strip_http_request(content: str) -> str:
+    """剔除 type=http-request 规则行(BiliUniverse 官方不支持 Shadowrocket,
+    其前置拦截脚本在 Shadowrocket 上执行失败会导致请求被丢弃)"""
+    out = []
+    removed = 0
+    in_script = False
+    for line in content.split("\n"):
+        s = line.strip()
+        if s.startswith("[") and s.endswith("]"):
+            in_script = s == "[Script]"
+            out.append(line)
+            continue
+        if in_script and re.search(r"type=http-request\b", s):
+            removed += 1
+            continue
+        out.append(line)
+    return "\n".join(out), removed
+
+
 def compile_filters(filters_cfg):
     """把 filters 配置编译成正则列表(忽略转义反斜杠, 兼容 `\\.` 形式的规则)"""
     compiled = {}
@@ -142,6 +161,10 @@ def main() -> int:
         # 重写 github.com Release 脚本直链为仓库 raw 直链并同步脚本
         if isinstance(content, bytes):
             content = content.decode("utf-8", errors="replace")
+        if mod.get("strip_http_request"):
+            content, removed = strip_http_request(content)
+            if removed:
+                print(f"[STRIP]    {name}.sgmodule 剔除 {removed} 条 http-request 规则")
         content = rewrite_scripts(name, content)
         data = content.encode("utf-8")
 
