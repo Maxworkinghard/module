@@ -82,6 +82,30 @@ def strip_http_request(content: str) -> str:
     return "\n".join(out), removed
 
 
+def strip_scripts(content: str) -> str:
+    """删除整个 [Script] 段(BiliUniverse 官方不支持 Shadowrocket,
+    其 http-response/http-request 脚本执行失败会吞掉响应, 导致 App 显示无网络)"""
+    lines = content.split("\n")
+    out = []
+    in_script = False
+    removed = 0
+    for line in lines:
+        s = line.strip()
+        if s.startswith("[") and s.endswith("]"):
+            if in_script:
+                removed += 1  # 段尾(下一个段标题)
+            in_script = s == "[Script]"
+            if not in_script:
+                out.append(line)
+            continue
+        if in_script:
+            if s and not s.startswith("#"):
+                removed += 1
+            continue
+        out.append(line)
+    return "\n".join(out).rstrip() + "\n", removed
+
+
 def compile_filters(filters_cfg):
     """把 filters 配置编译成正则列表(忽略转义反斜杠, 兼容 `\\.` 形式的规则)"""
     compiled = {}
@@ -165,6 +189,10 @@ def main() -> int:
             content, removed = strip_http_request(content)
             if removed:
                 print(f"[STRIP]    {name}.sgmodule 剔除 {removed} 条 http-request 规则")
+        if mod.get("strip_scripts"):
+            content, removed = strip_scripts(content)
+            if removed:
+                print(f"[STRIP]    {name}.sgmodule 删除整个 [Script] 段 ({removed} 行)")
         content = rewrite_scripts(name, content)
         data = content.encode("utf-8")
 
