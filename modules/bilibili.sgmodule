@@ -1,0 +1,36 @@
+#!name = BiliBili: 去广告(Shadowrocket 兼容版)
+#!desc = B站去广告: 开屏/推荐流/视频页/动态/tab, 基于 Shadowrocket 生态脚本, 无 BiliUniverse 依赖
+#!author = Maxworkinghard
+#!category = B站
+
+[URL Rewrite]
+# 开屏广告(静态兜底)
+^https://app\.bilibili\.com/x/v2/splash/show - reject-dict
+^https://app\.bilibili\.com/x/v2/splash/brand/list - reject-dict
+# 首页顶部活动横幅
+^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity - reject-dict
+# 搜索默认关键词
+^https://app\.bilibili\.com/x/v2/search/defaultwords - reject-dict
+^https?:\/\/app\.bilibili\.com\/bilibili\.app\.interface\.v1\.Search\/Default - reject
+# 番剧小卡片广告
+^https?:\/\/api\.bilibili\.com\/pgc\/season\/player\/cards - reject-dict
+# 番剧页弹窗素材
+^https?:\/\/api\.bilibili\.com\/pgc\/activity\/deliver\/material\/receive - reject-dict
+# VIP 广告素材上报
+^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report - reject-dict
+# IP 资源接口
+^https?:\/\/app\.bilibili\.com\/x\/resource\/ip - reject
+# 动态中的话题
+^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v1\/topic_svr - reject-dict
+# 漫画去广告
+^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash) - reject-dict
+
+[Script]
+# 开屏/推荐流/tab 去广告
+bilibili_json = type=http-response, pattern=^https?:\/\/app\.bilibili\.com\/(x\/v2\/splash|x\/v2\/feed\/index|x\/resource\/show\/tab), requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/bilibili-json.js
+# 视频页/动态去广告(grpc proto)
+bilibili_proto = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$, requires-body=1, max-size=0, binary-body-mode=1, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/bilibili-proto.js
+
+[MITM]
+hostname = %APPEND% app.bilibili.com, app.biliapi.net, api.bilibili.com, api.biliapi.net, api.vc.bilibili.com, manga.bilibili.com, api.live.bilibili.com, grpc.biliapi.net, i*.hdslb.com
+h2 = true
