@@ -2,7 +2,7 @@
 # 避免多个模块重复 MITM 同一批域名导致接口异常(如 B站评论/相关推荐/历史/搜索打不开)
 filters:
   bilibili:
-    desc: "剔除 bilibili 相关规则, B站去广告只由 BiliUniverse ADBlock 处理"
+    desc: "剔除 bilibili 相关规则, B站去广告由本仓库自维护的 bilibili.sgmodule(Shadowrocket 兼容版)处理"
     patterns:
       - "bili(bili|api)\\.(com|net)"
       - "hdslb\\.com"
@@ -44,12 +44,10 @@ modules:
     filter: bilibili
 
   # BiliUniverse 哔哩万象 - B站增强系列模块 (Release 直链, 不应用 bilibili 过滤)
-  # 注: BiliUniverse 官方不支持 Shadowrocket, 其 http-request 脚本执行会失败,
-  #     故 strip_scripts: true 剔除前置拦截规则, 只保留响应处理
-  - name: ADBlock
-    desc: "BiliUniverse ADBlock B站去广告"
-    url: "https://github.com/BiliUniverse/ADBlock/releases/latest/download/BiliBili.ADBlock.sgmodule"
-    strip_scripts: true
+  # 注: BiliUniverse 官方不支持 Shadowrocket, 其脚本在 Shadowrocket 上执行会失败,
+  #     故 strip_scripts: true 删除整个 [Script] 段
+  # ADBlock(B站去广告) 已退役: 脚本剥离后仅剩静态规则, 功能不全,
+  #     且与本仓库 bilibili.sgmodule 的 MITM 域名/接口重叠, 由后者替代
   - name: Enhanced
     desc: "BiliUniverse Enhanced B站界面增强"
     url: "https://github.com/BiliUniverse/Enhanced/releases/latest/download/BiliBili.Enhanced.sgmodule"
