@@ -1,4 +1,4 @@
-﻿# 过滤规则定义: 用于从通用模块中剔除特定 App 相关规则,
+# 过滤规则定义: 用于从通用模块中剔除特定 App 相关规则,
 # 避免多个模块重复 MITM 同一批域名导致接口异常(如 B站评论/相关推荐/历史/搜索打不开)
 filters:
   bilibili:
@@ -42,21 +42,3 @@ modules:
     desc: "FuckAppsAD 多应用去广告 (uxudjs/Shadowrocket)"
     url: "https://raw.githubusercontent.com/uxudjs/Shadowrocket/main/modules/fuck_apps_ad_sr.sgmodule"
     filter: bilibili
-
-  # BiliUniverse 哔哩万象 - B站增强系列模块 (Release 直链, 不应用 bilibili 过滤)
-  # 注: BiliUniverse 官方不支持 Shadowrocket, 其脚本在 Shadowrocket 上执行会失败,
-  #     故 strip_scripts: true 删除整个 [Script] 段
-  # ADBlock(B站去广告) 已退役: 脚本剥离后仅剩静态规则, 功能不全,
-  #     且与本仓库 bilibili.sgmodule 的 MITM 域名/接口重叠, 由后者替代
-  - name: Enhanced
-    desc: "BiliUniverse Enhanced B站界面增强"
-    url: "https://github.com/BiliUniverse/Enhanced/releases/latest/download/BiliBili.Enhanced.sgmodule"
-    strip_scripts: true
-  - name: Global
-    desc: "BiliUniverse Global B站地区解锁/线路切换"
-    url: "https://github.com/BiliUniverse/Global/releases/latest/download/BiliBili.Global.sgmodule"
-    strip_scripts: true
-  - name: Redirect
-    desc: "BiliUniverse Redirect B站CDN重定向"
-    url: "https://github.com/BiliUniverse/Redirect/releases/latest/download/BiliBili.Redirect.sgmodule"
-    strip_scripts: true

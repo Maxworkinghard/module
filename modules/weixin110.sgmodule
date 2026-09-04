@@ -1,0 +1,14 @@
+#!name = 微信 110 解锁
+#!desc = 跳过微信拦截中间界面，直接跳转原链接（支付宝/被封禁链接等）
+#!author = ddgksf2013 (Maxworkinghard 仓库自托管)
+#!homepage = https://github.com/Maxworkinghard/module
+#!category = 重写
+#!date = 2026-09-05
+#!version = 1.0.0
+
+[URL Rewrite]
+^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?.*url=([^&]+) $1 302
+^https?:\/\/support\.weixin\.qq\.com\/cgi-bin\/mmsupport-bin\/readtemplate\?t=w_blocked&url=([^&]+) $1 302
+
+[MITM]
+hostname = %APPEND% weixin110.qq.com, support.weixin.qq.com
