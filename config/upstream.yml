@@ -42,3 +42,38 @@ modules:
     desc: "FuckAppsAD 多应用去广告 (uxudjs/Shadowrocket)"
     url: "https://raw.githubusercontent.com/uxudjs/Shadowrocket/main/modules/fuck_apps_ad_sr.sgmodule"
     filter: bilibili
+
+# 独立脚本同步配置
+# 定时从上游拉取最新脚本保存到 scripts/ 目录，保证模块引用的脚本永远最新
+scripts:
+  - name: Revenuecat.js
+    desc: "RevenueCat 通用内购订阅解锁脚本 (Yu9191)"
+    url: "https://raw.githubusercontent.com/Yu9191/Rewrite/main/Revenuecat.js"
+
+  - name: CamScanner.js
+    desc: "扫描全能王解锁脚本 (chxm1023)"
+    url: "https://raw.githubusercontent.com/chxm1023/Rewrite/main/CamScanner.js"
+
+  - name: caiyuntianqi.js
+    desc: "彩云天气去广告与 SVIP 解锁脚本 (chxm1023)"
+    url: "https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js"
+
+  - name: youtube.response.js
+    desc: "YouTube 响应处理脚本 - 去广告、PiP与后台播放 (Maasea)"
+    url: "https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js"
+
+  - name: youtube.request.js
+    desc: "YouTube 请求处理脚本 (Maasea)"
+    url: "https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.request.js"
+
+  - name: xiaohongshu.js
+    desc: "小红书去广告去水印脚本 (fmz200)"
+    url: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu.js"
+
+  - name: zheye.min.js
+    desc: "知乎净化与优化脚本 - 哲也同学 (blackmatrix7)"
+    url: "https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js"
+
+  - name: chavy.boxjs.js
+    desc: "BoxJs 核心脚本 (ChavyLeung)"
+    url: "https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js"

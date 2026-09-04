@@ -1,0 +1,13 @@
+#!name=BoxJs
+#!desc=BoxJs 本地 Web 管理面板 (开启后访问 http://boxjs.com)
+#!author=ChavyLeung
+#!category=实用工具
+
+[General]
+force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
+
+[Script]
+BoxJs = type=http-request,pattern=^https?:\/\/(.+\.)?boxjs\.(com|net),script-path=https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/scripts/chavy.boxjs.js,requires-body=1,timeout=120
+
+[MITM]
+hostname = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net

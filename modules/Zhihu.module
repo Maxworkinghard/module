@@ -1,0 +1,42 @@
+#!name=知乎
+#!desc=知乎去广告、净化推荐流、移除盐选营销引导、折叠垃圾回答 (blackmatrix7 哲也同学)
+#!author=blackmatrix7
+#!category=社交媒体
+
+[Rule]
+IP-CIDR,118.89.204.198/32,REJECT,no-resolve
+IP-CIDR,103.41.167.237/32,REJECT,no-resolve
+IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,REJECT,no-resolve
+DOMAIN,mqtt.zhihu.com,REJECT
+DOMAIN,sugar.zhihu.com,REJECT
+DOMAIN,crash2.zhihu.com,REJECT
+DOMAIN,appcloud.zhihu.com,REJECT
+DOMAIN,appcloud2.in.zhihu.com,REJECT
+DOMAIN,duga.zhihu.com,REJECT
+DOMAIN,apm.zhihu.com,REJECT
+URL-REGEX,^https?:\/\/api\.zhihu\.com\/commercial_api,REJECT
+URL-REGEX,^https?:\/\/api\.zhihu\.com\/commercial_api\/answer/\d+/bottom-v2,REJECT
+URL-REGEX,^https?:\/\/api\.zhihu\.com\/message-push\/event,REJECT
+URL-REGEX,^https:\/\/api\.zhihu\.com\/guide_center\/strategy,REJECT
+URL-REGEX,^https?:\/\/api\.zhihu\.com\/bazaar\/float_window,REJECT
+URL-REGEX,^https?:\/\/api\.zhihu.\com\/metrics\/report,REJECT
+URL-REGEX,^https?:\/\/api\.zhihu\.com\/settings\/new\/notification,REJECT
+URL-REGEX,^https?:\/\/api\.zhihu\.com\/bazaar\/vip_tab\/header,REJECT
+
+[Script]
+哲也_推荐页优化 = type=http-response,requires-body=1,max-size=0,timeout=30,pattern=^https:\/\/(api|web-render)\.zhihu\.com\/topstory\/recommend,script-path=https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/scripts/zheye.min.js
+哲也_回答列表优化 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.zhihu\.com\/questions\/\d+\/feeds?,script-path=https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/scripts/zheye.min.js
+哲也_回答信息流优化 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/next-render,script-path=https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/scripts/zheye.min.js
+哲也_消息优化 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/notifications\/v3\/(message|timeline\/entry\/system_message),script-path=https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/scripts/zheye.min.js
+哲也_评论优化 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/(comment_v5\/)?(answers|comments?|articles|pins)\/\d+\/(root_|child_)?comments?,script-path=https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/scripts/zheye.min.js
+哲也_回答页广告移除 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/(page-info|api)\.zhihu\.com\/answers\/v2\/\d+,script-path=https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/scripts/zheye.min.js
+哲也_文章页广告移除 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.zhihu\.com\/articles\/v\d\/\d+,script-path=https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/scripts/zheye.min.js
+哲也_关注列表优化 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/moments_v3\?,script-path=https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/scripts/zheye.min.js
+哲也_热榜优化 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/topstory\/hot-lists(\?|\/),script-path=https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/scripts/zheye.min.js
+哲也_预置关键词优化 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/search\/preset_words\?,script-path=https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/scripts/zheye.min.js
+哲也_猜你想搜去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/search\/recommend_query,script-path=https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/scripts/zheye.min.js
+哲也_同步黑名单 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.zhihu\.com\/settings\/blocked_users,script-path=https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/scripts/zheye.min.js
+哲也_评论摘要优化 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/www\.zhihu\.com\/api\/v4\/comment_v5\/answers\/\d+\/abstract_comment\?,script-path=https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/scripts/zheye.min.js
+
+[MITM]
+hostname = %APPEND% www.zhihu.com, api.zhihu.com, zhuanlan.zhihu.com, m-cloud.zhihu.com, page-info.zhihu.com, web-render.zhihu.com

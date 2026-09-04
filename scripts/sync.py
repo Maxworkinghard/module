@@ -154,6 +154,59 @@ def apply_filter(content: str, patterns) -> str:
     return "\n".join(out), removed
 
 
+def sync_scripts(scripts_cfg: list):
+    """从上游独立同步 JS 脚本到 scripts/ 目录"""
+    if not scripts_cfg:
+        return
+    print("=== 开始同步独立上游脚本 ===")
+    for item in scripts_cfg:
+        name = item["name"]
+        url = item["url"]
+        local_path = os.path.join(SCRIPTS_DIR, name)
+        try:
+            data = fetch(url)
+        except Exception as e:
+            print(f"[FAILED]   script {name}: {e}")
+            continue
+
+        changed = True
+        if os.path.exists(local_path):
+            with open(local_path, "rb") as f:
+                changed = hashlib.sha256(f.read()).digest() != hashlib.sha256(data).digest()
+
+        if changed:
+            with open(local_path, "wb") as f:
+                f.write(data)
+            print(f"[updated]  script -> scripts/{name} ({len(data)} bytes)")
+        else:
+            print(f"[no change] script scripts/{name}")
+
+
+def sync_module_pairs():
+    """保证 modules/ 目录下所有 .sgmodule 与 .module 保持成对存在且内容一致"""
+    print("=== 检查并同步 .sgmodule 与 .module 双格式 ===")
+    all_files = os.listdir(OUTPUT_DIR)
+    for fname in sorted(all_files):
+        if fname.endswith(".sgmodule"):
+            base = fname[:-9]
+            mod_name = f"{base}.module"
+            src = os.path.join(OUTPUT_DIR, fname)
+            dst = os.path.join(OUTPUT_DIR, mod_name)
+            if not os.path.exists(dst) or open(src, "rb").read() != open(dst, "rb").read():
+                with open(src, "rb") as f_src, open(dst, "wb") as f_dst:
+                    f_dst.write(f_src.read())
+                print(f"[sync-pair] {fname} -> {mod_name}")
+        elif fname.endswith(".module"):
+            base = fname[:-7]
+            sg_name = f"{base}.sgmodule"
+            src = os.path.join(OUTPUT_DIR, fname)
+            dst = os.path.join(OUTPUT_DIR, sg_name)
+            if not os.path.exists(dst) or open(src, "rb").read() != open(dst, "rb").read():
+                with open(src, "rb") as f_src, open(dst, "wb") as f_dst:
+                    f_dst.write(f_src.read())
+                print(f"[sync-pair] {fname} -> {sg_name}")
+
+
 def main() -> int:
     with open(CONFIG_PATH, "r", encoding="utf-8") as f:
         cfg = yaml.safe_load(f)
@@ -162,10 +215,16 @@ def main() -> int:
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     os.makedirs(SCRIPTS_DIR, exist_ok=True)
 
+    # 1. 同步独立脚本
+    sync_scripts(cfg.get("scripts", []))
+
+    # 2. 同步上游模块
+    print("=== 开始同步上游模块 ===")
     for mod in cfg.get("modules", []):
         name = mod["name"]
         url = mod["url"]
-        out_path = os.path.join(OUTPUT_DIR, f"{name}.sgmodule")
+        out_path_sg = os.path.join(OUTPUT_DIR, f"{name}.sgmodule")
+        out_path_mod = os.path.join(OUTPUT_DIR, f"{name}.module")
 
         try:
             data = fetch(url)
@@ -198,19 +257,25 @@ def main() -> int:
 
         new_hash = hashlib.sha256(data).digest()
         old_hash = None
-        if os.path.exists(out_path):
-            with open(out_path, "rb") as f:
+        if os.path.exists(out_path_sg):
+            with open(out_path_sg, "rb") as f:
                 old_hash = hashlib.sha256(f.read()).digest()
 
-        if old_hash == new_hash:
-            print(f"[no change] {name}.sgmodule")
+        if old_hash == new_hash and os.path.exists(out_path_mod):
+            print(f"[no change] {name}.sgmodule & {name}.module")
             continue
 
-        with open(out_path, "wb") as f:
+        with open(out_path_sg, "wb") as f:
             f.write(data)
-        print(f"[updated]   {name}.sgmodule ({len(data)} bytes)")
+        with open(out_path_mod, "wb") as f:
+            f.write(data)
+        print(f"[updated]   {name}.sgmodule & {name}.module ({len(data)} bytes)")
+
+    # 3. 检查并补齐所有模块的双格式
+    sync_module_pairs()
 
     return 0
+
 
 
 if __name__ == "__main__":

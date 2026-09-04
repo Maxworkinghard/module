@@ -1,0 +1,11 @@
+#!name=RevenueCat
+#!desc=通用内购订阅解锁 (支持数十款使用 RevenueCat SDK 的应用)
+#!author=Yu9191
+#!category=会员解锁
+
+[Script]
+RevenueCat_Header = type=http-request,pattern=^https:\/\/(api\.revenuecat\.com|api\.rc-backup\.com)\/.+\/(receipts$|subscribers\/[^/]+$),script-path=https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/scripts/Revenuecat.js
+RevenueCat_Body = type=http-response,pattern=^https:\/\/(api\.revenuecat\.com|api\.rc-backup\.com)\/.+\/(receipts$|subscribers\/[^/]+$),script-path=https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/scripts/Revenuecat.js,requires-body=1,max-size=0
+
+[MITM]
+hostname = %APPEND% api.revenuecat.com, api.rc-backup.com
