@@ -1,0 +1,23 @@
+#!name=TikTok
+#!desc=TikTok 免拔卡换区与无水印去广告 (Keywos & lodepuly)
+#!author=Keywos, lodepuly
+#!category=媒体影音
+
+[Rule]
+DOMAIN-KEYWORD,tiktokcdn,PROXY
+DOMAIN-SUFFIX,byteoversea.com,PROXY
+DOMAIN-SUFFIX,ibytedtos.com,PROXY
+DOMAIN-SUFFIX,ipstatp.com,PROXY
+DOMAIN-SUFFIX,muscdn.com,PROXY
+DOMAIN-SUFFIX,musical.ly,PROXY
+DOMAIN-SUFFIX,tik-tokapi.com,PROXY
+DOMAIN-SUFFIX,tiktok.com,PROXY
+DOMAIN-SUFFIX,tiktokcdn.com,PROXY
+USER-AGENT,TikTok*,PROXY
+
+[Script]
+TikTok_Unlock = type=http-request,pattern=^https?:\/\/((tnc|dm).+\.[^\/]+\.com\/\w+\/v\d\/\?|.+\.(byteoversea|tiktokv).com\/.+(_region=CN&|&mcc_mnc=4)),script-path=https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/scripts/tk.js,timeout=20,argument=US
+TikTok_Watermark = type=http-response,pattern=^https?:\/\/.*\.tiktokv\.com\/aweme\/v\d\/(feed|mix\/aweme|aweme\/post|(multi\/)?aweme\/detail|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list|aweme\/favorite),script-path=https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/scripts/TikTok_remove_watermark.js,requires-body=1,timeout=20
+
+[MITM]
+hostname = %APPEND% *.byteoversea.com, *.tik-tokapi.com, *.tiktokv.com

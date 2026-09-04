@@ -77,3 +77,23 @@ scripts:
   - name: chavy.boxjs.js
     desc: "BoxJs 核心脚本 (ChavyLeung)"
     url: "https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js"
+
+  - name: tk.js
+    desc: "TikTok 免拔卡换区脚本 (Keywos)"
+    url: "https://raw.githubusercontent.com/Keywos/rule/main/loon/tk.js"
+
+  - name: TikTok_remove_watermark.js
+    desc: "TikTok 去水印与去广告脚本 (lodepuly)"
+    url: "https://raw.githubusercontent.com/Jard1n/VPN_Tool/master/Scripts/TikTok/TikTok_remove_watermark.js"
+
+  - name: sub-store-0.min.js
+    desc: "Sub-Store 前端界面组件 (Peng-YM / sub-store-org)"
+    url: "https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-0.min.js"
+
+  - name: sub-store-1.min.js
+    desc: "Sub-Store 后端核心引擎 (Peng-YM / sub-store-org)"
+    url: "https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-1.min.js"
+
+  - name: cron-sync-artifacts.min.js
+    desc: "Sub-Store 定时云端同步组件 (Peng-YM / sub-store-org)"
+    url: "https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js"

@@ -23,18 +23,22 @@
 | 模块 | 说明 | 原作者 / 上游 | CDN 订阅链接 (推荐) | GitHub Raw 链接 |
 | :--- | :--- | :--- | :--- | :--- |
 | **YouTube** | YouTube / YouTube Music 去视频与信息流广告、解锁画中画 (PiP)、支持后台/锁屏持续播放 | [Maasea](https://github.com/Maasea/sgmodule) | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/YouTube.module) | [Raw 链接](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/YouTube.module) |
+| **TikTok** | TikTok 免拔卡换区、解锁全球区域 (默认美区 US，可自定义)、视频下载去水印与广告过滤 | [Keywos & lodepuly](https://github.com/Keywos/rule) | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/TikTok.module) | [Raw 链接](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/TikTok.module) |
 | **小红书** | 小红书开屏/信息流去广告、无水印保存 4K 原图/视频、无水印保存 LivePhoto 实况动图 | [奶思 (fmz200)](https://github.com/fmz200/wool_scripts) | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/XiaoHongShu.module) | [Raw 链接](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/XiaoHongShu.module) |
 | **知乎** | 哲也同学知乎净化：去除信息流/回答/热榜广告、屏蔽盐选付费故事营销引导、折叠垃圾推广 | [blackmatrix7](https://github.com/blackmatrix7/ios_rule_script) | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/Zhihu.module) | [Raw 链接](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/Zhihu.module) |
+| **Twitter_Instagram** | Twitter (X) 与 Instagram 商业广告拦截、数据上报与分析追踪屏蔽 | [fmz200 & blackmatrix7](https://github.com/fmz200/wool_scripts) | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/Twitter_Instagram.module) | [Raw 链接](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/Twitter_Instagram.module) |
 | **bilibili** | B站去广告兼容版：开屏/首页推荐流/视频页/动态/底层Tab净化（原生 json+proto 处理，Shadowrocket 深度调优） | 本仓库自维护 | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/bilibili.module) | [Raw 链接](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/bilibili.module) |
 
 ### 3. 黑科技与网络实用工具
 
 | 模块 | 说明 | 原作者 / 上游 | CDN 订阅链接 (推荐) | GitHub Raw 链接 |
 | :--- | :--- | :--- | :--- | :--- |
+| **Sub-Store** | 高级订阅与节点管理神器：多机场/自建节点聚合清洗、去除死节点、国旗 Emoji 重命名、测速排序 | [Peng-YM / sub-store-org](https://github.com/sub-store-org/Sub-Store) | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/Sub-Store.module) | [Raw 链接](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/Sub-Store.module) |
 | **BoxJs** | 本地 Web 管理控制台：管理所有脚本的设置、授权 Cookie、环境变量与订阅配置 | [ChavyLeung](https://github.com/chavyleung/scripts) | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/BoxJs.module) | [Raw 链接](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/BoxJs.module) |
 | **wloc** | 苹果 WLOC 网络定位修改：欺骗系统 Wi-Fi 定位接口，支持网页交互选点与快捷指令无缝切换 | [Yu9191](https://github.com/Yu9191/wloc) | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/wloc.module) | [Raw 链接](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/wloc.module) |
 | **weixin110** | 微信外链解锁：自动跳过拦截提示，直接 302 重定向到原始网页链接 | [ddgksf2013](https://github.com/ddgksf2013) | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/weixin110.module) | [Raw 链接](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/weixin110.module) |
 | **HTTPDNS** | HTTPDNS / 私有 DoH 拦截：阻断腾讯、阿里、微博等私有 DNS 探测，强制走代理软件 DNS 规则 | 本仓库自维护 | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/HTTPDNS.module) | [Raw 链接](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/HTTPDNS.module) |
+
 
 ### 4. 规则合集模块
 

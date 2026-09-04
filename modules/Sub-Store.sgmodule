@@ -1,0 +1,12 @@
+#!name=Sub-Store
+#!desc=高级订阅与节点管理工具 (访问 https://sub.store)
+#!author=Peng-YM
+#!category=订阅管理
+
+[MITM]
+hostname = %APPEND% sub.store
+
+[Script]
+Sub-Store_Core = type=http-request,pattern=^https?:\/\/sub\.store\/((download)|api\/(preview|sync|(utils\/node-info))),script-path=https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/scripts/sub-store-1.min.js,requires-body=1,max-size=-1,timeout=900
+Sub-Store_Simple = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/scripts/sub-store-0.min.js,requires-body=1,max-size=-1,timeout=900
+Sub-Store_Sync = type=cron,cronexp=55 23 * * *,wake-system=1,timeout=900,script-path=https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/scripts/cron-sync-artifacts.min.js
