@@ -35,9 +35,9 @@
 | :--- | :--- | :--- | :--- | :--- |
 | **Sub-Store** | 高级订阅与节点管理神器：多机场/自建节点聚合清洗、去除死节点、国旗 Emoji 重命名、测速排序 | [Peng-YM / sub-store-org](https://github.com/sub-store-org/Sub-Store) | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/Sub-Store.module) | [Raw 链接](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/Sub-Store.module) |
 | **BoxJs** | 本地 Web 管理控制台：管理所有脚本的设置、授权 Cookie、环境变量与订阅配置 | [ChavyLeung](https://github.com/chavyleung/scripts) | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/BoxJs.module) | [Raw 链接](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/BoxJs.module) |
-| **wloc** | 苹果 WLOC 网络定位修改：欺骗系统 Wi-Fi 定位接口，支持网页交互选点与快捷指令无缝切换 | [Yu9191](https://github.com/Yu9191/wloc) | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/wloc.module) | [Raw 链接](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/wloc.module) |
 | **weixin110** | 微信外链解锁：自动跳过拦截提示，直接 302 重定向到原始网页链接 | [ddgksf2013](https://github.com/ddgksf2013) | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/weixin110.module) | [Raw 链接](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/weixin110.module) |
 | **HTTPDNS** | HTTPDNS / 私有 DoH 拦截：阻断腾讯、阿里、微博等私有 DNS 探测，强制走代理软件 DNS 规则 | 本仓库自维护 | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/HTTPDNS.module) | [Raw 链接](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/HTTPDNS.module) |
+
 
 
 ### 4. 规则合集模块
@@ -75,13 +75,8 @@
   - **应用参数修改**：针对支持 BoxJs 的脚本，可通过可视化开关直接调整选项，不用手动改代码。
   - **数据备份与迁移**：导入/导出备份所有脚本的环境变量与授权 Token。
 
-### 2. wloc（苹果网络定位修改）
-* **定位修改方式**：
-  - 网页可视化选点：浏览器访问 `http://wloc.net` 选择地图上的目标坐标。
-  - 快捷指令联动：运行预设快捷指令直接更新坐标。
-* 详细说明与快捷指令安装请参考模块内注释。
-
 ---
+
 
 ## 定时同步机制
 
