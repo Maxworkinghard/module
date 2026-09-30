@@ -1,88 +1,77 @@
 # Maxworkinghard/module
 
-基于上游优秀开源脚本与模块自动同步的 Shadowrocket / Surge 模块仓库，由 GitHub Actions 每 6 小时自动同步更新。
+用于 Shadowrocket 的模块与脚本仓库。保留原作者署名，按当前可用上游同步；GitHub Actions 每 6 小时检查一次，只有完整检查通过才发布。
 
-> **提示**：内容版权归各原作者所有，本仓库负责统一维护、Shadowrocket 语法规范化兼容、自建 CDN 加速分发与自动化定时同步。
+每个模块同时提供内容相同的 .module 与 .sgmodule 文件。文件扩展名不会自动解决客户端或 App 版本差异；HTTPS 重写需要在设备上验证。
 
----
+## 推荐组合
 
-## 模块列表
+- 通用开屏去广告使用 **Adblock**。它已替换为 [yfamilys 当前维护的 startingad.module](https://yfamilys.com/module/startingad.module)，保留本仓库原来的 Adblock 订阅地址。
+- **Adblock 与 rewrite 二选一**，避免叠加两套综合去广告规则。rewrite 保留 [fmz200 的当前重写合集](https://github.com/fmz200/wool_scripts/tree/main/QuantumultX/rewrite)。
+- B 站、小红书、知乎、YouTube、彩云天气及微信外链按需要启用对应专用模块。通用合集已过滤这些 App 的规则及 MITM 域名，包括 api\.(bilibili|biliapi) 这种组合写法。
+- cleanup 是额外的 App / 小程序界面净化，按需要单独启用；遇到某个 App 加载异常时，可先停用它排查。
+- 已停用 **FuckAppsAD、RevenueCat**，请在客户端删除或关闭。旧订阅地址保留停用提示文件，更新后不再加载旧脚本。
 
-国内网络推荐优先使用 **Fastly CDN 镜像链接**；境外或已开启全局代理可直接使用 **GitHub Raw 链接**。所有模块均同时提供 `.module`（Shadowrocket 专属）与 `.sgmodule`（Surge / Shadowrocket 通用）双版本。
+## 模块链接
 
-### 1. 会员解锁与实用生产力
+刚发布更新时优先使用 Raw 链接；CDN 链接可能存在缓存。以下模块适配的是脚本覆盖的接口，实际效果取决于 App 与代理客户端版本。
 
-| 模块 | 说明 | 原作者 / 上游 | CDN 订阅链接 (推荐) | GitHub Raw 链接 |
-| :--- | :--- | :--- | :--- | :--- |
-| **RevenueCat** | 通用内购/订阅解锁，支持数十款集成 RevenueCat SDK 的热门 App（如 HabitKit、Pillow、Structured、Vision 等） | [Yu9191](https://github.com/Yu9191) | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/RevenueCat.module) | [Raw 链接](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/RevenueCat.module) |
-| **扫描全能王** | 扫描全能王高级会员特权解锁、高清扫描导出、自动去除水印 | [chxm1023](https://github.com/chxm1023) | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/CamScanner.module) | [Raw 链接](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/CamScanner.module) |
-| **彩云天气** | 彩云天气免广告、解锁 SVIP 权益、开启 48 小时逐小时精准降水预报与高质量卫星云图 | [chxm1023](https://github.com/chxm1023) | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/CaiYun.module) | [Raw 链接](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/CaiYun.module) |
-
-### 2. 热门社交与影音增强
-
-| 模块 | 说明 | 原作者 / 上游 | CDN 订阅链接 (推荐) | GitHub Raw 链接 |
-| :--- | :--- | :--- | :--- | :--- |
-| **YouTube** | YouTube / YouTube Music 去视频与信息流广告、解锁画中画 (PiP)、支持后台/锁屏持续播放 | [Maasea](https://github.com/Maasea/sgmodule) | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/YouTube.module) | [Raw 链接](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/YouTube.module) |
-| **TikTok** | TikTok 免拔卡换区、解锁全球区域 (默认美区 US，可自定义)、视频下载去水印与广告过滤 | [Keywos & lodepuly](https://github.com/Keywos/rule) | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/TikTok.module) | [Raw 链接](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/TikTok.module) |
-| **小红书** | 小红书开屏/信息流去广告、无水印保存 4K 原图/视频、无水印保存 LivePhoto 实况动图 | [奶思 (fmz200)](https://github.com/fmz200/wool_scripts) | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/XiaoHongShu.module) | [Raw 链接](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/XiaoHongShu.module) |
-| **知乎** | 哲也同学知乎净化：去除信息流/回答/热榜广告、屏蔽盐选付费故事营销引导、折叠垃圾推广 | [blackmatrix7](https://github.com/blackmatrix7/ios_rule_script) | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/Zhihu.module) | [Raw 链接](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/Zhihu.module) |
-| **Twitter_Instagram** | Twitter (X) 与 Instagram 商业广告拦截、数据上报与分析追踪屏蔽 | [fmz200 & blackmatrix7](https://github.com/fmz200/wool_scripts) | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/Twitter_Instagram.module) | [Raw 链接](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/Twitter_Instagram.module) |
-| **bilibili** | B站去广告兼容版：开屏/首页推荐流/视频页/动态/底层Tab净化（原生 json+proto 处理，Shadowrocket 深度调优） | 本仓库自维护 | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/bilibili.module) | [Raw 链接](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/bilibili.module) |
-
-### 3. 黑科技与网络实用工具
-
-| 模块 | 说明 | 原作者 / 上游 | CDN 订阅链接 (推荐) | GitHub Raw 链接 |
-| :--- | :--- | :--- | :--- | :--- |
-| **Sub-Store** | 高级订阅与节点管理神器：多机场/自建节点聚合清洗、去除死节点、国旗 Emoji 重命名、测速排序 | [Peng-YM / sub-store-org](https://github.com/sub-store-org/Sub-Store) | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/Sub-Store.module) | [Raw 链接](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/Sub-Store.module) |
-| **BoxJs** | 本地 Web 管理控制台：管理所有脚本的设置、授权 Cookie、环境变量与订阅配置 | [ChavyLeung](https://github.com/chavyleung/scripts) | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/BoxJs.module) | [Raw 链接](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/BoxJs.module) |
-| **weixin110** | 微信外链解锁：自动跳过拦截提示，直接 302 重定向到原始网页链接 | [ddgksf2013](https://github.com/ddgksf2013) | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/weixin110.module) | [Raw 链接](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/weixin110.module) |
-| **HTTPDNS** | HTTPDNS / 私有 DoH 拦截：阻断腾讯、阿里、微博等私有 DNS 探测，强制走代理软件 DNS 规则 | 本仓库自维护 | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/HTTPDNS.module) | [Raw 链接](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/HTTPDNS.module) |
-
-
-
-### 4. 规则合集模块
-
-| 模块 | 说明 | 上游 | 订阅链接 |
+| 模块 | 用途 / 来源 | Raw 导入链接 | CDN 导入链接 |
 | :--- | :--- | :--- | :--- |
-| **rewrite** | 广告拦截合集-重写（约 730 款 APP，已过滤 Bilibili 冲突规则） | [fmz200/wool_scripts](https://github.com/fmz200/wool_scripts) | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/rewrite.module) |
-| **cleanup** | App & 小程序净化合集（约 88 款，已过滤 Bilibili 冲突规则） | [fmz200/wool_scripts](https://github.com/fmz200/wool_scripts) | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/cleanup.module) |
-| **Adblock** | 综合去广告集合（已过滤 Bilibili 冲突规则） | [bai1zi](https://github.com/bai1zi/shadowrocket-surge-loon-qx) | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/Adblock.module) |
-| **FuckAppsAD** | 多应用去广告（已过滤 Bilibili 冲突规则） | [uxudjs](https://github.com/uxudjs/Shadowrocket) | [导入链接](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/FuckAppsAD.module) |
+| **Adblock** | 通用开屏去广告；[yfamilys / deezertidal](https://github.com/deezertidal/shadowrocket-rules)，原脚本署名 ddgksf2013 | [导入](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/Adblock.module) | [CDN](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/Adblock.module) |
+| **rewrite** | 通用广告重写；[fmz200](https://github.com/fmz200/wool_scripts)，经 Script-Hub 转换 | [导入](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/rewrite.module) | [CDN](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/rewrite.module) |
+| **cleanup** | App 与小程序界面净化；[fmz200](https://github.com/fmz200/wool_scripts)，经 Script-Hub 转换 | [导入](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/cleanup.module) | [CDN](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/cleanup.module) |
+| **bilibili** | B 站广告接口处理；[fmz200 原生模块](https://github.com/fmz200/wool_scripts/blob/main/Shadowrocket/module/split/partB/bilibili.srmodule) / [kokoryh Sparkle](https://github.com/kokoryh/Sparkle)，固定 JSON 参数 | [导入](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/bilibili.module) | [CDN](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/bilibili.module) |
+| **小红书** | 广告过滤与图片 / 视频水印处理；[fmz200](https://github.com/fmz200/wool_scripts) | [导入](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/XiaoHongShu.module) | [CDN](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/XiaoHongShu.module) |
+| **知乎** | 信息流及回答等页面净化；[blackmatrix7](https://github.com/blackmatrix7/ios_rule_script) | [导入](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/Zhihu.module) | [CDN](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/Zhihu.module) |
+| **YouTube** | YouTube 接口广告处理与播放功能调整；[Maasea](https://github.com/Maasea/sgmodule) | [导入](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/YouTube.module) | [CDN](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/YouTube.module) |
+| **TikTok** | 换区与水印 / 广告处理；[Keywos](https://github.com/Keywos/rule) / [lodepuly](https://github.com/Jard1n/VPN_Tool) | [导入](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/TikTok.module) | [CDN](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/TikTok.module) |
+| **Twitter_Instagram** | 部分广告域名与统计请求阻断；不处理原生信息流响应 | [导入](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/Twitter_Instagram.module) | [CDN](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/Twitter_Instagram.module) |
+| **彩云天气** | 天气接口广告与功能处理；[chxm1023](https://github.com/chxm1023/Rewrite) | [导入](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/CaiYun.module) | [CDN](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/CaiYun.module) |
+| **扫描全能王** | 扫描全能王功能接口处理；[chxm1023](https://github.com/chxm1023/Rewrite) | [导入](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/CamScanner.module) | [CDN](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/CamScanner.module) |
+| **HTTPDNS** | 部分私有 HTTPDNS / DoH 请求阻断；本仓库维护 | [导入](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/HTTPDNS.module) | [CDN](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/HTTPDNS.module) |
+| **weixin110** | 微信外链提示页重定向 | [导入](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/weixin110.module) | [CDN](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/weixin110.module) |
+| **BoxJs** | 脚本设置管理面板；[ChavyLeung](https://github.com/chavyleung/scripts) | [导入](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/BoxJs.module) | [CDN](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/BoxJs.module) |
+| **Sub-Store** | 订阅管理；[sub-store-org](https://github.com/sub-store-org/Sub-Store) | [导入](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/Sub-Store.module) | [CDN](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/Sub-Store.module) |
 
----
+YouTube 上游明确以 Surge 为测试环境，不保证其他客户端兼容。本仓库使用已展开参数的模块和当前脚本，下载检查不等同于 iPhone 上的广告过滤、后台播放或画中画实测。
 
-## 安装与配置
+B 站模块保留最常访问列表，关闭赞助片段跳过；过滤上游的账户会员字段修改及整套导航重建。广告接口可能随 App 更新而变化，仍需在设备上验证。
 
-1. **Shadowrocket 导入**：
-   - 打开 Shadowrocket -> 点击下方 **配置** -> 进入 **模块**。
-   - 点击右上角 **`+`**，粘贴上方模块的 CDN 订阅链接。
-   - 勾选启用该模块。
-2. **前提条件（必须开启 HTTPS 解密）**：
-   - 必须开启 **HTTPS 解密 (MITM)** 并生成并信任 CA 证书（iOS 系统设置 -> 通用 -> 关于本机 -> 证书信任设置 -> 打开完全信任）。
-   - 去广告、去水印、会员修改、BoxJs 以及定位修改均依赖 MITM 注入。
+## 安装与迁移
 
----
+1. 在 Shadowrocket 的配置 / 模块页面，添加所需模块的导入链接并启用。
+2. 对带 [MITM] 的 HTTPS 重写模块，开启 HTTPS 解密，安装 CA 证书并在 iOS 证书信任设置中完全信任。仅域名阻断的模块不要求 HTTPS 解密。
+3. 已导入本仓库 Adblock 的用户，更新这个模块即可；停用 FuckAppsAD 后启用 Adblock。不要同时启用 Adblock 与 rewrite。
+4. 若使用的是其他仓库的旧 AdBlock.module、startingad.module 或 YouTubeAd.sgmodule，删除旧模块并改用上表相应链接。更新本仓库无法更新其他作者的旧订阅地址。
+5. 更新后重新连接代理，重新打开目标 App。若广告仍在，检查模块是否更新成功、证书是否信任及该 App 的请求是否命中模块。
 
-## 重点模块详细使用说明
+BoxJs 启用后可通过 Safari 访问 [http://boxjs.com](http://boxjs.com) 或 [http://boxjs.net](http://boxjs.net) 管理脚本参数。
 
-### 1. BoxJs（脚本管理利器）
-* **原理**：BoxJs 是运行在手机代理内核中的本地 Web 服务。启用模块后，它会在本地拦截 `boxjs.com` 和 `boxjs.net` 的 HTTP 请求，直接将管理面板渲染在浏览器中。**完全不需要远程服务器，零网络延迟，数据安全保存在本地**。
-* **访问方法**：
-  1. 开启包含 BoxJs 模块的 VPN 连接。
-  2. 使用 Safari 浏览器直接打开 [http://boxjs.com](http://boxjs.com) 或 [http://boxjs.net](http://boxjs.net)。
-* **主要用途**：
-  - **应用订阅配置**：在面板中可添加大佬们维护的订阅链接（如签到脚本、Cookie获取等）。
-  - **应用参数修改**：针对支持 BoxJs 的脚本，可通过可视化开关直接调整选项，不用手动改代码。
-  - **数据备份与迁移**：导入/导出备份所有脚本的环境变量与授权 Token。
+## 2026-09-30 清理记录
 
----
+| 内容 | 处理 |
+| :--- | :--- |
+| Adblock 的旧 bai1zi 快照 | 改用作者网站当前维护的开屏去广告模块，保留本仓库 Adblock 地址及原作者信息 |
+| FuckAppsAD | 移除旧规则与全部脚本引用，提供停用提示；旧合集含失效的滴滴、小红书等脚本，以及返回网页的百度网盘 / 知乎脚本 |
+| RevenueCat | 原独立脚本地址返回 404，移除缓存脚本和同步配置，模块地址提供停用提示 |
+| bilibili | 移除有乱码语法错误的 JSON 脚本与旧 Protobuf 缓存，改用 fmz200 原生模块和 kokoryh 当前脚本；修正 JSON 参数格式 |
+| rewrite / cleanup | 从 fmz200 当前上游重新转换；统一过滤专用 App 规则 |
+| 自动同步 | 检查脚本引用及 JavaScript 语法、拒绝空文件 / HTML / 未展开参数；失败时保留旧版本并让工作流失败 |
 
+源码日期本身不作为删除依据；仍可获取、被现有模块使用的脚本继续保留。功能是否仍适配 App 新版本，需要设备上的实际验证。
 
-## 定时同步机制
+## 同步维护
 
-- 仓库内集成了 GitHub Actions 自动化工作流（`.github/workflows/sync.yml`），**每 6 小时自动触发一次** (`0 */6 * * *`)。
-- 自动化同步引擎（`scripts/sync.py`）会自动执行：
-  1. 从 upstream 拉取并更新所有依赖的独立 JavaScript 脚本。
-  2. 同步通用去广告合集并自动过滤冲突域名规则。
-  3. 规范化模块语法为 Shadowrocket 完美兼容格式（去除多余空格，修正参数格式）。
-  4. 自动生成与更新 `.module` 与 `.sgmodule` 双版本文件并提交推送。
+配置入口为 [config/upstream.yml](config/upstream.yml)，同步实现为 [scripts/sync.py](scripts/sync.py)。
+
+同步先下载到内存并处理过滤，再检查所有 .sgmodule 文件中的脚本引用。本仓库脚本链接检查待发布文件；第三方脚本链接实际下载检查 HTTP 结果、文件内容及 JavaScript 语法。全部检查通过后，才写入模块、脚本并生成内容一致的 .module 文件。任何来源失败都不发布该轮变更，工作流会保留错误日志。
+
+开发验证：
+
+~~~sh
+python -m unittest discover -s scripts -p 'test_*.py'
+python scripts/sync.py
+~~~
+
+完整同步需要 PyYAML 与 Node.js，并在 127.0.0.1:9100 启动 [Script-Hub](https://github.com/Script-Hub-Org/Script-Hub) 转换服务。工作流会自动启动服务；使用 node --check 检查语法，不执行第三方广告脚本。这不能验证 Shadowrocket 的脚本 API 或 iPhone 上的实际运行行为。

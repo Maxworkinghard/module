@@ -1,99 +1,99 @@
-# 过滤规则定义: 用于从通用模块中剔除特定 App 相关规则,
-# 避免多个模块重复 MITM 同一批域名导致接口异常(如 B站评论/相关推荐/历史/搜索打不开)
+# 通用合集不重复处理由本仓库专用模块负责的 App。
+# 使用域名/脚本中的关键词，兼容 api\.(bilibili|biliapi) 等组合正则。
 filters:
-  bilibili:
-    desc: "剔除 bilibili 相关规则, B站去广告由本仓库自维护的 bilibili.sgmodule(Shadowrocket 兼容版)处理"
+  dedicated_apps:
+    desc: "B站、小红书、知乎、YouTube、彩云及微信外链使用对应专用模块"
     patterns:
-      - "bili(bili|api)\\.(com|net)"
-      - "hdslb\\.com"
-      - "bilivideo\\.(com|cn)"
-      - "manga\\.bilibili"
+      - "bilibili|biliapi|hdslb|bilivideo"
+      - "xiaohongshu|redbook"
+      - "zhihu"
+      - "youtube|googlevideo|ytimg"
+      - "cyapi|caiyunapp|caiyuntianqi|colorfulclouds"
+      - 'weixin110|support\.weixin\.qq\.com|UnblockURLinWeChat'
+  bilibili_optional_features:
+    desc: "不改动账户会员字段和整套导航布局，仅保留广告接口处理"
+    patterns:
+      - 'account/(mine|myinfo)'
+      - 'x/resource/show/tab/v2'
 
-# 上游模块配置
-# 新增模块: 在 modules 列表下加一项即可, 下次同步会自动处理
-# filter: 可选, 引用上面 filters 中定义的过滤规则
-# strip_scripts: true 时删除整个 [Script] 段
-#   (BiliUniverse 官方明确不支持 Shadowrocket, 其 http-request/http-response
-#    脚本在 Shadowrocket 上执行失败会导致请求被丢弃/响应被吞,
-#    表现为 B站主页推荐无新内容、详情页简介评论加载不出、显示无网络连接)
 modules:
-  # 广告拦截合集-重写 (fmz200/wool_scripts, 约730款APP)
-  # 上游为 QuantumultX snippet, 由 workflow 中本地启动的 Script-Hub 服务转换为 Shadowrocket 模块
+  # 作者当前网站版本，替代 bai1zi 的旧快照；保留 Adblock 原订阅地址。
+  - name: Adblock
+    desc: "APP 开屏去广告 (yfamilys / ddgksf2013 / deezertidal)"
+    url: "https://yfamilys.com/module/startingad.module"
+    display_name: "Adblock · 开屏去广告"
+    module_desc: "通用开屏去广告；B站、小红书、知乎、YouTube、彩云及微信外链请单独启用对应模块"
+    filter: dedicated_apps
+
+  # QX 重写由工作流内 Script-Hub 服务转换。与 Adblock 二选一。
   - name: rewrite
     desc: "广告拦截合集-重写 (fmz200/wool_scripts)"
     url: "http://127.0.0.1:9100/file/_start_/https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/rewrite.snippet/_end_/rewrite.sgmodule?type=qx-rewrite&target=shadowrocket-module&del=true&jqEnabled=true"
-    filter: bilibili
+    filter: dedicated_apps
 
-  # App&小程序净化合集 (fmz200/wool_scripts, 约88款)
-  # 上游为 QuantumultX snippet, 由 workflow 中本地启动的 Script-Hub 服务转换为 Shadowrocket 模块
   - name: cleanup
-    desc: "App&小程序净化合集 (fmz200/wool_scripts)"
+    desc: "App 与小程序净化合集 (fmz200/wool_scripts)"
     url: "http://127.0.0.1:9100/file/_start_/https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/cleanup.snippet/_end_/cleanup.sgmodule?type=qx-rewrite&target=shadowrocket-module&del=true&jqEnabled=true"
-    filter: bilibili
+    filter: dedicated_apps
 
-  # 去广告集合 (bai1zi/shadowrocket-surge-loon-qx, 替代已删除的墨鱼融合模块)
-  - name: Adblock
-    desc: "去广告集合 (bai1zi/shadowrocket-surge-loon-qx)"
-    url: "https://raw.githubusercontent.com/bai1zi/shadowrocket-surge-loon-qx/main/AD.sgmodule"
-    filter: bilibili
+  # fmz200 原生 Shadowrocket 模块，使用 kokoryh 当前 Sparkle 脚本。
+  # 当前脚本接受 JSON 参数，覆盖上游旧的数组模板，保留最常访问列表。
+  - name: bilibili
+    url: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Shadowrocket/module/split/partB/bilibili.srmodule"
+    display_name: "BiliBili · 去广告"
+    module_desc: "fmz200 / kokoryh 当前广告接口处理；已固定 JSON 参数，关闭赞助片段跳过"
+    filter: bilibili_optional_features
+    script_arguments:
+      bilibili.airborne:
+        logLevel: "error"
+        sponsorBlock: false
+      bilibili.request:
+        logLevel: "error"
+        purifyComment: true
+        sponsorBlock: false
+      bilibili.live:
+        logLevel: "error"
+      bilibili.protobuf:
+        logLevel: "error"
+        displayUpList: "show"
+        purifyComment: true
+        sponsorBlock: false
 
-  # FuckAppsAD 多应用去广告 (uxudjs/Shadowrocket, 原生 sgmodule 直接同步)
+# 停用模块保留同名提示文件，让已经导入旧地址的客户端在刷新后移除旧规则。
+retired_modules:
   - name: FuckAppsAD
-    desc: "FuckAppsAD 多应用去广告 (uxudjs/Shadowrocket)"
-    url: "https://raw.githubusercontent.com/uxudjs/Shadowrocket/main/modules/fuck_apps_ad_sr.sgmodule"
-    filter: bilibili
+    reason: "旧合集包含多处失效脚本，已移除原规则"
+    replacement: Adblock
+  - name: RevenueCat
+    reason: "原作者脚本已返回 404，停止分发旧缓存"
+retired_scripts:
+  - Revenuecat.js
+  - bilibili-json.js
+  - bilibili-proto.js
 
-# 独立脚本同步配置
-# 定时从上游拉取最新脚本保存到 scripts/ 目录，保证模块引用的脚本永远最新
+# 脚本必须可下载且不是 HTML；失败会中止本次发布，而非假装同步成功。
 scripts:
-  - name: Revenuecat.js
-    desc: "RevenueCat 通用内购订阅解锁脚本 (Yu9191)"
-    url: "https://raw.githubusercontent.com/Yu9191/Rewrite/main/Revenuecat.js"
-
   - name: CamScanner.js
-    desc: "扫描全能王解锁脚本 (chxm1023)"
     url: "https://raw.githubusercontent.com/chxm1023/Rewrite/main/CamScanner.js"
-
   - name: caiyuntianqi.js
-    desc: "彩云天气去广告与 SVIP 解锁脚本 (chxm1023)"
     url: "https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js"
-
   - name: youtube.response.js
-    desc: "YouTube 响应处理脚本 - 去广告、PiP与后台播放 (Maasea)"
     url: "https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js"
-
   - name: youtube.request.js
-    desc: "YouTube 请求处理脚本 (Maasea)"
     url: "https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.request.js"
-
   - name: xiaohongshu.js
-    desc: "小红书去广告去水印脚本 (fmz200)"
     url: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu.js"
-
   - name: zheye.min.js
-    desc: "知乎净化与优化脚本 - 哲也同学 (blackmatrix7)"
     url: "https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js"
-
   - name: chavy.boxjs.js
-    desc: "BoxJs 核心脚本 (ChavyLeung)"
     url: "https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js"
-
   - name: tk.js
-    desc: "TikTok 免拔卡换区脚本 (Keywos)"
     url: "https://raw.githubusercontent.com/Keywos/rule/main/loon/tk.js"
-
   - name: TikTok_remove_watermark.js
-    desc: "TikTok 去水印与去广告脚本 (lodepuly)"
     url: "https://raw.githubusercontent.com/Jard1n/VPN_Tool/master/Scripts/TikTok/TikTok_remove_watermark.js"
-
   - name: sub-store-0.min.js
-    desc: "Sub-Store 前端界面组件 (Peng-YM / sub-store-org)"
     url: "https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-0.min.js"
-
   - name: sub-store-1.min.js
-    desc: "Sub-Store 后端核心引擎 (Peng-YM / sub-store-org)"
     url: "https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-1.min.js"
-
   - name: cron-sync-artifacts.min.js
-    desc: "Sub-Store 定时云端同步组件 (Peng-YM / sub-store-org)"
     url: "https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js"
