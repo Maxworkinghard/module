@@ -1,0 +1,911 @@
+{
+  "format": 1,
+  "scripts": {
+    "mirrors/8aa0030707379068-netease.adblock.js": {
+      "url": "https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js",
+      "sha256": "6ba468eb994e3843d69563f8f3b31c2d63a62a68d60fc3a1fd61947c1546936f",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/5c73e78258207fb4-coolapk.js": {
+      "url": "https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js",
+      "sha256": "79b28bcbeb4b7b150a21ed20d7d50d9cee2bb91ff5110e9f34dc3be54b0991e4",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/d260266f76a3cc1f-pixivAds.js": {
+      "url": "https://github.com/ddgksf2013/Scripts/raw/master/pixivAds.js",
+      "sha256": "249eabc913b8210c0ccb00ab1cfb1094a55a771d33cd0c69225c6d0cb2504359",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/e7fbe6e97c9cb09c-rrtv_json.js": {
+      "url": "https://github.com/ddgksf2013/Scripts/raw/master/rrtv_json.js",
+      "sha256": "1f5732fce78864d5b0cb6bd039837f3e5d25632b1e3a061d1c2801685c7420ce",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/29c959d46da4e494-mlxx.js": {
+      "url": "https://github.com/fmz200/wool_scripts/raw/main/Scripts/mlxx/mlxx.js",
+      "sha256": "7c22e8836f2e9247755180d094d2700e5bb6d10d70cfd042ebc463eb501e8416",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/9f029b3f48e03451-wyres.js": {
+      "url": "https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js",
+      "sha256": "b729d3f27bcb4992b7dc8d82ef7563af7b2a1380976f55975166f68defe3c393",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/0ff4419465d79000-BahamutAnimeAds.js": {
+      "url": "https://raw.githubusercontent.com/NobyDa/Script/master/Bahamut/BahamutAnimeAds.js",
+      "sha256": "7be309316b34c0272bdfef7ababd2219e79e3c85d38b525fa97e3ae409c40252",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/15cb41bf88f26d12-xjsp.js": {
+      "url": "https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/xjsp.js",
+      "sha256": "6fc5d0aa5b7d70febfc7081b95d16f15cf1664767286a9ca0c5939d5c8187859",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/7e513b7176785a58-replace-body.js": {
+      "url": "https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js",
+      "sha256": "1f02ab57c96cffe522bb0ad30acef049d9fb8d35b0132c57552bbe7e26779175",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/8cd9d9503c513067-wnbz.js": {
+      "url": "https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/AdBlock/xmApp/wnbz.js",
+      "sha256": "b4c4a10fbb15268d20b1c2dd69c842494029f7bd8eb691add5db105ce087cbef",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/deda39243f57d797-xmApp.js": {
+      "url": "https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/AdBlock/xmApp/xmApp.js",
+      "sha256": "319c650370f0c4086a6aea0f0d9efa0677c4ac9829d07830218dac69c174164a",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/758f3f177a2912da-adsense.js": {
+      "url": "https://raw.githubusercontent.com/app2smile/rules/master/js/adsense.js",
+      "sha256": "171f97bb25c6cb29aeb134acdddca5c96b06e0e70a6e4f670914eba1c8f3b662",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/a9b555deb7dccf4a-baidumap.js": {
+      "url": "https://raw.githubusercontent.com/app2smile/rules/master/js/baidumap.js",
+      "sha256": "7cd5425ff0dcdd24d0fd42a4ca4a21b30c5d6edcd8052b3b7ca95c4722fcb500",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/ac2c1ec848a8bd34-qidian.js": {
+      "url": "https://raw.githubusercontent.com/app2smile/rules/master/js/qidian.js",
+      "sha256": "e599a063040ecb222ad5d4f8666157ef1ee31495aef6d87fb13453dce46f5c19",
+      "modules": [
+        "Adblock",
+        "rewrite"
+      ]
+    },
+    "mirrors/a4ac231868fb4ed3-qq-news.js": {
+      "url": "https://raw.githubusercontent.com/app2smile/rules/master/js/qq-news.js",
+      "sha256": "98b921f278eae3f4d99751a35c2b0c867b9716bd20713da14859f4033f8c7394",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/02086290c7c6ac68-spotify-json.js": {
+      "url": "https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js",
+      "sha256": "41cf1074770cdef3948baa12ff4a8db9045d1cac888714c8b7e69909eb531bc9",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/99449675fd0d0002-spotify-proto.js": {
+      "url": "https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js",
+      "sha256": "2e6850e888d092905c766f0bbedc4b4afb9a712330970cc1265105d7fb4995d0",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/d075fa04e43daa6e-spotify-qx-header.js": {
+      "url": "https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-qx-header.js",
+      "sha256": "77267bc9bdcc8a2bc8eb1e70fffaeee0fb0c097a076bc9040b6c430acf051f3c",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/9d456958a06617ec-tieba-json.js": {
+      "url": "https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-json.js",
+      "sha256": "91040c0d5bf906357829d8df344a3bdce00b59e6c24f255e54a2ef7a46d04c69",
+      "modules": [
+        "Adblock",
+        "rewrite"
+      ]
+    },
+    "mirrors/f38021eb462fc211-tieba-proto.js": {
+      "url": "https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js",
+      "sha256": "6015d737870b6d89c38a0181479ed715e07d11b5a2c3746f96f95e25835e8610",
+      "modules": [
+        "Adblock",
+        "rewrite"
+      ]
+    },
+    "mirrors/03e37ba50a09e20b-vgtime.js": {
+      "url": "https://raw.githubusercontent.com/app2smile/rules/master/js/vgtime.js",
+      "sha256": "489f711e41734a6c9a8749d79923c3dc3930c63239fc7e97cb3e25a29c9eafd3",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/56531eec41cf1df7-abchina.js": {
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/master/abchina.js",
+      "sha256": "26d2b77d365bed05baac95d6bf42f8950b0899fd8e49d60ce5e8a26caa8be2c8",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/8d8d2065a9b987e5-baishitv.js": {
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/master/baishitv.js",
+      "sha256": "b4af6e3ea6d58d20567a04e47f7dc7de137307773a6f06e5916b9278c9c00717",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/e698ff0e64bf0dc6-pinganads.js": {
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/master/pinganads.js",
+      "sha256": "645e358b4f666d5e10678041d873a7e69e0b4e93ae491223af19f549eee03f08",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/9b7ece1b8a771913-pupumarket.js": {
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/master/pupumarket.js",
+      "sha256": "2a2357b324e04b5cf254db77710e523be895e4ba61082a77cd0773f7a706baf2",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/1f0bd1771212e8a8-quark.js": {
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/master/quark.js",
+      "sha256": "a80632f4308d8971f2ee1b42cb1b2c3b72c90ec5619ed33849fcc0fcbf0f1bcc",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/05954700c061735c-12306.js": {
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/12306.js",
+      "sha256": "4723bc2236835eea0a8b79529c832a9af1cfd37fa1b160becb3a4b51f9067cd5",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/db7f8ced260f75c7-123pan.js": {
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/123pan.js",
+      "sha256": "bde5bed66b502a330e67725183fc28a7ad5d3da74fcb20067b8c9013cd21f1aa",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/3d3ef868cecfcd9c-555Ad.js": {
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/555Ad.js",
+      "sha256": "24e580861f900fb775adb4cbbd106ef46d946c7f47db132e3036ee29d90d2dec",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/e583e8f4e2693b04-ahfs.js": {
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/ahfs.js",
+      "sha256": "faebd8707d3d25183764ceceda4620fc1be6d1c34e6b9abf19722df42a48b9ba",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/b2c0f8aafb2f13cd-amap.js": {
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/amap.js",
+      "sha256": "936aaaf97cf69b8a5a25ba49303c0470a16ac48851e8bf58080ff9f129ff7c48",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/ef90ca68bf9216b4-amdc.js": {
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/amdc.js",
+      "sha256": "8217f2150f8d12ae04d2c49b5da0a838e83f4de68b34df71c2da16cc1267898f",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/a94e56a8e11325bb-applet.js": {
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/applet.js",
+      "sha256": "0e2ffdd010b7f1ee38c526af5b7842f8fe3af89bf7ccd298596025baa4471855",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/9894f7225d37af86-bing.js": {
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/bing.js",
+      "sha256": "12ecdd295de9c427dbd0fbed9d356d70e6b5c0afe0105fb7f678484b4fc98ce5",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/920166e43b1baf43-caixinads.js": {
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/caixinads.js",
+      "sha256": "592c181611f5b89682c93cfc59a29de84e35606e8ab1837118a175886acd6e58",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/b6d2854e467177b4-coolapk.js": {
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/coolapk.js",
+      "sha256": "79b28bcbeb4b7b150a21ed20d7d50d9cee2bb91ff5110e9f34dc3be54b0991e4",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/3870622a38761496-dict.js": {
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/dict.js",
+      "sha256": "cb80f9bcc73f21bb2a61650db6c203faf40373d97b99c752a07c113cd2c635a1",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/52681dc27da9509a-fly.js": {
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/fly.js",
+      "sha256": "83a8f1d03b3b5fa903b9d31102f12bce0eadd238eac5325f1e1ee032c090cdeb",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/5ae2830a3bb127b5-hanglvzongheng.js": {
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/hanglvzongheng.js",
+      "sha256": "24173b13433fc3c46b29577301c044425b1159f24f6fe577eef9a8227120f201",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/a121ed1c1e7631ae-iqiyi_open_ads.js": {
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/iqiyi_open_ads.js",
+      "sha256": "e98f28a8d930fa2c873ed6fa1b618d60a7360ced8b6bd6a4ed40f76085400f5f",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/a5694d75631c6b9e-ithome.js": {
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/ithome.js",
+      "sha256": "e8e1210c6a10d98258e56821267bcc2c66455633765263acb3d3ff423d254ece",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/a8626525ec76a6aa-keepStyle.js": {
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/keepStyle.js",
+      "sha256": "199783afcdd891bfd5fa298638e5806263521c14fd561ab6fda84efe5fe1e332",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/31c2534f03f3ad0c-qidian.js": {
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/qidian.js",
+      "sha256": "020399e7a5571227ad7cb7e8515c39bb3b5fbab9874e0ab3c2a6bee5240163a5",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/461096dfcbd48193-shunfeng_json.js": {
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/shunfeng_json.js",
+      "sha256": "63d75bd700e36799dfa1b2fd0111e5ed26c27e9db910b096e902ae62d017cb56",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/dbdcc5fc1c239242-smzdm_json.js": {
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/smzdm_json.js",
+      "sha256": "cbcabf770447117a66358314950a4233448eeb86274ccfb96d148294d327eece",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/a143ff8f765edbf7-stay.js": {
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/stay.js",
+      "sha256": "7f4a7b8170640d7479f0e0d9124dc29ee8764e5260ff39d1b67394c16294a147",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/ca866532ca5809b3-weibo_json.js": {
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/weibo_json.js",
+      "sha256": "1714a128eb1e2cc5c333e93bd66c860cbaa6a76bae0a3c9d15d5138fcd30b151",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/b2506abb5e1fc4dc-weibo_search_info.json": {
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/weibo_search_info.json",
+      "sha256": "5404166f304ace3d4749e18500d595acadaf5c913d13c5b196657a05149872ac",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/2bd76811ea1e9d50-weibo_search_topic.json": {
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/weibo_search_topic.json",
+      "sha256": "57881f577f253467924a5ce8698997bdc1dfaa102ca93c2538065d44a564215d",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/7207e9dc08009d9d-ximalaya_json.js": {
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/ximalaya_json.js",
+      "sha256": "2b0cb0abf3cf9eaf16e45591c947d2ab1905c2fa5aa8c1ca56ac1f3b4cf19533",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/2ca8a4753be17213-zhangshanggongjiao.js": {
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/zhangshanggongjiao.js",
+      "sha256": "0a2ebfbf41ed4b7dbd39f4aa50616ac42cd59d5eb0baa026fc1b98e7a4f5a8bb",
+      "modules": [
+        "Adblock"
+      ]
+    },
+    "mirrors/0430e3242fcfc32b-51card.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/51card.js",
+      "sha256": "5f3708e56c28a2e7fec50f90f8b6768ed0e6b3d7b354bef0e32fd21f7a57a6c2",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/f8526d9282f80412-555Ad.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/555Ad.js",
+      "sha256": "9d8d59fe3cbd5bdeffe80c580fa210a94432bfedc6cb5e018feda761dcbcf681",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/beef0747358d39ad-FamilyMart.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/FamilyMart.js",
+      "sha256": "6094e9b067da8365aa67f86bddb256da5110e2192b6291b7bef2c9ed994d61b7",
+      "modules": [
+        "cleanup"
+      ]
+    },
+    "mirrors/86a5c2c779ec6201-PupuSplashAds.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js",
+      "sha256": "187189b01bd11dbd3fa992428facf680e73f26e5267cfe45dc24f53b788d9215",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/a5bda7e38c3ee744-QuDa.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/QuDa.js",
+      "sha256": "a388141caa03a22decbe518fbdd670c806f0893a540daed142c9b0ba37636bd3",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/0b5093d1b7f8c438-T3.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/T3.js",
+      "sha256": "ab1ca9af4dd9b294f585335856de51d6df2b61c31d9a3d1982a5b091355da25a",
+      "modules": [
+        "cleanup"
+      ]
+    },
+    "mirrors/c3206eef6cecfab6-adrive.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/adrive/adrive.js",
+      "sha256": "9d31582028a31ea605e69d09aa9e33949e57050006a8e0f3deb79b1c89933acd",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/68c79732c0ba1bde-alittle-tea.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/alittle-tea.js",
+      "sha256": "3a269e88d2d53b29f0e5567261298fdf79de2cfccc76e5c19a746a6cfb14667c",
+      "modules": [
+        "cleanup"
+      ]
+    },
+    "mirrors/42d41d40246f212b-applet.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/applet.js",
+      "sha256": "7bc20d06caec86eeb2f70ba817efe7341091ceba4dbdfb7a64dbe881e3fc04b3",
+      "modules": [
+        "cleanup"
+      ]
+    },
+    "mirrors/0906e7b6f8e0035f-baidumap.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/baidumap.js",
+      "sha256": "26b1b805a73f0c4992e4b92025e09e5e3df18dd99f761ff690df925a323ad694",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/e118fec1aaae6a11-blued.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/blued.js",
+      "sha256": "5b39cca2a3debe6a73083f7781b6b0eb47d91755f597169db34109db3813a172",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/50531633c8169eb7-bohe_ads.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bohe/bohe_ads.js",
+      "sha256": "493534355c02be962e06a75ad7eb51b1918c5c347122f40663ae9bc39a64cc1e",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/05f68b57c8c15966-cainiao.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cainiao/cainiao.js",
+      "sha256": "76fe899db1e045aaff2d71d6ff3c58cb665bac52a5996ff20e56079a02a6451c",
+      "modules": [
+        "CaiNiao"
+      ]
+    },
+    "mirrors/e0b4de0796f5edf5-caixinAd.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/caixin/caixinAd.js",
+      "sha256": "0366e7eb1ffc341c472304e526f93bf6104a1cda668c85f50e8798fe0f035e4d",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/a110f9b20814ed17-cmschina.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cmschina/cmschina.js",
+      "sha256": "0d65a79b61b6ef85c88110538e21ca4f5aafe9b7acc6c3272b17ef7361c2c8b6",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/47c242029d83452d-cnftp.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js",
+      "sha256": "4a95ce816c3e0bbaddf99e76c0f4b5ae3adb74318b9509e24ace40b675f11954",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/601fe18a775c5fc3-coco.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/coco.js",
+      "sha256": "08131003ab558a9bf2fc90a8e386bf380d2206c1cfe494b65f252c9b06594d1a",
+      "modules": [
+        "cleanup"
+      ]
+    },
+    "mirrors/14d1e419b620df50-coolapk.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/coolapk.js",
+      "sha256": "58002f35b6ed5dbcb277e4571f231cc5491d9cd2d04f72ad9c63d4b35b15c003",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/1758cbe66af0aa02-cyys.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cyys.js",
+      "sha256": "973b95271778e9684a447537a61dc49558c5925887741ed329018167c48cf31c",
+      "modules": [
+        "cleanup"
+      ]
+    },
+    "mirrors/8a4d8a86359999ad-dianyinglieshou.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/dianyinglieshou.js",
+      "sha256": "50926e7d5f53278d37e0dc2d66b8159a1813537708c88b231159cfa2b201f198",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/6497035a5ea6a19f-didiAds.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js",
+      "sha256": "c4f17a8ca8b27e15b7332460c83b5ba19aeded4c21e8f31beff8cefc54425ab7",
+      "modules": [
+        "cleanup",
+        "rewrite"
+      ]
+    },
+    "mirrors/73a3cd5c4e8c5f7a-ems.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ems.js",
+      "sha256": "2208e4945d8781e5bc9d20a436fc141629a7e4dc9fd516f9fe917196010cf5bc",
+      "modules": [
+        "cleanup"
+      ]
+    },
+    "mirrors/c5e861643f0c4087-fenbi.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/fenbi.js",
+      "sha256": "bc6eff20278e7244bb5d11fd8698aa4195471f0df3cc68a28c598b8f60c232d5",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/5caa481275e3c78c-fly.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/fly.js",
+      "sha256": "9642b1436e2ad10a35cb40ba33b8b1b5c72047a8d1bdfaaa87600cf3d6c1cd41",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/ce2f2a853bba482e-heytea.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/heytea.js",
+      "sha256": "e79df79a60f3ccbdde66518c8b6623241bd0400bcc8392ed26895240659f083a",
+      "modules": [
+        "cleanup"
+      ]
+    },
+    "mirrors/99959724794229b5-huifutianxia_ads.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/huifutianxia_ads.js",
+      "sha256": "5a97f31585d436c36413301a16b4862f62481923caf63f44b1e39eb3b7d1b11f",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/b413e8b3735899cf-ithome.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ithome/ithome.js",
+      "sha256": "afa7249bf854abe582d6c6b73e0297d24a8ee2221db0982c8cb4ce90bb0d4872",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/2356f15b3cabcedd-jabi.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jabi.js",
+      "sha256": "6c2f5a8a94b49008b659dea12f80a997f01242f05f37e7c023b44b20cd835c0c",
+      "modules": [
+        "cleanup"
+      ]
+    },
+    "mirrors/644b98230e1f80b6-jingdong.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingdong/jingdong.js",
+      "sha256": "3e7cc975f8985a4d2dbdbdefc405d0e3e6c9c07bf3c5361da1ecae206b6c04a1",
+      "modules": [
+        "JD"
+      ]
+    },
+    "mirrors/101b360ee977d011-keep.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js",
+      "sha256": "4efaba25017ff63e2e39e7fa55fac425e38262576bb31fe487b98ce5fce37f92",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/f4e9544493735ef2-kff.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kff.js",
+      "sha256": "ea82f129b33ecfa2adaf47001901ccb07eeaab53962864c76cdca092813951c1",
+      "modules": [
+        "cleanup"
+      ]
+    },
+    "mirrors/75e7feecf556c810-kuwo.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js",
+      "sha256": "d5119438070518dcd250dba9d678d85b063db97db3a52bdce2ae34760469ae8a",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/e8587938c145ab53-lawson.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/lawson.js",
+      "sha256": "ebf5ba4051ffeca870f3f0a15e6c9042649931c8d2b267e3bb51ef0545e3fb93",
+      "modules": [
+        "cleanup",
+        "rewrite"
+      ]
+    },
+    "mirrors/733ffc3b95115e5a-ltsst-ad.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/lvtusuishenting/ltsst-ad.js",
+      "sha256": "d056e2f2ecb0a48ce09e324e7c5296b8e4fe54b0fbad0c68173bbd7717f3da49",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/b5f13a6e3c474f71-maimai_ads.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/maimai/maimai_ads.js",
+      "sha256": "cdd9424de68aa4aad03ba5fda672ccf5e3d3344ee3886e72848bfb7b30977c28",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/30de0007d08d2cd4-manhuatailite.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/manhuatailite.js",
+      "sha256": "60d9513582023525f323c5e4edbc59fdedf6bd2c063a3c8d160a85a5f8044e25",
+      "modules": [
+        "cleanup"
+      ]
+    },
+    "mirrors/b5150f8cfaf435b6-meiyou_ads.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/meiyou/meiyou_ads.js",
+      "sha256": "5bfa31920f176ec0a992d6dfd3ee68d3ea3e416597f87af622665fe6b8cb626a",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/154c8f1e4b346f0d-ming.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ming.js",
+      "sha256": "3880e62638f5d9ac9b4729fb44cb881ad9b6c0ee88cf1bada0e7f3bef6b396a4",
+      "modules": [
+        "cleanup"
+      ]
+    },
+    "mirrors/99c1f7a94b665bd1-myBlockAds.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js",
+      "sha256": "4cf62100424886068a5470daecec319e93ccd034c647d79a9daaa72bbbc341bb",
+      "modules": [
+        "Taobao",
+        "rewrite"
+      ]
+    },
+    "mirrors/224bd1ed6acc12dd-picc_ads.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/picc/picc_ads.js",
+      "sha256": "07e5fa66a0efe225b0dae2beaab83a9f1f9ad4dd6d3748d571156db8e324300c",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/a7e33408dc8147ec-qingju.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/qingju.js",
+      "sha256": "122b32e793476983ae7315b4b7411d2abdd3cf71a11a8ee4018b1ed6a98e0784",
+      "modules": [
+        "cleanup"
+      ]
+    },
+    "mirrors/dc899664787546ea-quark.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/quark.js",
+      "sha256": "a80632f4308d8971f2ee1b42cb1b2c3b72c90ec5619ed33849fcc0fcbf0f1bcc",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/fc4b214bb4657bd4-reddit.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/reddit.js",
+      "sha256": "3178f057b758e8e5fa20477c8abde707fa367482f63553be833773dd33aec3ed",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/26050e48827affcf-rrtv_json.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js",
+      "sha256": "4202921945c0ba616133ca833b034954c3b3b5f328199c809065ce25d16446a7",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/1ca6ef134b1be9f2-Smzdm.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/smzdm/Smzdm.js",
+      "sha256": "611b9fa8cb1022622d1df9a2952b0f0fa1a001069b5666cce7e09b87dbec8dff",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/2d477c4af29cb5ee-smzdm_ads.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/smzdm/smzdm_ads.js",
+      "sha256": "8e8b27474b277b334b1b37b14b412330485140b0df1cb77112f66fa043c550db",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/cf2c05d120b06d0a-soda.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soda.js",
+      "sha256": "a252569a8ff6317abedd2714fb4932d631cc07ce857a403aa88a83818661b78e",
+      "modules": [
+        "cleanup",
+        "rewrite"
+      ]
+    },
+    "mirrors/b605a47fa7e7a42c-soul_ads.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js",
+      "sha256": "a2987051900998f971fa9f9eba9b1ab96fa15fcfbc1848f7c96afa0dd038bdf1",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/c039fffc8a49b3bd-req_replace_body.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/template/req_replace_body.js",
+      "sha256": "90adc7374f0c9a62b25bbea2027570e2c08002130bca22d909607fcfca642c70",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/06d3dd7a4e7f429d-umetrip_ads.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/umetrip/umetrip_ads.js",
+      "sha256": "7a0f7976a4b8f47649684cc382832e425610e924e0fdc11ea2e06b1ebd2cbacf",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/6fd287e457720075-watsons.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/watsons.js",
+      "sha256": "20eb0dcaeb258ced382d3cff90378f1286b8622199e34f31e76d1561226c3882",
+      "modules": [
+        "cleanup"
+      ]
+    },
+    "mirrors/4f8f35284bc5f439-xiaodaka.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaodaka.js",
+      "sha256": "332a082bfffc7d63c51ea61a4a3b003a3e2f056dd61be573674c8b523e027b73",
+      "modules": [
+        "cleanup"
+      ]
+    },
+    "mirrors/5123ae634fe0813c-xiaotucc.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaotucc.js",
+      "sha256": "197bc64c8ddf1188d1b876d7b980d5708a0bdb79a01be51a9f3b14adc936cc9d",
+      "modules": [
+        "cleanup",
+        "rewrite"
+      ]
+    },
+    "mirrors/3b4e680772277ff3-dict-youdao-ad.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/youdao/dict-youdao-ad.js",
+      "sha256": "07261d8faf3a9dd0591477679935b3a44fc1b044ed5ca849e01b04cc889f4c0c",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/9aefdaf10b336424-yx.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/yx.js",
+      "sha256": "7a85dc4dabb4c048a2c9231c17580df96d94c478479a54e3be33346c64e7d6ec",
+      "modules": [
+        "cleanup",
+        "rewrite"
+      ]
+    },
+    "mirrors/bfec7c5588dc4bba-zhangshanggongjiao.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhangshanggongjiao.js",
+      "sha256": "ee4e5a1ee5ce0817e0787578f7dd47874c65e9bd02bfda4b27527d4f6d59a44c",
+      "modules": [
+        "cleanup",
+        "rewrite"
+      ]
+    },
+    "mirrors/5af7cfca554d6c20-zhuanzhuan.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhuanzhuan/zhuanzhuan.js",
+      "sha256": "b8498e51290e0d0e83018d216b9cf44d602cef5392c39a509ca576c06937efaf",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/379472e34e6e55f2-miguvideo_ads.js": {
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/refs/heads/main/Scripts/miguvideo/miguvideo_ads.js",
+      "sha256": "869200a4759c7a9f3f89359fb36275121b0de0ae9772c5f0ce9765a5fcbec999",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/d28d901fa4fd7ec7-goofish.js": {
+      "url": "https://raw.githubusercontent.com/ishowshu/qx/refs/heads/main/script/goofish.js",
+      "sha256": "5f17dc551da355b79d25d390ef88acafd0ce757f14740e7f0dcd6bd4398918a9",
+      "modules": [
+        "XianYu"
+      ]
+    },
+    "mirrors/53e7438651b1e488-12306.js": {
+      "url": "https://raw.githubusercontent.com/kokoryh/Script/master/js/12306.js",
+      "sha256": "676fe92784297b1ec93e0dc128597af3e38f42e9a37772cbdb9bda4ab9eed3dd",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/627c8519776a4a58-bilibili.json.js": {
+      "url": "https://raw.githubusercontent.com/kokoryh/Sparkle/refs/heads/master/dist/bilibili.json.js",
+      "sha256": "32ba00da58c598c4419e7cc86f50acf0279a1c819fa6e3f2a851e6582001a5b8",
+      "modules": [
+        "bilibili"
+      ]
+    },
+    "mirrors/b11e1109b63ffbe6-bilibili.protobuf.request.js": {
+      "url": "https://raw.githubusercontent.com/kokoryh/Sparkle/refs/heads/master/dist/bilibili.protobuf.request.js",
+      "sha256": "d092d4b606fa00d3712b80f589599959d03c6088884955bf4d48e2830bfc573e",
+      "modules": [
+        "bilibili"
+      ]
+    },
+    "mirrors/d8856a08f43970a3-bilibili.protobuf.response.js": {
+      "url": "https://raw.githubusercontent.com/kokoryh/Sparkle/refs/heads/master/dist/bilibili.protobuf.response.js",
+      "sha256": "11cfc005a11141a1d1fe08591b06fe14b470e074e61d4196a1b0fe0286e72eb9",
+      "modules": [
+        "bilibili"
+      ]
+    },
+    "mirrors/e388fd2c12c508df-51job.js": {
+      "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/51job.js",
+      "sha256": "85e2b927da9a653691d954775adbab6160e24ca8e6117b779d27c1924bec1af0",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/ef523f718bdc0ef5-airchina.js": {
+      "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/airchina.js",
+      "sha256": "b3ad5ac0f6bd2a53b93aa5476cb97d7dcc386952ee1f7fae48f4a9ce98f1a2eb",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/a1536927e11e0b56-alicdn.js": {
+      "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/alicdn.js",
+      "sha256": "e6ff8a29a82508abff43eab1e85c7d518002c6d810f5458d1b78a8219fc4cdcf",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/d2fc650d201907b7-ccblife.js": {
+      "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/ccblife.js",
+      "sha256": "d4017e1658d35309671deda236c0e0bcc560fa604796562d2b39fcc6f69b4958",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/a929f621f8a48d49-ddxq.js": {
+      "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/ddxq.js",
+      "sha256": "8ae52e7bccc43facf64dc9edaf8e6e1c1da564c6bbab242fb9e51a304e3a0b16",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/d7cd7fadf4b469af-dianping.js": {
+      "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/dianping.js",
+      "sha256": "78971da6855858d1a6737872209cfc0aaaf7755fbe8da19f4115a03591820252",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/0024b28e1094abd5-flyert.js": {
+      "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/flyert.js",
+      "sha256": "9f7b49651ad956ae5fd7a17ad120c486c4f228ae2f7cfab21fcb4fccedfe2d98",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/db81e1e426a23b3f-foliday.js": {
+      "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/foliday.js",
+      "sha256": "9e48b618be78330bbcd1d29e56bc5a407414d12a03a158a4d559f7857c74b976",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/30a4a807311c635e-mafengwo.js": {
+      "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/mafengwo.js",
+      "sha256": "9944c174ff0270e9b4cb9a0b8ebf8b40d1a9232b633d7fbee57c171eda6397ea",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/89816a29460471fa-mdb.js": {
+      "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/mdb.js",
+      "sha256": "f50cef7a5f3b3e3179f9c5a93f2ab937dd72d83ca4dc2c9e8a66937c38e3e9ab",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/6c23ec663dccbcbc-qmai.js": {
+      "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/qmai.js",
+      "sha256": "b6823b14feaba4600fdc73438d91b35f1c5b166da3177b70da19dc97f850ce65",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/75dcaa1d45273ed3-tuhu.js": {
+      "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/tuhu.js",
+      "sha256": "d4a8f475d9c24107644eadce1736e2d0db68974129809ca7f05c77e48abe4561",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/39b651a656f6ea84-usmile.js": {
+      "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/usmile.js",
+      "sha256": "afe656ce07d169fb9baf4d4484f77b0861341a88950fb64182cd30b45f70ce95",
+      "modules": [
+        "rewrite"
+      ]
+    },
+    "mirrors/97c6492922dbf64f-wechatApplet.js": {
+      "url": "https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/wechatApplet.js",
+      "sha256": "4e0a57585f4ce16bc2f655ec104d1b25d9d42864b78f3ca893b48e7c9e487bed",
+      "modules": [
+        "rewrite"
+      ]
+    }
+  }
+}

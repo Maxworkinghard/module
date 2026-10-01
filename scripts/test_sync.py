@@ -59,6 +59,15 @@ class FilterTests(unittest.TestCase):
 
 
 class PayloadTests(unittest.TestCase):
+    def test_two_field_rejects_become_native_syntax_without_changing_maps_or_comments(self):
+        content = '[URL Rewrite]\n^https://example.com/ad reject-200\n^https://example.com/list - reject-dict\n# ^https://example.com/disabled reject\n[Map Local]\n^https://example.com/m data-type=text data="{}"\n'
+        result = sync.normalize_shadowrocket_rewrites(content)
+        self.assertIn('^https://example.com/ad - reject-200', result)
+        self.assertIn('^https://example.com/list - reject-dict', result)
+        self.assertNotIn('- -', result)
+        self.assertIn('# ^https://example.com/disabled reject', result)
+        self.assertIn('data-type=text data="{}"', result)
+
     def test_invalid_javascript_is_rejected(self):
         with self.assertRaisesRegex(ValueError, "语法"):
             sync.validate_payload(b'const message = "broken;', "script", "url")
@@ -94,6 +103,12 @@ class ArgumentTests(unittest.TestCase):
     def test_missing_configured_script_requires_manual_update(self):
         with self.assertRaisesRegex(ValueError, "缺少"):
             sync.configure_script_arguments("[Rule]\n", {"removed-name": {}})
+
+    def test_duplicate_names_keep_both_different_endpoints(self):
+        content = "[Script]\n淘宝 = type=http-response,pattern=splash,script-path=https://example.com/a.js\n淘宝 = type=http-response,pattern=poplayer,script-path=https://example.com/a.js\n"
+        result = sync.unique_script_names(content, "Taobao")
+        self.assertIn("淘宝 = type=http-response,pattern=splash", result)
+        self.assertIn("Taobao.001 = type=http-response,pattern=poplayer", result)
 
 
 class SyncTests(unittest.TestCase):
@@ -168,7 +183,7 @@ class SyncTests(unittest.TestCase):
         self.assertEqual(self.run_main(cfg, responses.__getitem__), 0)
         self.assertEqual((self.scripts / "new.js").read_bytes(), b"$done({});")
         actual = (self.modules / "Adblock.module").read_bytes()
-        self.assertIn(module, actual)
+        self.assertIn(b"script-path=" + sync.RAW_BASE.encode() + b"new.js", actual)
         self.assertIn(b"#!raw-url=https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/Adblock.module", actual)
         self.assertEqual((self.modules / "Adblock.sgmodule").read_bytes(), actual)
 
@@ -182,6 +197,89 @@ class SyncTests(unittest.TestCase):
         self.assertNotIn("DOMAIN,example.com", module)
         self.assertIn("已停用", module)
         self.assertFalse((self.scripts / "ad.js").exists())
+
+    def test_mirrored_source_is_refreshed_even_when_existing_module_uses_own_url(self):
+        cfg = {"modules": [{"name": "Adblock", "url": "module"}]}
+        module = b"[Script]\nad=type=http-response,script-path=https://example.com/ad.js\n"
+        responses = {"module": module, "https://example.com/ad.js": b"$done({body:'first'});"}
+        self.assertEqual(self.run_main(cfg, responses.__getitem__), 0)
+        manifest = json.loads((self.scripts / "upstream.json").read_text())
+        relative = next(iter(manifest["scripts"]))
+        self.assertEqual(manifest["scripts"][relative]["url"], "https://example.com/ad.js")
+        responses["https://example.com/ad.js"] = b"$done({body:'second'});"
+        # Adblock 未在配置中重新下载时，也必须依据来源记录更新脚本。
+        self.assertEqual(self.run_main({}, responses.__getitem__), 0)
+        self.assertEqual((self.scripts / relative).read_bytes(), responses["https://example.com/ad.js"])
+
+    def test_commented_script_is_not_downloaded_or_rewritten(self):
+        module = b"[Script]\n# disabled=script-path=https://example.com/disabled.js\n[Rule]\nDOMAIN,example.com,REJECT\n"
+        self.assertEqual(self.run_main({"modules": [{"name": "Adblock", "url": "module"}]}, lambda _: module), 0)
+        self.assertIn(b"# disabled=script-path=https://example.com/disabled.js", (self.modules / "Adblock.module").read_bytes())
+
+    def test_missing_bundle_member_prevents_all_publication(self):
+        cfg = {"bundles": [{"name": "DailyAds", "members": ["missing"], "desc": "ads"}]}
+        self.assertEqual(self.run_main(cfg, lambda _: self.fail("Unexpected fetch")), 1)
+        self.assert_previous_files()
+
+    def test_unused_mirror_is_removed_only_after_successful_validation(self):
+        folder = self.scripts / "mirrors"
+        folder.mkdir()
+        old = folder / "old.js"
+        old.write_bytes(b"$done({});")
+        self.assertEqual(self.run_main({"modules": [{"name": "Adblock", "url": "bad"}]}, lambda _: b"<html>"), 1)
+        self.assertTrue(old.exists())
+        self.assertEqual(self.run_main({}, lambda _: self.fail("Unexpected fetch")), 0)
+        self.assertFalse(old.exists())
+
+
+class BundleTests(unittest.TestCase):
+    def setUp(self):
+        self.modules = {
+            sync.OUTPUT_DIR / "a.sgmodule": b"#!author=Alice\n[Rule]\nDOMAIN,ads.example,REJECT\n[Script]\nshared=type=http-response,script-path=https://example.com/a.js\n[MITM]\nhostname = %APPEND% a.example, shared.example\n",
+            sync.OUTPUT_DIR / "b.sgmodule": b"#!author=Bob\n[Rule]\nDOMAIN,ads.example,REJECT\n[Map Local]\n^https://b.example/ad data-type=text data=\"{}\" header=\"Content-Type:application/json\"\n[Script]\nshared=type=http-request,script-path=https://example.com/b.js\n[MITM]\nhostname = b.example, shared.example\n",
+        }
+
+    def test_bundle_preserves_rules_names_and_mitm_without_overwriting(self):
+        result = sync.merge_modules("DailyAds", ["a", "b"], self.modules, "test").decode()
+        self.assertEqual(result.count("DOMAIN,ads.example,REJECT"), 1)
+        self.assertIn("a.001 = type=http-response", result)
+        self.assertIn("b.001 = type=http-request", result)
+        self.assertEqual(result.count("hostname ="), 1)
+        self.assertIn("hostname = %APPEND% a.example, shared.example, b.example", result)
+        self.assertIn('data="{}" header="Content-Type:application/json"', result)
+        self.assertIn("# a: Alice", result)
+        self.assertIn("# b: Bob", result)
+
+    def test_conflicting_mitm_settings_fail_instead_of_silently_overwriting(self):
+        self.modules[sync.OUTPUT_DIR / "a.sgmodule"] += b"h2 = true\n"
+        self.modules[sync.OUTPUT_DIR / "b.sgmodule"] += b"h2 = false\n"
+        with self.assertRaisesRegex(ValueError, "冲突"):
+            sync.merge_modules("DailyAds", ["a", "b"], self.modules, "test")
+
+    def test_unsupported_section_cannot_be_silently_dropped(self):
+        self.modules[sync.OUTPUT_DIR / "b.sgmodule"] += b"[General]\nunknown-setting=true\n"
+        with self.assertRaisesRegex(ValueError, "暂不支持"):
+            sync.merge_modules("DailyAds", ["a", "b"], self.modules, "test")
+
+    def test_repository_links_cannot_escape_scripts_directory(self):
+        with self.assertRaises(ValueError):
+            sync.local_script_path(sync.RAW_BASE + "%2e%2e/config/upstream.yml")
+
+
+class SelectedSourceTests(unittest.TestCase):
+    def test_real_cainiao_grouped_patterns_preserve_services_and_keep_ads(self):
+        cfg = yaml.safe_load(sync.CONFIG_PATH.read_text())
+        patterns = sync.compile_filters(cfg["filters"])["cainiao_preserve_services"]
+        content = r"""[Script]
+service = type=http-response,pattern=nbpresentation\.(pickup\.empty\.page|protocol\.homepage)\.get,script-path=https://example.com/services.js
+ad = type=http-response,pattern=nbnetflow\.ads\.m?show,script-path=https://example.com/ads.js
+[Map Local]
+nbpresentation\.(homepage\.merge|tabbar\.marketing)\.get data-type=text data="{}"
+"""
+        filtered, _ = sync.apply_filter(content, patterns)
+        self.assertNotIn("services.js", filtered)
+        self.assertNotIn("tabbar", filtered)
+        self.assertIn("ads.js", filtered)
 
 
 if __name__ == "__main__":

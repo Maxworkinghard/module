@@ -1,0 +1,13 @@
+#!name=BiliSplash · B站开屏去广告
+#!desc=只对 B站开屏广告接口返回空 JSON；无需 JavaScript，需开启 HTTPS 解密
+#!author=Maxworkinghard; splash 接口参考 NADYuk0314 / app2smile / deezertidal
+#!homepage=https://github.com/Maxworkinghard/module
+#!category=广告拦截
+
+# 来源核对：https://github.com/NADYuk0314/shadowrocket-adblock/blob/main/src/additions/30-bilibili.conf
+# 仅处理开屏命名空间；不改动推荐、评论、会员字段或 gRPC 播放接口。
+[Map Local]
+^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/ data-type=text data="{}" header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% app.bilibili.com

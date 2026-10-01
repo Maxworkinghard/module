@@ -1,0 +1,13 @@
+#!name=TikTokAds · 信息流广告过滤
+#!desc=过滤 JSON 信息流中的显式广告项；保留直播，地区及下载设置；接口变化需设备验证
+#!author=Maxworkinghard; 接口参考 lodepuly / Jard1n
+#!homepage=https://github.com/Maxworkinghard/module
+#!category=广告拦截
+
+# 接口来源：https://github.com/Jard1n/VPN_Tool/blob/master/Scripts/TikTok/TikTok_remove_watermark.js
+# 独立保守实现，不使用旧脚本中的下载权限修改或换区逻辑。
+[Script]
+TikTokAds.feed = type=http-response, pattern=^https?:\/\/(?:[^\/]+\.)?(?:tiktokv\.com|tiktok\.com|tik-tokapi\.com)\/aweme\/v\d+\/(?:feed|mix\/aweme|aweme\/post|(?:multi\/)?aweme\/detail|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list|aweme\/favorite)(?:\/|\?), script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/TikTokAds.js, requires-body=true, timeout=10
+
+[MITM]
+hostname = %APPEND% *.tiktokv.com, *.tiktok.com, *.tik-tokapi.com

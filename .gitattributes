@@ -1,0 +1,2 @@
+# Upstream mirrors retain their original bytes and SHA-256; do not reformat them.
+scripts/mirrors/* -whitespace

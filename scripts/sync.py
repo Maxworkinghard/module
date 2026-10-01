@@ -4,6 +4,7 @@
 
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
+import hashlib
 import json
 import re
 import subprocess
@@ -18,16 +19,14 @@ CONFIG_PATH = ROOT / "config" / "upstream.yml"
 OUTPUT_DIR = ROOT / "modules"
 SCRIPTS_DIR = ROOT / "scripts"
 RAW_BASE = "https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/"
-SCRIPT_URL_RE = re.compile(
-    r"https://github\.com/[^/]+/[^/]+/releases/download/[^/\s]+/([^\s,]+)"
-)
+MODULE_BASE = "https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/"
 SCRIPT_PATH_RE = re.compile(r"\bscript-path\s*=\s*[\"']?(https?://[^\s,\"']+)", re.I)
 HTML_RE = re.compile(
     r"^\s*(?:<!--.*?-->\s*)*(?:<!doctype\s+html\b|<(?:html|head|body)\b)",
     re.I | re.S,
 )
 SECTION_RE = re.compile(r"^\[([^\]]+)\]$")
-MODULE_SECTIONS = {"rule", "url rewrite", "body rewrite", "map local", "script", "mitm", "general"}
+MODULE_SECTIONS = {"rule", "url rewrite", "header rewrite", "body rewrite", "map local", "script", "mitm", "general"}
 
 
 def validate_payload(data: bytes, kind: str, source: str, allow_arguments=False) -> str:
@@ -127,21 +126,6 @@ def collect_script_urls(content: str):
     return urls
 
 
-def rewrite_scripts(name: str, content: str, staged: dict) -> str:
-    """将 GitHub Release 脚本存入本仓库；下载失败时不生成损坏的模块。"""
-    def replace(match):
-        source = match.group(0)
-        filename = f"{name}.{match.group(1)}"
-        if Path(filename).name != filename:
-            raise ValueError(f"无效的脚本文件名: {filename}")
-        data = fetch(source)
-        validate_payload(data, "script", source)
-        staged[SCRIPTS_DIR / filename] = data
-        return RAW_BASE + filename
-
-    return SCRIPT_URL_RE.sub(replace, content)
-
-
 def local_script_path(url: str):
     """本仓库 Raw/CDN 链接检查待发布文件，避免误读 CDN 上的旧缓存。"""
     parsed = urlsplit(url)
@@ -153,10 +137,162 @@ def local_script_path(url: str):
     prefix = prefixes.get(parsed.hostname)
     if prefix and parsed.path.startswith(prefix):
         filename = unquote(parsed.path[len(prefix):])
-        if Path(filename).name != filename:
+        relative = Path(filename)
+        if not filename or relative.is_absolute() or ".." in relative.parts or "\\" in filename:
             raise ValueError(f"无效的本仓库脚本路径: {url}")
         return SCRIPTS_DIR / filename
     return None
+
+
+def mirror_scripts(modules: dict, staged: dict, declared: list):
+    """统一镜像所有 script-path，保留来源与哈希；下一次仍从作者 URL 更新。"""
+    manifest_path = SCRIPTS_DIR / "upstream.json"
+    previous = json.loads(manifest_path.read_text()) if manifest_path.exists() else {}
+    previous_by_path = {
+        SCRIPTS_DIR / relative: item["url"]
+        for relative, item in previous.get("scripts", {}).items()
+    }
+    declared_by_url = {item["url"]: SCRIPTS_DIR / item["name"] for item in declared}
+    references = {}
+    for path, data in modules.items():
+        for url in collect_script_urls(data.decode("utf-8-sig")):
+            references.setdefault(url, set()).add(path.stem)
+
+    sources = {}
+    destinations = {}
+    for url in sorted(references):
+        local = local_script_path(url)
+        source = previous_by_path.get(local, url) if local else url
+        # 人工维护的本仓库脚本只规范化 Raw 地址；声明过的上游已在本轮下载。
+        if local and local not in previous_by_path:
+            destinations[url] = local
+            continue
+        if source in declared_by_url:
+            destinations[url] = declared_by_url[source]
+            continue
+        filename = re.sub(r"[^A-Za-z0-9_.-]", "_", Path(urlsplit(source).path).name)[:80]
+        filename = filename or "script.js"
+        identity = hashlib.sha256(source.encode()).hexdigest()[:16]
+        destination = SCRIPTS_DIR / "mirrors" / f"{identity}-{filename}"
+        destinations[url] = destination
+        sources.setdefault(source, {"path": destination, "modules": set()})["modules"].update(references[url])
+
+    def download(source):
+        data = fetch(source)
+        validate_payload(data, "script", source)
+        return data
+
+    errors = []
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        futures = {pool.submit(download, source): source for source in sources}
+        for future in as_completed(futures):
+            source = futures[future]
+            try:
+                staged[sources[source]["path"]] = future.result()
+            except Exception as error:
+                errors.append(f"{source}: {error}")
+    if errors:
+        raise ValueError("脚本镜像检查失败:\n" + "\n".join(sorted(errors)))
+
+    manifest = {"format": 1, "scripts": {}}
+    for source, item in sorted(sources.items()):
+        relative = item["path"].relative_to(SCRIPTS_DIR).as_posix()
+        manifest["scripts"][relative] = {
+            "url": source,
+            "sha256": hashlib.sha256(staged[item["path"]]).hexdigest(),
+            "modules": sorted(item["modules"]),
+        }
+    staged[manifest_path] = (json.dumps(manifest, ensure_ascii=False, indent=2) + "\n").encode()
+
+    for path, data in list(modules.items()):
+        output = []
+        in_script = False
+        for line in data.decode("utf-8-sig").splitlines():
+            if match := SECTION_RE.match(line.strip()):
+                in_script = match.group(1).lower() == "script"
+            if in_script and line.strip() and not line.lstrip().startswith("#"):
+                def replace(match):
+                    destination = destinations[match.group(1)]
+                    url = RAW_BASE + destination.relative_to(SCRIPTS_DIR).as_posix()
+                    return match.group(0).replace(match.group(1), url)
+                line = SCRIPT_PATH_RE.sub(replace, line)
+            output.append(line)
+        modules[path] = ("\n".join(output).rstrip() + "\n").encode()
+    unused = {path for path in (SCRIPTS_DIR / "mirrors").glob("*") if path.is_file()} - {
+        item["path"] for item in sources.values()
+    }
+    print(f"[mirrored] {len(sources)} 个上游脚本；模块仅使用本仓库脚本地址")
+    return unused
+
+
+def merge_modules(name: str, members: list, modules: dict, description: str) -> bytes:
+    """按段合并模块，保留署名、去重规则，避免重复脚本名称覆盖及 MITM 赋值覆盖。"""
+    order = ["Rule", "URL Rewrite", "Header Rewrite", "Body Rewrite", "Map Local", "Script", "MITM"]
+    sections = {section.lower(): [] for section in order}
+    seen = {section.lower(): set() for section in order}
+    hosts = []
+    mitm_options = {}
+    credits = []
+    for member in members:
+        path = OUTPUT_DIR / f"{member}.sgmodule"
+        if path not in modules:
+            raise ValueError(f"合集 {name} 缺少模块 {member}")
+        content = modules[path].decode("utf-8-sig")
+        author = re.search(r"^#!author=(.*)$", content, re.M)
+        homepage = re.search(r"^#!homepage=(.*)$", content, re.M)
+        credits.append(f"# {member}: " + (author.group(1) if author else "Maxworkinghard/module"))
+        if homepage:
+            credits.append("# " + homepage.group(1))
+        section = None
+        script_number = 0
+        for line in content.splitlines():
+            stripped = line.strip()
+            if match := SECTION_RE.match(stripped):
+                section = match.group(1).lower()
+                if section not in sections:
+                    raise ValueError(f"合集 {name} 暂不支持 [{match.group(1)}]，来源 {member}")
+                continue
+            if not section or not stripped or stripped.startswith("#"):
+                continue
+            if section == "mitm":
+                key, value = (part.strip() for part in stripped.split("=", 1))
+                if key.lower() == "hostname":
+                    value = re.sub(r"^%APPEND%\s*", "", value, flags=re.I)
+                    for host in value.split(","):
+                        host = host.strip()
+                        if host and host not in hosts:
+                            hosts.append(host)
+                else:
+                    if key in mitm_options and mitm_options[key] != value:
+                        raise ValueError(f"合集 {name} 的 MITM {key} 设置冲突")
+                    mitm_options[key] = value
+                continue
+            signature = stripped
+            if section == "script":
+                if "=" not in stripped:
+                    raise ValueError(f"{member}: 无效脚本规则")
+                _, settings = stripped.split("=", 1)
+                signature = re.sub(r"\s*,\s*", ",", settings.strip())
+                script_number += 1
+                stripped = f"{member}.{script_number:03d} = {settings.strip()}"
+            if signature not in seen[section]:
+                seen[section].add(signature)
+                sections[section].append(stripped)
+    sections["mitm"] = (["hostname = %APPEND% " + ", ".join(hosts)] if hosts else []) + [
+        f"{key} = {value}" for key, value in mitm_options.items()
+    ]
+    output = [
+        f"#!name={name} · 日用去广告合集", f"#!desc={description}",
+        "#!homepage=https://github.com/Maxworkinghard/module",
+        f"#!raw-url={MODULE_BASE}{name}.module", "#!category=广告拦截",
+        "# AWAvenue 广告规则遵循 GPL-3.0；见 licenses/AWAvenue-GPL-3.0.txt。",
+        "# 合集内规则来自以下模块，原作者署名及完整来源见各模块与 scripts/upstream.json。",
+        *credits,
+    ]
+    for section in order:
+        if sections[section.lower()]:
+            output.extend(["", f"[{section}]", *sections[section.lower()]])
+    return ("\n".join(output) + "\n").encode()
 
 
 def validate_script_references(modules: dict, staged: dict, retired_scripts: set):
@@ -241,6 +377,46 @@ def configure_script_arguments(content: str, arguments: dict) -> str:
     return "\n".join(output).rstrip() + "\n"
 
 
+def unique_script_names(content: str, prefix: str) -> str:
+    """同一模块中重复的名字可能覆盖前一条脚本；保留首条并给其余条目独立名字。"""
+    output = []
+    names = set()
+    in_script = False
+    number = 0
+    for line in content.splitlines():
+        stripped = line.strip()
+        if match := SECTION_RE.match(stripped):
+            in_script = match.group(1).lower() == "script"
+        elif in_script and stripped and not stripped.startswith("#"):
+            name, settings = stripped.split("=", 1)
+            name = name.strip()
+            if name in names:
+                while True:
+                    number += 1
+                    name = f"{prefix}.{number:03d}"
+                    if name not in names:
+                        break
+                line = f"{name} = {settings.strip()}"
+            names.add(name)
+        output.append(line)
+    return "\n".join(output).rstrip() + "\n"
+
+
+def normalize_shadowrocket_rewrites(content: str) -> str:
+    """部分综合来源省略 reject 前的 '-'；补成原生 Shadowrocket 三字段语法。"""
+    output = []
+    in_rewrite = False
+    for line in content.splitlines():
+        if match := SECTION_RE.match(line.strip()):
+            in_rewrite = match.group(1).lower() == "url rewrite"
+        elif in_rewrite and not line.lstrip().startswith("#"):
+            match = re.fullmatch(r"\s*(\S+)\s+(reject(?:-(?:200|dict|array|img|tinygif|video|drop))?)\s*", line, re.I)
+            if match:
+                line = f"{match.group(1)} - {match.group(2)}"
+        output.append(line)
+    return "\n".join(output).rstrip() + "\n"
+
+
 def prepare(cfg: dict):
     """所有变更先留在内存中；任何来源失败都不写入已有模块。"""
     filters = compile_filters(cfg.get("filters"))
@@ -253,9 +429,10 @@ def prepare(cfg: dict):
         print(f"[fetched] script {item['name']}")
 
     for item in cfg.get("modules", []):
-        source = item["url"]
+        source = item.get("url") or str(ROOT / item["file"])
+        data = fetch(source) if item.get("url") else Path(source).read_bytes()
         content = validate_payload(
-            fetch(source), "module", source, allow_arguments=bool(item.get("script_arguments"))
+            data, "module", source, allow_arguments=bool(item.get("script_arguments"))
         )
         if filter_name := item.get("filter"):
             content, removed = apply_filter(content, filters[filter_name])
@@ -264,22 +441,36 @@ def prepare(cfg: dict):
             content = set_metadata(content, "name", display_name)
         if description := item.get("module_desc"):
             content = set_metadata(content, "desc", description)
+        if author := item.get("module_author"):
+            content = set_metadata(content, "author", author)
         if arguments := item.get("script_arguments"):
             content = configure_script_arguments(content, arguments)
         content = set_metadata(
             content, "raw-url",
-            f"https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/{item['name']}.module",
+            MODULE_BASE + item["name"] + ".module",
         )
-        content = rewrite_scripts(item["name"], content, staged)
+        # 无剩余模板时移除无效的上游开关提示；已固定的脚本参数仍保留。
+        content = re.sub(r"^#!arguments(?:-desc)?=.*\n?", "", content, flags=re.M)
+        content = unique_script_names(content, item["name"])
+        content = normalize_shadowrocket_rewrites(content)
         staged[OUTPUT_DIR / f"{item['name']}.sgmodule"] = content.encode("utf-8")
 
     for item in cfg.get("retired_modules", []):
         staged[OUTPUT_DIR / f"{item['name']}.sgmodule"] = retired_module(item)
     retired_scripts = {SCRIPTS_DIR / name for name in cfg.get("retired_scripts", [])}
     modules = {path: path.read_bytes() for path in OUTPUT_DIR.glob("*.sgmodule")}
+    # 合集每轮重建，不能把上次合集中的镜像引用当作仍在使用的上游。
+    for bundle in cfg.get("bundles", []):
+        modules.pop(OUTPUT_DIR / f"{bundle['name']}.sgmodule", None)
     modules.update({path: data for path, data in staged.items() if path.suffix == ".sgmodule"})
+    retired_scripts.update(mirror_scripts(modules, staged, cfg.get("scripts", [])))
+    for bundle in cfg.get("bundles", []):
+        modules[OUTPUT_DIR / f"{bundle['name']}.sgmodule"] = merge_modules(
+            bundle["name"], bundle["members"], modules, bundle["desc"]
+        )
     validate_script_references(modules, staged, retired_scripts)
     for path, data in modules.items():
+        staged[path] = data
         staged[path.with_suffix(".module")] = data
     return staged, retired_scripts
 

@@ -877,7 +877,6 @@ DOMAIN,richmanapi.jxedt.com,REJECT
 DOMAIN,richmanmain.jxedt.com,REJECT
 DOMAIN,richmanrules.jxedt.com,REJECT
 # 内置饿了么外卖弹窗
-DOMAIN,o2o-ad-log-gateway.alibaba.com,REJECT
 # hostname = p*.pstatp.com
 DOMAIN-KEYWORD,clk.gentags.net,REJECT
 DOMAIN-KEYWORD,dm.pstatp.com,REJECT
@@ -885,7 +884,6 @@ DOMAIN-KEYWORD,dm.bytedance.com,REJECT
 DOMAIN-KEYWORD,uop.umeng.com,REJECT
 DOMAIN-KEYWORD,m.suning.com,REJECT
 DOMAIN-KEYWORD,adshare.toutiao.com,REJECT
-DOMAIN-KEYWORD,tunion-api.m.taobao.com,REJECT
 DOMAIN-KEYWORD,s1.pstatp.com,REJECT
 DOMAIN-KEYWORD,s2.pstatp.com,REJECT
 DOMAIN-KEYWORD,s3.pstatp.com,REJECT
@@ -952,21 +950,10 @@ DOMAIN-SUFFIX,bu2.duba.com,REJECT
 DOMAIN-SUFFIX,docer.com,REJECT
 DOMAIN-SUFFIX,iciba.com,REJECT
 # hostname = api.m.jd.com, dns.jd.com
-DOMAIN-SUFFIX,jzt.jd.com,REJECT
-DOMAIN-SUFFIX,img-x.jd.com,REJECT
-DOMAIN-SUFFIX,du.jd.com,REJECT
-DOMAIN-SUFFIX,c-nfa.jd.com,REJECT
-DOMAIN-SUFFIX,cm.jd.com,REJECT
 DOMAIN-SUFFIX,jddebug.com,REJECT
-DOMAIN-SUFFIX,policy.jd.com,REJECT
-DOMAIN-SUFFIX,kepler.jd.com,REJECT
-DOMAIN-SUFFIX,bdsp.x.jd.com,REJECT
-DOMAIN-SUFFIX,keplerapi.jd.com,REJECT
-DOMAIN-SUFFIX,mapi.m.jd.com,REJECT
 DOMAIN-SUFFIX,ad.3.cn,REJECT
 DOMAIN-SUFFIX,jd.c-ptsp.com.cn,REJECT
 # 屏蔽DNS
-DOMAIN,dns.jd.com,REJECT
 IP-CIDR,101.124.19.122/32,REJECT
 IP-CIDR6,2402:db40:5100:1011::5/128,REJECT
 # > 九游
@@ -1489,11 +1476,8 @@ DOMAIN-SUFFIX,ad.weshineapp.com,REJECT
 DOMAIN-SUFFIX,wxsnsdythumb.wxs.qq.com,REJECT
 # hostname = homepage-api.smzdm.com, haojia-api.smzdm.com, app-api.smzdm.com, user-api.smzdm.com, article-api.smzdm.com, qianbao.smzdm.com, s-api.smzdm.com, haojia.m.smzdm.com
 DOMAIN,aaid.uyunad.com,REJECT
-DOMAIN,acs4baichuan.m.taobao.com,REJECT
-DOMAIN,adashxgc.ut.taobao.com,REJECT
 DOMAIN,analytics-api.smzdm.com,REJECT
 DOMAIN,baichuan-sdk.alicdn.com,REJECT
-DOMAIN,dgstatic.jd.com,REJECT
 DOMAIN,msg.umengcloud.com,REJECT
 DOMAIN,sec.umeng.com,REJECT
 DOMAIN,ulogs.umeng.com,REJECT
@@ -1536,7 +1520,6 @@ DOMAIN-SUFFIX,bite.theta.sogoucdn.com,REJECT
 DOMAIN-SUFFIX,brand.sogou.com,REJECT
 DOMAIN-SUFFIX,bsiet.husky.sogou.com,REJECT
 # 屏蔽京东和搜狗收集信息 @jFrecht
-DOMAIN-SUFFIX,jdqd.jd.com,REJECT
 DOMAIN-SUFFIX,shouji.sougou.com,REJECT
 DOMAIN-SUFFIX,cpc.sogou.com,REJECT
 DOMAIN-SUFFIX,fair.sogou.com,REJECT
@@ -1658,39 +1641,7 @@ DOMAIN-SUFFIX,iad0ssl.pconline.com.cn,REJECT
 DOMAIN-SUFFIX,imgad0.pconline.com.cn,REJECT
 DOMAIN-SUFFIX,ivy.pconline.com.cn,REJECT
 # hostname = acs.m.taobao.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
-DOMAIN-SUFFIX,apoll.m.taobao.com,REJECT
-DOMAIN-SUFFIX,h-adashx.ut.taobao.com,REJECT
-DOMAIN-SUFFIX,w.m.taobao.com,REJECT
-DOMAIN,tunion-api.m.taobao.com,REJECT
 # host-suffix, ai.m.taobao.com, reject
-DOMAIN-SUFFIX,re.m.taobao.com,REJECT
-DOMAIN-SUFFIX,agoodm.m.taobao.com,REJECT
-DOMAIN-SUFFIX,ai.taobao.com,REJECT
-DOMAIN-SUFFIX,api.waptest.taobao.com,REJECT
-DOMAIN-SUFFIX,dsp.simba.taobao.com,REJECT
-DOMAIN-SUFFIX,fav.simba.taobao.com,REJECT
-DOMAIN-SUFFIX,m.simba.taobao.com,REJECT
-DOMAIN-SUFFIX,mclick.simba.taobao.com,REJECT
-DOMAIN-SUFFIX,re.taobao.com,REJECT
-DOMAIN-SUFFIX,redirect.simba.taobao.com,REJECT
-DOMAIN-SUFFIX,simba.m.taobao.com,REJECT
-DOMAIN-SUFFIX,srd.simba.taobao.com,REJECT
-DOMAIN-SUFFIX,temai.taobao.com,REJECT
-DOMAIN-SUFFIX,textlink.simba.taobao.com,REJECT
-DOMAIN-SUFFIX,unitacs.m.taobao.com,REJECT
-DOMAIN-SUFFIX,acs4baichuan.m.taobao.com,REJECT
-DOMAIN-SUFFIX,adashbc.ut.taobao.com,REJECT
-DOMAIN-SUFFIX,adash-c.ut.taobao.com,REJECT
-DOMAIN-SUFFIX,adashxgc.ut.taobao.com,REJECT
-DOMAIN-SUFFIX,adashx4yt.m.taobao.com,REJECT
-DOMAIN-SUFFIX,tunion-api.m.taobao.com,REJECT
-DOMAIN-SUFFIX,tns.simba.taobao.com,REJECT
-DOMAIN-SUFFIX,click.mz.simba.taobao.com,REJECT
-DOMAIN-SUFFIX,click.simba.taobao.com,REJECT
-DOMAIN-SUFFIX,click.tz.simba.taobao.com,REJECT
-DOMAIN-SUFFIX,stat.simba.taobao.com,REJECT
-DOMAIN-SUFFIX,m-adash.m.taobao.com,REJECT
-DOMAIN-SUFFIX,adashbc.m.taobao.com,REJECT
 # > 淘淘搜
 DOMAIN-SUFFIX,img.taotaosou.cn,REJECT
 DOMAIN-SUFFIX,img01.taotaosou.cn,REJECT
@@ -1867,7 +1818,6 @@ DOMAIN,ucdc-upaas.uc.cn,REJECT
 DOMAIN,access.open.uc.cn,REJECT
 DOMAIN,uc.ucweb.com,REJECT
 DOMAIN,emoji.uc.cn,REJECT
-DOMAIN,ssp-partner.alibaba.com,REJECT
 DOMAIN,voice-service.uc.cn,REJECT
 DOMAIN,v.uc.cn,REJECT
 DOMAIN,coral.uc.cn,REJECT
@@ -1875,7 +1825,6 @@ DOMAIN,wolong-dsp.sm.cn,REJECT
 DOMAIN,cartoonapi.uc.cn,REJECT
 DOMAIN,umessage-online-zb.uc.cn,REJECT
 DOMAIN,api.c.uc.cn,REJECT
-DOMAIN,aid.m.taobao.com,REJECT
 DOMAIN,cms.uc.cn,REJECT
 DOMAIN,applog-perf.uc.cn,REJECT
 DOMAIN-SUFFIX,clickc.admaster.com.cn,REJECT
@@ -2409,7 +2358,6 @@ DOMAIN-SUFFIX,partner.uc.cn,REJECT
 DOMAIN-SUFFIX,ubixioe.com,REJECT
 DOMAIN-SUFFIX,uczzd.cn,REJECT
 DOMAIN-SUFFIX,ranfenghd.com,REJECT
-DOMAIN-SUFFIX,zconfig.alibabausercontent.com,REJECT
 DOMAIN-SUFFIX,bgg.baidu.com,REJECT
 # host-suffix, acz.youku.com, reject
 DOMAIN-SUFFIX,adx-core.youku.com,REJECT
@@ -2612,7 +2560,6 @@ DOMAIN,ad.zijieapi.com,REJECT
 DOMAIN,applog.zijieapi.com,REJECT
 DOMAIN-SUFFIX,-normal-lq.zijieapi.com,REJECT
 DOMAIN-SUFFIX,dm.bytedance.com,REJECT
-DOMAIN-SUFFIX,xlog-va.byteoversea.com,REJECT
 DOMAIN-SUFFIX,tosv.byted.org,REJECT
 DOMAIN-SUFFIX,tosv.boe.byted.org,REJECT
 DOMAIN-SUFFIX,extlog.snssdk.com,REJECT
@@ -3161,18 +3108,7 @@ DOMAIN-SUFFIX,z1.zedo.com,REJECT
 ^https?:\/\/app\.58\.com\/api\/home\/invite\/popupAdv - reject-200
 ^https?:\/\/app\.58\.com\/api\/log\/ - reject
 # hostname = acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.fliggy\.crm\.screen\.(allresource|predict) - reject-dict
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv - reject-dict
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimama\.etao\.config\.query\/.+?etao_advertise - reject-dict
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit - reject-dict
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.etao\.noah\.query\/.+tao_splash - reject-dict
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise - reject-dict
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get - reject-dict
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome - reject-dict
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources - reject-dict
 ^https:\/\/heic\.alicdn\.com\/imgextra\/i\d\/\d*\/?[\w!]+-\d-(octopus|tps-1125-1602|tps-1080-1920)\.(jp|pn)g_(1\d{3}|9\d{2})x(1\d{3}|9\d{2})q[59]0 - reject-dict
-^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.adx\.flyad\.getad - reject-dict
-^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(volvo\.secondfloor\.getconfig|wireless\.home\.newface\.awesome\.get) - reject-dict
 # hostname = api.alipan.com, member.alipan.com
 ^https:\/\/api\.alipan\.com\/adrive\/v1\/file\/getTopFolders - reject-dict
 ^https:\/\/member\.alipan\.com\/v2\/activity\/sign_in_luckyBottle - reject-dict
@@ -3341,16 +3277,7 @@ DOMAIN-SUFFIX,z1.zedo.com,REJECT
 # hostname = cn-acs.m.cainiao.com, amdc.m.taobao.com
 ^http:\/\/.+\/amdc\/mobileDispatch - reject
 # 首页 好物推荐,商品推广,底部标签页,快递详情页,问卷调查,主页图标
-^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.adkeyword\.get\.cn - reject-dict
-^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.cncommunity\.my\.station\.query\.cn - reject-dict
-^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(batch\.show\.v2|index)\.cn - reject-dict
-^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbopen\.miniapp\.recommend\.cpc\.cn - reject-dict
-^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbmensa\.research\.researchservice\.(acquire|event|close)\.cn - reject-dict
-^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.(homepage\.merge|tabbar\.marketing)\.get\.cn - reject-dict
 # 发现页 数字角标 裹裹券
-^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.com\.cainiao\.cnactivitycenter - reject-dict
-^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.com\.cainiao\.cncreditmarket\.hit\.getactivityhit\.cn - reject-dict
-^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.com\.cainiao\.longquan\.place\.getpageresourcecontent\.cn - reject-dict
 # hostname = ptmpcap.caocaokeji.cn, cap.caocaokeji.cn
 ^https?:\/\/ptmpcap\.caocaokeji\.cn\/advert-bss\/ - reject-img
 ^https?:\/\/cap\.caocaokeji\.cn\/advert-bss\/ - reject
@@ -3389,13 +3316,7 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 - reject
 # hostname = se-api.djiits.com
 ^https:\/\/se-api\.djiits\.com\/api\/components\/launch_ad\.json\?abbrv_url=1&country=cn&language=zh-CN - reject-dict
 # hostname = acs.m.taobao.com, amdc.m.taobao.com
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.wireless\.home\.welcome - reject-200
-^https?:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch\?appkey=23782110 - reject
 # hostname = sdk.alibaba.com.ailbaba.me, adservice.sigmob.cn
-^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/version - reject-200
-^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/advert\?position=[^2]+ - reject-200
-^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/top_notice\? - reject-200
-^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/(dsx|xgapp)\.php\/v\d\/(top_notice\?|version|advert\?position=[^2]+) - reject-200
 # hostname = ssp.dzh.com.cn
 ^https?://ssp\.dzh\.com\.cn/v2api/adgroupjson - reject
 # hostname = 103.37.155.60, *.dianping.com, img.meituan.net, p.meituan.com, rms.meituan.com, www.dpfile.com, awp-assets.meituan.net, s3plus.meituan.net, p*.meituan.net, ddplus.meituan.net
@@ -3565,8 +3486,6 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 - reject
 # hostname = app.flymodem.com.cn
 ^https:\/\/app\.flymodem\.com\.cn\/Appapi\/Public\/welecome - reject
 # hostname = acs.m.taobao.com, gw.alicdn.com
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.fliggy\.crm\.screen\.(allresource|predict) - reject-dict
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources\/1\.0\?type=originaljson - reject-img
 ^https?:\/\/gw\.alicdn\.com\/mt\/ - reject
 ^https?:\/\/gw\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tps-\d{3}-\d{4}\.(jpg|png)$ - reject
 # hostname = fm.fenqile.com
@@ -3682,12 +3601,6 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 # hostname = hfapp-service.qweather.net
 ^https?:\/\/hfapp-service\.qweather\.net\/v\d\.\d\/app\/ad\/list\? - reject-dict
 # hostname = acs.m.taobao.com, acs-m.freshippo.com
-^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.hippotown\.tabbar\.info - reject
-^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.sg\.querysinglescene - reject-dict
-^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.render\.querysinglepage - reject-200
-^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.fc\.recommend\.feedscommondservice - reject-dict
-^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.crm\.platform\.ma\.recommend - reject-dict
-^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.mimir\.recommend\.after\.purchase\.activity - reject-dict
 # hostname = api.hengdianfilm.com
 ^https?:\/\/api\.hengdianfilm\.com\/\/cinema\/queryAvailableBannerInfo\/1 https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/hengdian.json 302
 # 顶部横幅广告
@@ -3786,17 +3699,11 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 # hostname = booking.bestwehotel.com
 ^https:\/\/booking\.bestwehotel\.com\/proxy\/trip-hotel-banner\/activity\/getActivityInfo - reject-200
 # 禁京东直播小窗
-^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getWidgetV1052 - reject
 # hostname = jdread-api.jd.com
-^https?:\/\/jdread-api\.jd\.com\/jdread\/api\/channel\/module\/opens - reject-200
-^https?:\/\/jdread-api\.jd\.com\/jdread\/api\/popup - reject-200
 # hostname = m.360buyimg.com
 ^https?:\/\/m\.360buyimg\.com\/babel\/jfs\/t1\/[0-9]{6}\/[0-9]{2}\/[0-9]{5}\/[0-9]{6}\/.*.jpg - reject-200
 # hostname = m.360buyimg.com, api.m.jd.com, bdsp-x.jd.com, dsp-x.jd.com, ms.jr.jd.com, appconf.mail.163.com, support.you.163.com
 ^https?:\/\/m.360buyimg\.com\/mobilecms\/s1125x2436_jfs\/ - reject-200
-^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start - reject-img
-^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ - reject-200
-^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/(new)?na\/m\/getLoadingPicture - reject
 ^https?:\/\/appconf\.mail\.163\.com\/mmad\/ - reject
 ^https?:\/\/support\.you\.163\.com\/xhr\/boot\/getBootMedia\.json - reject
 # hostname = router-app-api.jdcloud.com
@@ -3931,7 +3838,6 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 ^https?:\/\/app\.aa-ab\.com\/home - reject-200
 # hostname = ad.lofter.com, images.pinduoduo.com, lofter.lf127.net
 ^https?:\/\/ad\.lofter.com\/v1\.1\/yitou\/madr - reject-200
-^https?:\/\/images\.pinduoduo\.com\/marketing\_api - reject-200
 ^https?:\/\/lofter\.lf127\.net\/ad\-material - reject-200
 # hostname = qimg.cdnmama.com
 ^https?:\/\/qimg\.cdnmama\.com\/rd - reject-dict
@@ -3954,7 +3860,6 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 ^https?:\/\/static01\.versa-ai\.com\/upload\/ec0ba51d68f9\/.*.jpg - reject-200
 # hostname = sfo.mddcloud.com.cn, mob.mddcloud.com.cn, toblog.ctobsnssdk.com, t-dsp.pinduoduo.com, mobads-pre-config.cdn.bcebos.com, sdk1xyajs.data.kuiniuca.com, conf-darwin.xycdn.com, *.ubixioe.com
 ^https?:\/\/mob\.mddcloud\.com\.cn\/adApi\/advert\/(first|third)part\/advertList - reject-dict
-^https?:\/\/t-dsp\.pinduoduo\.com - reject-200
 ^https?:\/\/mobads-pre-config\.cdn\.bcebos\.com\/preload\.php - reject-200
 ^https?:\/\/sfo\.mddcloud\.com\.cn\/api\/v\d\/sfo\/popup_displays? - reject-dict
 ^https?:\/\/tower\.ubixioe\.com\/mob\/mediation - reject
@@ -4080,8 +3985,6 @@ http:\/\/dili.sqcosmos.com\/jiekou\/endpage\/ad - reject-dict
 # hostname = appapi.caiyicloud.com
 ^https:\/\/appapi\.caiyicloud\.com\/cyy_gatewayapi\/home\/pub\/v3\/banners\/app_start_page - reject-dict
 # hostname = api.pinduoduo.com, api.yangkeduo.com, mobile.yangkeduo.com
-^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash - reject
-^https?:\/\/api\.pinduoduo\.com\/api\/aquarius\/hungary\/global\/homepage\? - reject-dict
 # hostname = iobs.pingan.com.cn, hcz-member.pingan.com.cn
 ^https?:\/\/iobs\.pingan\.com\.cn\/download\/bweb-per-sf-prd\/bweb - reject-200
 ^https?:\/\/iobs\.pingan\.com\.cn\/download\/icore-aops-base-dmz-prd\/(YourSystemName|icore-apps-ad) - reject-200
@@ -4124,7 +4027,6 @@ https://access.mypikpak.com/access_controller/v1/area_accessible - reject
 # 删除了域名lf-cdn-tos.bytescm.com，原因是无法MITM
 ^https?:\/\/api-access\.pangolin-sdk-toutiao-b\.com\/api\/ad\/union\/sdk\/get_ads - reject
 ^https?:\/\/api-access\.(pangolin-sdk-toutiao|pangolin-sdk-toutiao1)\.com\/api\/ad - reject
-^https?:\/\/dsp\-x\.jd\.com\/adx\/sdk - reject
 ^https?:\/\/api\-cfg\.wtzw\.com\/v1\/(adv|reward|operation) - reject
 ^https?:\/\/p1\-lm\.adukwai\.com\/bs2\/adUnionVideo - reject
 ^https?:\/\/lf\-cdn\-tos\.bytescm\.com\/obj\/static\/ad - reject
@@ -4354,17 +4256,7 @@ https://ios.sspai.com/api/v3/recommend/page/get\?ad.*ios_home_modal - reject
 ^https?:\/\/mrobot\.pcauto\.com\.cn\/xsp\/s\/auto\/info\/(ad|preload) - reject
 # hostname = mrobot.pconline.com.cn
 ^https?:\/\/mrobot\.pconline\.com\.cn\/s-900\/onlineinfo\/cms\/launch - reject-200
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv - reject-dict
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimama\.etao\.config\.query\/.+?etao_advertise - reject-dict
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit - reject-dict
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.etao\.noah\.query\/.+tao_splash - reject-dict
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise - reject-dict
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get - reject-dict
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome - reject-dict
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources - reject-dict
-^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(volvo\.secondfloor\.getconfig|wireless\.home\.newface\.awesome\.get) - reject-dict
 # hostname = acs.m.taobao.com
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.(queryadvertise|queryloadingbanner)\/ - reject
 # hostname = bid.adview.cn
 ^https?:\/\/bid\.adview\.cn\/agent\/getAd - reject
 # hostname = ccmsupport-sz.tenpay.com
@@ -4411,7 +4303,6 @@ https://ios.sspai.com/api/v3/recommend/page/get\?ad.*ios_home_modal - reject
 ^https?:\/\/wechat\.tf\.cn\/mini-financial\/model\/queryPopup - reject-dict
 # hostname = ossgw.alicdn.com, zconfig.alibabausercontent.com
 ^https?:\/\/ossgw.alicdn.com\/creatives-assets\/image\/ - reject-200
-^https?:\/\/zconfig\.alibabausercontent\.com\/zconfig - reject
 # hostname = api.ncarzone.com
 ^https?:\/\/api\.ncarzone\.com\/superapi\/canary\/appHomeFacade\/getNewUserPlateActivity - reject-200
 ^https?:\/\/api\.ncarzone\.com\/superapi\/canary\/bannerFacade\/app\/list - reject-200
@@ -4620,24 +4511,16 @@ https?:\/\/interface\d?\.music\.163.com\/eapi\/(mlivestream\/entrance\/playpage|
 ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/subscribe\/v\d\/subscribe\/recommend\? - reject-dict
 ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/mobile-user\/v\d\/purchased\/recommend\/ - reject-dict
 # hostname = acs.m.taobao.com
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit\/ - reject
 # hostname = *.pglstatp-toutiao.com, res1.hubcloud.com.cn, api.xiachufang.com
 ^http?:\/\/.*\.pglstatp-toutiao\.com - reject-200
 ^http:\/\/res1\.hubcloud\.com\.cn - reject-200
 ^https?:\/\/api\.xiachufang\.com\/v\d\/ad/ - reject
 # 搜索页多余推荐列表
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.item\.search\.activate\/2\.0 - reject-dict
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.discover\/1\.0 - reject-dict
 # 这些宝贝超好卖
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.item\.resell\.recommendorhotcate\/1\.0 - reject-dict
 # 用闲鱼币买更便宜
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.idle\.coin\.nextfresh\/1\.0 - reject-dict
 # 闲鱼我的页面底部商品推荐
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.item\.buy\.feeds - reject-dict
 # 消息页感兴趣推荐
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.playboy\.recommend\/1\.0 - reject
 # 开屏广告
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlecommerce\.splash\.ads - reject-dict
 # 开屏广告
 ^https?:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_STARTUP - reject-dict
 # 首页文字广告
@@ -5014,7 +4897,6 @@ https://.+\.gamersky.com/v1/statisticAd - reject-dict
 # hostname = zjdr666.com
 ^https?:\/\/zjdr666\.com\/zjdr\.php\/v\d\/(version|top_notice\?|advert\?position=[^2]+) - reject
 #^https?:\/\/.+\.pstatp\.com\/img\/ad url reject-200
-^https?:\/\/.+\.(amemv|musical|snssdk|tiktokv)\.com\/(api|motor)\/ad\/ - reject-200
 ^https?:\/\/.+\.snssdk\.com\/motor\/operation\/activity\/display\/config\/V2\/ - reject-200
 ^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/ad\/ - reject
 ^https?:\/\/[\w-]+\.snssdk\.com\/.+_ad\/ - reject
@@ -5044,14 +4926,6 @@ http-response-jq ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/discovery
 http-response-jq ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/discovery-category\/customCategories\/ '.categoryList |= map(.itemList |= map(select(.title | test("直播|123狂欢节|SVIP"; "i") | not))) | .customCategoryList |= map(select(.title | test("直播|123狂欢节|SVIP"; "i") | not))'
 http-response-jq ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/nexus-web\/v\d\/tabs\/customTabs\? '.data.feedTabs |= map(select(.name != "大赛"))'
 http-response-jq ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/mobile-user\/v\d\/homePage\/ '.data.serviceModule.entrances |= map(select(.name == "全部服务"))'
-http-response-jq ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.shade\/ 'del(.data)'
-http-response-jq ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.user\.strategy\.list\/ 'del(.data)'
-http-response-jq ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.group\.myself\.banner\/ '.data.bannerList = []'
-http-response-jq ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.playboy\.recommend\/2\.0 '.data.recommends = [] | .data.items = [] | .data.next = false'
-http-response-jq ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.item\.recommend\.list\/ '.data.cardList = []'
-http-response-jq ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.fun\.follow\.often\.visit '.data.sections = []'
-http-response-jq ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.circle\.myself\.banner\/1\.0 '.data.bannerList = []'
-http-response-jq ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.circle\.visited\/1\.0 '.data.visitedCircleList = []'
 http-response-jq ^https?:\/\/api\.xiaoyuzhoufm\.com\/v1\/discovery-feed\/list '.data |= map(select(.type == "DISCOVERY_EPISODE_RECOMMEND" or .type == "EDITOR_PICK"))'
 http-response-jq ^https?:\/\/api\.xiaoyuzhoufm\.com\/v1\/(related-episode|operation-resource)\/list '.data = []'
 http-response-jq ^https?:\/\/oneapp-api\.faw-vw\.com\/search\/firstPage\/getPromptList\/v1\?.* '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'
@@ -5067,482 +4941,461 @@ http-response-jq http:\/\/.+\.gamersky.com/.+/lists/getListElements '.listElemen
 
 [Script]
 # hostname = ad.12306.cn
-12306 = type=http-request, pattern=^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList, script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/12306.js, requires-body=true, max-size=-1, timeout=60
+12306 = type=http-request, pattern=^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/53e7438651b1e488-12306.js, requires-body=true, max-size=-1, timeout=60
 
-51card = type=http-response, pattern=^https?:\/\/api\.u51\.com\/liabilitygateway\/api\/v\d\/homepage\/liabilityline, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/51card.js, requires-body=true, max-size=-1, timeout=60
+51card = type=http-response, pattern=^https?:\/\/api\.u51\.com\/liabilitygateway\/api\/v\d\/homepage\/liabilityline, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/0430e3242fcfc32b-51card.js, requires-body=true, max-size=-1, timeout=60
 
-51card = type=http-response, pattern=^https?:\/\/api\.u51\.com\/generic-config-gateway\/api\/v\d\/guanjia\/me-tab2\/config, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/51card.js, requires-body=true, max-size=-1, timeout=60
+rewrite.001 = type=http-response, pattern=^https?:\/\/api\.u51\.com\/generic-config-gateway\/api\/v\d\/guanjia\/me-tab2\/config, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/0430e3242fcfc32b-51card.js, requires-body=true, max-size=-1, timeout=60
 
-555Ad = type=http-response, pattern=^https?:\/\/[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+){1,3}(:\d+)?\/api\/v\d\/movie\/index_recommend, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/555Ad.js, requires-body=true, max-size=-1, timeout=60
+555Ad = type=http-response, pattern=^https?:\/\/[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+){1,3}(:\d+)?\/api\/v\d\/movie\/index_recommend, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/f8526d9282f80412-555Ad.js, requires-body=true, max-size=-1, timeout=60
 
-cainiao = type=http-response, pattern=^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.mshow, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cainiao/cainiao.js, requires-body=true, max-size=-1, timeout=60
 
-myBlockAds = type=http-response, pattern=^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get), script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js, requires-body=true, max-size=-1, timeout=60
 
-myBlockAds = type=http-response, pattern=^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js, requires-body=true, max-size=-1, timeout=60
 
-adrive = type=http-response, pattern=^https:\/\/api\.alipan\.com\/apps\/v2\/users\/home\/(news|widgets), script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/adrive/adrive.js, requires-body=true, max-size=-1, timeout=60
+adrive = type=http-response, pattern=^https:\/\/api\.alipan\.com\/apps\/v2\/users\/home\/(news|widgets), script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/c3206eef6cecfab6-adrive.js, requires-body=true, max-size=-1, timeout=60
 
-adrive = type=http-response, pattern=^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/adrive/adrive.js, requires-body=true, max-size=-1, timeout=60
+rewrite.002 = type=http-response, pattern=^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/c3206eef6cecfab6-adrive.js, requires-body=true, max-size=-1, timeout=60
 
 # 首页信息流广告
-cnftp = type=http-response, pattern=^https?:\/\/[\d\.]+\/3f1\/cards\.iqiyi\.com\/(views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, max-size=-1, timeout=60
+cnftp = type=http-response, pattern=^https?:\/\/[\d\.]+\/3f1\/cards\.iqiyi\.com\/(views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/47c242029d83452d-cnftp.js, requires-body=true, max-size=-1, timeout=60
 
-cnftp = type=http-response, pattern=^https?:\/\/access\.if\.iqiyi\.com\/3f1\/cards\.iqiyi\.com\/(views_category\/3\.0\/category_home|views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, max-size=-1, timeout=60
+rewrite.003 = type=http-response, pattern=^https?:\/\/access\.if\.iqiyi\.com\/3f1\/cards\.iqiyi\.com\/(views_category\/3\.0\/category_home|views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/47c242029d83452d-cnftp.js, requires-body=true, max-size=-1, timeout=60
 
-cnftp = type=http-response, pattern=^https?:\/\/cards\.iqiyi\.com\/views_category\/3\.0\/(category_home|categorylib_content|film_hybrid)\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, max-size=-1, timeout=60
+rewrite.004 = type=http-response, pattern=^https?:\/\/cards\.iqiyi\.com\/views_category\/3\.0\/(category_home|categorylib_content|film_hybrid)\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/47c242029d83452d-cnftp.js, requires-body=true, max-size=-1, timeout=60
 
-cnftp = type=http-response, pattern=^https?:\/\/cards\.iqiyi\.com\/(views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, max-size=-1, timeout=60
+rewrite.005 = type=http-response, pattern=^https?:\/\/cards\.iqiyi\.com\/(views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/47c242029d83452d-cnftp.js, requires-body=true, max-size=-1, timeout=60
 
 # 播放详情页
-cnftp = type=http-response, pattern=^https?:\/\/cards\.iqiyi\.com\/views_plt\/3\.0\/player_tabs_v2\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, max-size=-1, timeout=60
+rewrite.006 = type=http-response, pattern=^https?:\/\/cards\.iqiyi\.com\/views_plt\/3\.0\/player_tabs_v2\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/47c242029d83452d-cnftp.js, requires-body=true, max-size=-1, timeout=60
 
 # 搜索页列表
-cnftp = type=http-response, pattern=^https?:\/\/cards\.iqiyi\.com\/views_search\/3\.0\/(hot_query_)?search\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, max-size=-1, timeout=60
+rewrite.007 = type=http-response, pattern=^https?:\/\/cards\.iqiyi\.com\/views_search\/3\.0\/(hot_query_)?search\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/47c242029d83452d-cnftp.js, requires-body=true, max-size=-1, timeout=60
 
 # 评论区
-cnftp = type=http-response, pattern=^https?:\/\/comment-card\.iqiyi\.com\/views_comment\/3\.0\/long_video_comments\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, max-size=-1, timeout=60
+rewrite.008 = type=http-response, pattern=^https?:\/\/comment-card\.iqiyi\.com\/views_comment\/3\.0\/long_video_comments\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/47c242029d83452d-cnftp.js, requires-body=true, max-size=-1, timeout=60
 
 # 我的页面菜单
-cnftp = type=http-response, pattern=^https?:\/\/iface2\.iqiyi\.com\/aggregate\/3\.0\/getMyMenus\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, max-size=-1, timeout=60
+rewrite.009 = type=http-response, pattern=^https?:\/\/iface2\.iqiyi\.com\/aggregate\/3\.0\/getMyMenus\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/47c242029d83452d-cnftp.js, requires-body=true, max-size=-1, timeout=60
 
 # 首页左上角天气
-cnftp = type=http-response, pattern=^https?:\/\/iface2\.iqiyi\.com\/control\/3\.0\/init_proxy\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, max-size=-1, timeout=60
+rewrite.010 = type=http-response, pattern=^https?:\/\/iface2\.iqiyi\.com\/control\/3\.0\/init_proxy\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/47c242029d83452d-cnftp.js, requires-body=true, max-size=-1, timeout=60
 
 # 通用控制,各tab页二楼
-cnftp = type=http-response, pattern=^https?:\/\/iface2\.iqiyi\.com\/fusion\/3\.0\/common_switch\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, max-size=-1, timeout=60
+rewrite.011 = type=http-response, pattern=^https?:\/\/iface2\.iqiyi\.com\/fusion\/3\.0\/common_switch\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/47c242029d83452d-cnftp.js, requires-body=true, max-size=-1, timeout=60
 
 # 底部tab、顶部tab
-cnftp = type=http-response, pattern=^https?:\/\/iface2\.iqiyi\.com\/views\/3\.0\/(bottom_theme|home_top_menu)\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, max-size=-1, timeout=60
+rewrite.012 = type=http-response, pattern=^https?:\/\/iface2\.iqiyi\.com\/views\/3\.0\/(bottom_theme|home_top_menu)\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/47c242029d83452d-cnftp.js, requires-body=true, max-size=-1, timeout=60
 
 # 搜索框填充词
-cnftp = type=http-response, pattern=^https?:\/\/search\.video\.iqiyi\.com\/q\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, max-size=-1, timeout=60
+rewrite.013 = type=http-response, pattern=^https?:\/\/search\.video\.iqiyi\.com\/q\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/47c242029d83452d-cnftp.js, requires-body=true, max-size=-1, timeout=60
 
 # 开屏广告,播放广告
-cnftp = type=http-response, pattern=^https?:\/\/(kjp|t7z)\.cupid\.iqiyi\.com\/mixer\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, max-size=-1, timeout=60
+rewrite.014 = type=http-response, pattern=^https?:\/\/(kjp|t7z)\.cupid\.iqiyi\.com\/mixer\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/47c242029d83452d-cnftp.js, requires-body=true, max-size=-1, timeout=60
 
-baidumap = type=http-response, pattern=^https?:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/baidumap.js, requires-body=true, max-size=-1, timeout=60
+baidumap = type=http-response, pattern=^https?:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/0906e7b6f8e0035f-baidumap.js, requires-body=true, max-size=-1, timeout=60
 
-tieba-json = type=http-response, pattern=^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/(c\/(s\/sync|f\/(ad\/getSplashAd|frs\/(page|threadlist|generalTabList)|pb\/(pic)?page|excellent\/personalized))$|tiebaads\/commonbatch\?), script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-json.js, requires-body=true, max-size=-1, timeout=60
+tieba-json = type=http-response, pattern=^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/(c\/(s\/sync|f\/(ad\/getSplashAd|frs\/(page|threadlist|generalTabList)|pb\/(pic)?page|excellent\/personalized))$|tiebaads\/commonbatch\?), script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/9d456958a06617ec-tieba-json.js, requires-body=true, max-size=-1, timeout=60
 
-tieba-proto = type=http-response, pattern=^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/(b\/ad\/adBid|f\/(frs\/(page|threadlist|generalTabList)|ad\/getFeedAd|pb\/page|excellent\/personalized))\?cmd, script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js, requires-body=true, binary-body-mode=true, max-size=-1, timeout=60
+tieba-proto = type=http-response, pattern=^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/(b\/ad\/adBid|f\/(frs\/(page|threadlist|generalTabList)|ad\/getFeedAd|pb\/page|excellent\/personalized))\?cmd, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/f38021eb462fc211-tieba-proto.js, requires-body=true, binary-body-mode=true, max-size=-1, timeout=60
 
 # hostname = api.boohee.com, bohe.sfo-tx-shanghai-01.saas.sensorsdata.cn, lego.boohee.com, status.boohee.com
-bohe_ads = type=http-response, pattern=^https:\/\/api\.boohee\.com\/meta-interface\/v2\/index\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bohe/bohe_ads.js, requires-body=true, max-size=-1, timeout=60
+bohe_ads = type=http-response, pattern=^https:\/\/api\.boohee\.com\/meta-interface\/v2\/index\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/50531633c8169eb7-bohe_ads.js, requires-body=true, max-size=-1, timeout=60
 
 # 广场 - 推荐 - 红标data.tabs[1].badge /轮播图data.recommend_ads
-bohe_ads = type=http-response, pattern=^https:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/plaza\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bohe/bohe_ads.js, requires-body=true, max-size=-1, timeout=60
+rewrite.015 = type=http-response, pattern=^https:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/plaza\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/50531633c8169eb7-bohe_ads.js, requires-body=true, max-size=-1, timeout=60
 
 # 代谢中心 - 顶部轮播图top_banner / 免费问诊推广diagnos_config / 合作医疗机构partner_hospital / 医患问答question_answer / 热门商品product / 品牌大事件brand_story
-bohe_ads = type=http-response, pattern=^https:\/\/api\.boohee\.com\/open-interface\/v1\/string\/market_page\?title=metabolism_config$, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bohe/bohe_ads.js, requires-body=true, max-size=-1, timeout=60
+rewrite.016 = type=http-response, pattern=^https:\/\/api\.boohee\.com\/open-interface\/v1\/string\/market_page\?title=metabolism_config$, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/50531633c8169eb7-bohe_ads.js, requires-body=true, max-size=-1, timeout=60
 
 
 
 
 
 # 登录后个人界面广告
-blued = type=http-response, pattern=^https?:\/\/social\.blued\.cn\/users\/.+\/more\/ios\?v=2, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/blued.js, requires-body=true, max-size=-1, timeout=60
+blued = type=http-response, pattern=^https?:\/\/social\.blued\.cn\/users\/.+\/more\/ios\?v=2, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/e118fec1aaae6a11-blued.js, requires-body=true, max-size=-1, timeout=60
 
-caixinAd = type=http-response, pattern=^https?:\/\/gg\.caixin\.com\/s\?z=caixin&op=1&c=3362, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/caixin/caixinAd.js, requires-body=true, max-size=-1, timeout=60
+caixinAd = type=http-response, pattern=^https?:\/\/gg\.caixin\.com\/s\?z=caixin&op=1&c=3362, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/e0b4de0796f5edf5-caixinAd.js, requires-body=true, max-size=-1, timeout=60
 
-cainiao = type=http-response, pattern=^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.m?show\.cn, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cainiao/cainiao.js, requires-body=true, max-size=-1, timeout=60
 
-cainiao = type=http-response, pattern=^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.(pickup\.empty\.page|protocol\.homepage)\.get\.cn, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cainiao/cainiao.js, requires-body=true, max-size=-1, timeout=60
 
 # 消息中心
-cainiao = type=http-response, pattern=^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.nbfriend\.message\.conversation\.list\.cn, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cainiao/cainiao.js, requires-body=true, max-size=-1, timeout=60
 
 # hostname = beta-api.crunchyroll.com
-replaceBody = type=http-response, pattern=^https?:\/\/beta-api\.crunchyroll\.com\/cms, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=offset_ms%22%3A%5Cd%2B-%3Eoffset_ms%22%3A99999999999999
+replaceBody = type=http-response, pattern=^https?:\/\/beta-api\.crunchyroll\.com\/cms, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/7e513b7176785a58-replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=offset_ms%22%3A%5Cd%2B-%3Eoffset_ms%22%3A99999999999999
 
-replaceBody = type=http-response, pattern=^https?:\/\/adservice\.sigmob\.cn\/extconfig, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=false-%3Etrue
+rewrite.017 = type=http-response, pattern=^https?:\/\/adservice\.sigmob\.cn\/extconfig, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/7e513b7176785a58-replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=false-%3Etrue
 
-dianping = type=http-response, pattern=^https?:\/\/img\.meituan\.net\/(?>dpmobile|goodsawardpic)\/, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/dianping.js, requires-body=true, max-size=-1, timeout=60
+dianping = type=http-response, pattern=^https?:\/\/img\.meituan\.net\/(?>dpmobile|goodsawardpic)\/, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/d7cd7fadf4b469af-dianping.js, requires-body=true, max-size=-1, timeout=60
 
-dianping = type=http-response, pattern=^https?:\/\/ddplus\.meituan\.net\/v\d\/mss_\w+\/picassovc, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/dianping.js, requires-body=true, max-size=-1, timeout=60
+rewrite.018 = type=http-response, pattern=^https?:\/\/ddplus\.meituan\.net\/v\d\/mss_\w+\/picassovc, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/d7cd7fadf4b469af-dianping.js, requires-body=true, max-size=-1, timeout=60
 
-didiAds = type=http-response, pattern=^https?:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, max-size=-1, timeout=60
+didiAds = type=http-response, pattern=^https?:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/6497035a5ea6a19f-didiAds.js, requires-body=true, max-size=-1, timeout=60
 
-didiAds = type=http-response, pattern=^https?:\/\/freight\.xiaojukeji\.com\/gateway, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, max-size=-1, timeout=60
+rewrite.019 = type=http-response, pattern=^https?:\/\/freight\.xiaojukeji\.com\/gateway, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/6497035a5ea6a19f-didiAds.js, requires-body=true, max-size=-1, timeout=60
 
-didiAds = type=http-response, pattern=^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/xpget, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, max-size=-1, timeout=60
+rewrite.020 = type=http-response, pattern=^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/xpget, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/6497035a5ea6a19f-didiAds.js, requires-body=true, max-size=-1, timeout=60
 
-didiAds = type=http-response, pattern=^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, max-size=-1, timeout=60
+rewrite.021 = type=http-response, pattern=^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/6497035a5ea6a19f-didiAds.js, requires-body=true, max-size=-1, timeout=60
 
-didiAds = type=http-response, pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/fast, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, max-size=-1, timeout=60
+rewrite.022 = type=http-response, pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/fast, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/6497035a5ea6a19f-didiAds.js, requires-body=true, max-size=-1, timeout=60
 
 #^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/core url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js
-didiAds = type=http-response, pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/dynamic\/conf, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, max-size=-1, timeout=60
+rewrite.023 = type=http-response, pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/dynamic\/conf, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/6497035a5ea6a19f-didiAds.js, requires-body=true, max-size=-1, timeout=60
 
-didiAds = type=http-response, pattern=^https?:\/\/common\.diditaxi\.com\.cn\/common\/v\d\/usercenter\/me, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, max-size=-1, timeout=60
+rewrite.024 = type=http-response, pattern=^https?:\/\/common\.diditaxi\.com\.cn\/common\/v\d\/usercenter\/me, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/6497035a5ea6a19f-didiAds.js, requires-body=true, max-size=-1, timeout=60
 
-didiAds = type=http-response, pattern=^https?:\/\/daijia\.kuaidadi\.com\/gateway, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, max-size=-1, timeout=60
+rewrite.025 = type=http-response, pattern=^https?:\/\/daijia\.kuaidadi\.com\/gateway, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/6497035a5ea6a19f-didiAds.js, requires-body=true, max-size=-1, timeout=60
 
-didiAds = type=http-response, pattern=^https?:\/\/daijia\.kuaidadi\.com:443\/gateway, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, max-size=-1, timeout=60
+rewrite.026 = type=http-response, pattern=^https?:\/\/daijia\.kuaidadi\.com:443\/gateway, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/6497035a5ea6a19f-didiAds.js, requires-body=true, max-size=-1, timeout=60
 
 # 微信小程序个人中心净化 感谢【TEXAS】分享
-didiAds = type=http-response, pattern=^https?:\/\/common\.diditaxi\.com\.cn\/common\/v5, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, max-size=-1, timeout=60
+rewrite.027 = type=http-response, pattern=^https?:\/\/common\.diditaxi\.com\.cn\/common\/v5, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/6497035a5ea6a19f-didiAds.js, requires-body=true, max-size=-1, timeout=60
 
 # hostname = app-v1.ecoliving168.com
-dianyinglieshou = type=http-response, pattern=^https:\/\/app-v1\.ecoliving168\.com\/api\/v1\/movie\/index_recommend\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/dianyinglieshou.js, requires-body=true, max-size=-1, timeout=60
+dianyinglieshou = type=http-response, pattern=^https:\/\/app-v1\.ecoliving168\.com\/api\/v1\/movie\/index_recommend\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/8a4d8a86359999ad-dianyinglieshou.js, requires-body=true, max-size=-1, timeout=60
 
 # 首页悬浮窗
-replaceBody = type=http-response, pattern=^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/newDetails, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=suspension-%3Erandom_body
+rewrite.028 = type=http-response, pattern=^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/newDetails, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/7e513b7176785a58-replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=suspension-%3Erandom_body
 
 # 首页推荐流优化,AI栏去除,右下角浮标
-ddxq = type=http-response, pattern=^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/(?>bottomNavi|homeFlowDetail), script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/ddxq.js, requires-body=true, max-size=-1, timeout=60
+ddxq = type=http-response, pattern=^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/(?>bottomNavi|homeFlowDetail), script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/a929f621f8a48d49-ddxq.js, requires-body=true, max-size=-1, timeout=60
 
 # 右下角AI
-ddxq = type=http-response, pattern=^https?:\/\/maicai\.api\.ddxq\.mobi\/tool\/getConfig, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/ddxq.js, requires-body=true, max-size=-1, timeout=60
+rewrite.029 = type=http-response, pattern=^https?:\/\/maicai\.api\.ddxq\.mobi\/tool\/getConfig, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/a929f621f8a48d49-ddxq.js, requires-body=true, max-size=-1, timeout=60
 
 # 我的页净化
-ddxq = type=http-response, pattern=^https?:\/\/user\.api\.ddxq\.mobi\/userportal-service\/api\/v\d\/user\/queryMyPage, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/ddxq.js, requires-body=true, max-size=-1, timeout=60
+rewrite.030 = type=http-response, pattern=^https?:\/\/user\.api\.ddxq\.mobi\/userportal-service\/api\/v\d\/user\/queryMyPage, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/a929f621f8a48d49-ddxq.js, requires-body=true, max-size=-1, timeout=60
 
 # (黑屏25秒)
-BahamutAnimeAds = type=http-response, pattern=^https?:\/\/api\.gamer\.com\.tw\/mobile_app\/anime\/v\d/(token|m3u8).php\?, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Bahamut/BahamutAnimeAds.js, requires-body=true, max-size=-1, timeout=60
+BahamutAnimeAds = type=http-response, pattern=^https?:\/\/api\.gamer\.com\.tw\/mobile_app\/anime\/v\d/(token|m3u8).php\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/0ff4419465d79000-BahamutAnimeAds.js, requires-body=true, max-size=-1, timeout=60
 
-wechatApplet = type=http-response, pattern=^https?:\/\/ec\.ems\.com\.cn\/ecr-qry-web\/redis\/pageInfoByChannel, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/wechatApplet.js, requires-body=true, max-size=-1, timeout=60
+wechatApplet = type=http-response, pattern=^https?:\/\/ec\.ems\.com\.cn\/ecr-qry-web\/redis\/pageInfoByChannel, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/97c6492922dbf64f-wechatApplet.js, requires-body=true, max-size=-1, timeout=60
 
-wechatApplet = type=http-response, pattern=^https?:\/\/ump\.ems\.com\.cn\/new-generation-extend\/redis\/pageInfoByChannel, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/wechatApplet.js, requires-body=true, max-size=-1, timeout=60
+rewrite.031 = type=http-response, pattern=^https?:\/\/ump\.ems\.com\.cn\/new-generation-extend\/redis\/pageInfoByChannel, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/97c6492922dbf64f-wechatApplet.js, requires-body=true, max-size=-1, timeout=60
 
-replaceBody = type=http-response, pattern=^https?:\/\/47\.100\.65\.202\/api\/mobile\/index\.php\?version=\d&mobile=yes&module=basicdata&type=forumlist, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=adv-%3Efmz200
+rewrite.032 = type=http-response, pattern=^https?:\/\/47\.100\.65\.202\/api\/mobile\/index\.php\?version=\d&mobile=yes&module=basicdata&type=forumlist, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/7e513b7176785a58-replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=adv-%3Efmz200
 
-fly = type=http-response, pattern=^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/fly.js, requires-body=true, max-size=-1, timeout=60
+fly = type=http-response, pattern=^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/5caa481275e3c78c-fly.js, requires-body=true, max-size=-1, timeout=60
 
-flyert = type=http-response, pattern=^https?:\/\/www\.flyert\.com(\.cn)?\/.*plugin, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/flyert.js, requires-body=true, max-size=-1, timeout=60
+flyert = type=http-response, pattern=^https?:\/\/www\.flyert\.com(\.cn)?\/.*plugin, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/0024b28e1094abd5-flyert.js, requires-body=true, max-size=-1, timeout=60
 
 # hostname = tiku.fenbi.com
-fenbi = type=http-response, pattern=^https?:\/\/tiku\.fenbi\.com\/activity\/app\/launcher\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/fenbi.js, requires-body=true, max-size=-1, timeout=60
+fenbi = type=http-response, pattern=^https?:\/\/tiku\.fenbi\.com\/activity\/app\/launcher\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/c5e861643f0c4087-fenbi.js, requires-body=true, max-size=-1, timeout=60
 
 # hostname = apis.folidaymall.com
-foliday = type=http-response, pattern=^https?:\/\/apis\.folidaymall\.com\/online\/capi\/component\/getPageComponents, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/foliday.js, requires-body=true, max-size=-1, timeout=60
+foliday = type=http-response, pattern=^https?:\/\/apis\.folidaymall\.com\/online\/capi\/component\/getPageComponents, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/db81e1e426a23b3f-foliday.js, requires-body=true, max-size=-1, timeout=60
 
-umetrip_ads = type=http-response, pattern=^http?:\/\/(114\.115\.217\.129)|(home\.umetrip\.com)\/gateway\/api\/umetrip\/native$, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/umetrip/umetrip_ads.js, requires-body=true, max-size=-1, timeout=60
+umetrip_ads = type=http-response, pattern=^http?:\/\/(114\.115\.217\.129)|(home\.umetrip\.com)\/gateway\/api\/umetrip\/native$, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/06d3dd7a4e7f429d-umetrip_ads.js, requires-body=true, max-size=-1, timeout=60
 
-freshippo = type=http-response, pattern=^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.render\.query(?>indexpage|mypage|tabfeedstream), script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/freshippo.js, requires-body=true, max-size=-1, timeout=60
 
 # hostname = mcsp.cloudpnr.com, saas-ad.cloudpnr.com
-huifutianxia_ads = type=http-response, pattern=^https:\/\/mcsp\.cloudpnr\.com\/api\/miniapp\/popular\/T_MINIAPP$, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/huifutianxia_ads.js, requires-body=true, max-size=-1, timeout=60
+huifutianxia_ads = type=http-response, pattern=^https:\/\/mcsp\.cloudpnr\.com\/api\/miniapp\/popular\/T_MINIAPP$, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/99959724794229b5-huifutianxia_ads.js, requires-body=true, max-size=-1, timeout=60
 
-huifutianxia_ads = type=http-response, pattern=^https:\/\/saas-ad\.cloudpnr\.com\/huifuad-base-api\/api\/tactics\/ad, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/huifutianxia_ads.js, requires-body=true, max-size=-1, timeout=60
+rewrite.033 = type=http-response, pattern=^https:\/\/saas-ad\.cloudpnr\.com\/huifuad-base-api\/api\/tactics\/ad, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/99959724794229b5-huifutianxia_ads.js, requires-body=true, max-size=-1, timeout=60
 
 # hostname = www.i3zh.com
-replaceBody = type=http-response, pattern=^https?:\/\/www\.i3zh\.com, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=cm-pop-up-banners-%3Efmz200
+rewrite.034 = type=http-response, pattern=^https?:\/\/www\.i3zh\.com, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/7e513b7176785a58-replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=cm-pop-up-banners-%3Efmz200
 
 # hostname = napi.ithome.com
-ithome = type=http-response, pattern=^https?:\/\/napi\.ithome\.com\/api\/(news\/index|topmenu\/getfeeds), script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ithome/ithome.js, requires-body=true, max-size=-1, timeout=60
+ithome = type=http-response, pattern=^https?:\/\/napi\.ithome\.com\/api\/(news\/index|topmenu\/getfeeds), script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/b413e8b3735899cf-ithome.js, requires-body=true, max-size=-1, timeout=60
 
-ccblife = type=http-response, pattern=^https?:\/\/yunbusiness\.ccb\.com\/(?>basic_service|clp_service)\/txCtrl\?txcode=A3341(?>SB16|C147|MB22|A009|A120|AB03|AB04|A068|A095|AB08), script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/ccblife.js, requires-body=true, max-size=-1, timeout=60
+ccblife = type=http-response, pattern=^https?:\/\/yunbusiness\.ccb\.com\/(?>basic_service|clp_service)\/txCtrl\?txcode=A3341(?>SB16|C147|MB22|A009|A120|AB03|AB04|A068|A095|AB08), script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/d2fc650d201907b7-ccblife.js, requires-body=true, max-size=-1, timeout=60
 
 # 内置饿了么
-alicdn = type=http-response, pattern=^https?:\/\/g\.alicdn\.com\/.*o2o-ad, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/alicdn.js, requires-body=true, max-size=-1, timeout=60
+alicdn = type=http-response, pattern=^https?:\/\/g\.alicdn\.com\/.*o2o-ad, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/a1536927e11e0b56-alicdn.js, requires-body=true, max-size=-1, timeout=60
 
-replaceBody = type=http-response, pattern=^https?:\/\/waimai-guide\.ele\.me\/\w+\/mtop\.venus\.shopresourceservice\.getshopresource, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=posterList-%3Erandom_body
+rewrite.035 = type=http-response, pattern=^https?:\/\/waimai-guide\.ele\.me\/\w+\/mtop\.venus\.shopresourceservice\.getshopresource, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/7e513b7176785a58-replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=posterList-%3Erandom_body
 
-jingdong = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome), script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingdong/jingdong.js, requires-body=true, max-size=-1, timeout=60
 
 # hostname = api.m.jd.com
-replaceBody = type=http-response, pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=jdLiteAdvertisingVO-%3Efmz200
 
-replaceBody = type=http-response, pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_SmartPush, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=pushData-%3Efmz200
 
-jingxiAd = type=http-response, pattern=^https?:\/\/api\.m\.jd\.com\/api\?functionId=delivery_show, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingxiAd.js, requires-body=true, max-size=-1, timeout=60
 
 # ^https?:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch url reject-dict
-coolapk = type=http-response, pattern=^https?:\/\/api\.coolapk\.com\/v6\/feed\/(detail|replyList)\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/coolapk.js, requires-body=true, max-size=-1, timeout=60
+coolapk = type=http-response, pattern=^https?:\/\/api\.coolapk\.com\/v6\/feed\/(detail|replyList)\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/14d1e419b620df50-coolapk.js, requires-body=true, max-size=-1, timeout=60
 
-coolapk = type=http-response, pattern=^https?:\/\/api\.coolapk\.com\/v6\/main\/(dataList|indexV8|init), script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/coolapk.js, requires-body=true, max-size=-1, timeout=60
+rewrite.036 = type=http-response, pattern=^https?:\/\/api\.coolapk\.com\/v6\/main\/(dataList|indexV8|init), script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/14d1e419b620df50-coolapk.js, requires-body=true, max-size=-1, timeout=60
 
-coolapk = type=http-response, pattern=^https?:\/\/api\.coolapk\.com\/v6\/page\/dataList\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/coolapk.js, requires-body=true, max-size=-1, timeout=60
+rewrite.037 = type=http-response, pattern=^https?:\/\/api\.coolapk\.com\/v6\/page\/dataList\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/14d1e419b620df50-coolapk.js, requires-body=true, max-size=-1, timeout=60
 
 # 广告
-kuwo = type=http-response, pattern=^https?:\/\/(mgxhtj|nmobi|searchrecterm)\.kuwo\.cn\/(mgxh|mobi|recterm)\.s, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body=true, max-size=-1, timeout=60
+kuwo = type=http-response, pattern=^https?:\/\/(mgxhtj|nmobi|searchrecterm)\.kuwo\.cn\/(mgxh|mobi|recterm)\.s, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/75e7feecf556c810-kuwo.js, requires-body=true, max-size=-1, timeout=60
 
 # 会员
-kuwo = type=http-response, pattern=^https?:\/\/audiobookpay\.kuwo\.cn\/a\.p, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body=true, max-size=-1, timeout=60
+rewrite.038 = type=http-response, pattern=^https?:\/\/audiobookpay\.kuwo\.cn\/a\.p, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/75e7feecf556c810-kuwo.js, requires-body=true, max-size=-1, timeout=60
 
-kuwo = type=http-response, pattern=^https?:\/\/musicpay\.kuwo\.cn\/music\.pay, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body=true, max-size=-1, timeout=60
+rewrite.039 = type=http-response, pattern=^https?:\/\/musicpay\.kuwo\.cn\/music\.pay, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/75e7feecf556c810-kuwo.js, requires-body=true, max-size=-1, timeout=60
 
-kuwo = type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/vip\/(enc\/user\/vip\?op=ui|v\d\/theme\?op=gd), script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body=true, max-size=-1, timeout=60
+rewrite.040 = type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/vip\/(enc\/user\/vip\?op=ui|v\d\/theme\?op=gd), script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/75e7feecf556c810-kuwo.js, requires-body=true, max-size=-1, timeout=60
 
-kuwo = type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/vip\/v\d\/user\/vip\?op=ui, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body=true, max-size=-1, timeout=60
+rewrite.041 = type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/vip\/v\d\/user\/vip\?op=ui, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/75e7feecf556c810-kuwo.js, requires-body=true, max-size=-1, timeout=60
 
 # hostname = open-cms-api.uc.cn, open-cms-api.quark.cn
-quark = type=http-response, pattern=^https?:\/\/open-cms-api\.(uc|quark)\.cn\/open-cms, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/quark.js, requires-body=true, max-size=-1, timeout=60
+quark = type=http-response, pattern=^https?:\/\/open-cms-api\.(uc|quark)\.cn\/open-cms, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/dc899664787546ea-quark.js, requires-body=true, max-size=-1, timeout=60
 
 # hostname = api-access.pangolin-sdk-toutiao.com, mi.gdt.qq.com, open.e.kuaishou.com
-adsense = type=http-response, pattern=^https:\/\/(api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/get_ads|open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$|mi\.gdt\.qq\.com\/gdt_mview\.fcg\?), script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/adsense.js, requires-body=true, max-size=-1, timeout=60
+adsense = type=http-response, pattern=^https:\/\/(api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/get_ads|open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$|mi\.gdt\.qq\.com\/gdt_mview\.fcg\?), script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/758f3f177a2912da-adsense.js, requires-body=true, max-size=-1, timeout=60
 
 # 我的页面去推广
-keep = type=http-response, pattern=^https?:\/\/api\.gotokeep\.com\/athena\/v\d\/people\/my$, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js, requires-body=true, max-size=-1, timeout=60
+keep = type=http-response, pattern=^https?:\/\/api\.gotokeep\.com\/athena\/v\d\/people\/my$, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/101b360ee977d011-keep.js, requires-body=true, max-size=-1, timeout=60
 
 # 发现页处理
-keep = type=http-response, pattern=^https?:\/\/api\.gotokeep\.com\/homepage\/v\d\/tab, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js, requires-body=true, max-size=-1, timeout=60
+rewrite.042 = type=http-response, pattern=^https?:\/\/api\.gotokeep\.com\/homepage\/v\d\/tab, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/101b360ee977d011-keep.js, requires-body=true, max-size=-1, timeout=60
 
 # 课程预览页广告
-keep = type=http-response, pattern=^https?:\/\/api\.gotokeep\.com\/nuocha\/course\/v\d/\w+\/preview, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js, requires-body=true, max-size=-1, timeout=60
+rewrite.043 = type=http-response, pattern=^https?:\/\/api\.gotokeep\.com\/nuocha\/course\/v\d/\w+\/preview, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/101b360ee977d011-keep.js, requires-body=true, max-size=-1, timeout=60
 
 # 我的运动页面去除下方推荐
-keep = type=http-response, pattern=^https?:\/\/api\.gotokeep\.com\/sportpage\/sport\/v\d\/mysport, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js, requires-body=true, max-size=-1, timeout=60
+rewrite.044 = type=http-response, pattern=^https?:\/\/api\.gotokeep\.com\/sportpage\/sport\/v\d\/mysport, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/101b360ee977d011-keep.js, requires-body=true, max-size=-1, timeout=60
 
 # 首页北京城市导览图片,首页上方轮播图片净化
-ltsst-ad = type=http-response, pattern=^https?:\/\/www\.1314zhilv\.com\/ltsstnew\/(common\/getJGQIconNew|city\/getAllBannelByCity), script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/lvtusuishenting/ltsst-ad.js, requires-body=true, max-size=-1, timeout=60
+ltsst-ad = type=http-response, pattern=^https?:\/\/www\.1314zhilv\.com\/ltsstnew\/(common\/getJGQIconNew|city\/getAllBannelByCity), script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/733ffc3b95115e5a-ltsst-ad.js, requires-body=true, max-size=-1, timeout=60
 
-lawson = type=http-response, pattern=^https:\/\/lawsonapi\.yorentown\.com\/area\/sh-lawson\/app\/v1\/, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/lawson.js, requires-body=true, max-size=-1, timeout=60
+lawson = type=http-response, pattern=^https:\/\/lawsonapi\.yorentown\.com\/area\/sh-lawson\/app\/v1\/, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/e8587938c145ab53-lawson.js, requires-body=true, max-size=-1, timeout=60
 
-lawson = type=http-response, pattern=^https:\/\/lawsonapi\.yorentown\.com\/portal\/app\/globalLaunch\/listAdvert, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/lawson.js, requires-body=true, max-size=-1, timeout=60
+rewrite.045 = type=http-response, pattern=^https:\/\/lawsonapi\.yorentown\.com\/portal\/app\/globalLaunch\/listAdvert, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/e8587938c145ab53-lawson.js, requires-body=true, max-size=-1, timeout=60
 
-mafengwo = type=http-response, pattern=^https?:\/\/mapi\.mafengwo\.cn\/user\/profile\/get_(list|profile), script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/mafengwo.js, requires-body=true, max-size=-1, timeout=60
+mafengwo = type=http-response, pattern=^https?:\/\/mapi\.mafengwo\.cn\/user\/profile\/get_(list|profile), script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/30a4a807311c635e-mafengwo.js, requires-body=true, max-size=-1, timeout=60
 
-mdb = type=http-response, pattern=^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/rcg\/index\.html\?callbackurl=rcg\/index\.html&orclogin=1&, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/mdb.js, requires-body=true, max-size=-1, timeout=60
+mdb = type=http-response, pattern=^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/rcg\/index\.html\?callbackurl=rcg\/index\.html&orclogin=1&, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/89816a29460471fa-mdb.js, requires-body=true, max-size=-1, timeout=60
 
 # 帖子末尾 - 看过此贴的用户也在看
-maimai_ads = type=http-response, pattern=^https:\/\/(h3\.)?open\.taou\.com\/maimai\/feed\/v6\/detail_recommend_feeds\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/maimai/maimai_ads.js, requires-body=true, max-size=-1, timeout=60
+maimai_ads = type=http-response, pattern=^https:\/\/(h3\.)?open\.taou\.com\/maimai\/feed\/v6\/detail_recommend_feeds\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/b5f13a6e3c474f71-maimai_ads.js, requires-body=true, max-size=-1, timeout=60
 
 # 移除信息流和评论区大块广告 - 信息流广告focus_feed / 评论区广告gossip_detail_comment / 评论区广告feed_detail_comment?
-maimai_ads = type=http-response, pattern=^https:\/\/(h3\.)?open\.taou\.com\/maimai\/(feed|gossip)\/v\d\/(focus_feed|gossip_detail_comment|feed_detail_comment?)\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/maimai/maimai_ads.js, requires-body=true, max-size=-1, timeout=60
+rewrite.046 = type=http-response, pattern=^https:\/\/(h3\.)?open\.taou\.com\/maimai\/(feed|gossip)\/v\d\/(focus_feed|gossip_detail_comment|feed_detail_comment?)\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/b5f13a6e3c474f71-maimai_ads.js, requires-body=true, max-size=-1, timeout=60
 
 # 我的页面
-cnftp = type=http-response, pattern=^https?:\/\/me\.bz\.mgtv\.com\/v3\/module\/list\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, max-size=-1, timeout=60
+rewrite.047 = type=http-response, pattern=^https?:\/\/me\.bz\.mgtv\.com\/v3\/module\/list\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/47c242029d83452d-cnftp.js, requires-body=true, max-size=-1, timeout=60
 
 # 首页信息流,顶部tab
-cnftp = type=http-response, pattern=^https?:\/\/mob-st\.bz\.mgtv\.com\/odin\/c1\/channel\/index\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, max-size=-1, timeout=60
+rewrite.048 = type=http-response, pattern=^https?:\/\/mob-st\.bz\.mgtv\.com\/odin\/c1\/channel\/index\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/47c242029d83452d-cnftp.js, requires-body=true, max-size=-1, timeout=60
 
-cnftp = type=http-response, pattern=^https?:\/\/dc2?\.bz\.mgtv\.com\/dynamic\/v1\/channel\/(index|vrsList)\/\w, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, max-size=-1, timeout=60
+rewrite.049 = type=http-response, pattern=^https?:\/\/dc2?\.bz\.mgtv\.com\/dynamic\/v1\/channel\/(index|vrsList)\/\w, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/47c242029d83452d-cnftp.js, requires-body=true, max-size=-1, timeout=60
 
 # 底部tab
-cnftp = type=http-response, pattern=^https?:\/\/mobile\.api\.mgtv\.com\/mobile\/config\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, max-size=-1, timeout=60
+rewrite.050 = type=http-response, pattern=^https?:\/\/mobile\.api\.mgtv\.com\/mobile\/config\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/47c242029d83452d-cnftp.js, requires-body=true, max-size=-1, timeout=60
 
 # 播放详情页
-cnftp = type=http-response, pattern=^https?:\/\/mobile\.api\.mgtv\.com\/v10\/video\/info\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, max-size=-1, timeout=60
+rewrite.051 = type=http-response, pattern=^https?:\/\/mobile\.api\.mgtv\.com\/v10\/video\/info\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/47c242029d83452d-cnftp.js, requires-body=true, max-size=-1, timeout=60
 
-cnftp = type=http-response, pattern=^https?:\/\/mobile-thor\.api\.mgtv\.com\/v1\/vod\/info\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, max-size=-1, timeout=60
+rewrite.052 = type=http-response, pattern=^https?:\/\/mobile-thor\.api\.mgtv\.com\/v1\/vod\/info\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/47c242029d83452d-cnftp.js, requires-body=true, max-size=-1, timeout=60
 
-cnftp = type=http-response, pattern=^https?:\/\/mobileso\.bz\.mgtv\.com\/mobile\/recommend\/v2\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, max-size=-1, timeout=60
+rewrite.053 = type=http-response, pattern=^https?:\/\/mobileso\.bz\.mgtv\.com\/mobile\/recommend\/v2\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/47c242029d83452d-cnftp.js, requires-body=true, max-size=-1, timeout=60
 
 # hostname = api.bevol.com
-mlxx = type=http-response, pattern=^https:\/\/api\.bevol\.com\/(?:appmain\/app\/home\/page|usercenter\/account\/info|personal\/page|appmain\/app\/home\/launch|trialbox\/shop\/app\/homePage)$, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/mlxx/mlxx.js, requires-body=true, max-size=-1, timeout=60
+mlxx = type=http-response, pattern=^https:\/\/api\.bevol\.com\/(?:appmain\/app\/home\/page|usercenter\/account\/info|personal\/page|appmain\/app\/home\/launch|trialbox\/shop\/app\/homePage)$, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/29c959d46da4e494-mlxx.js, requires-body=true, max-size=-1, timeout=60
 
-meiyou_ads = type=http-response, pattern=^https:\/\/config-service\.seeyouyima\.com\/api\/configs\/batch\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/meiyou/meiyou_ads.js, requires-body=true, max-size=-1, timeout=60
+meiyou_ads = type=http-response, pattern=^https:\/\/config-service\.seeyouyima\.com\/api\/configs\/batch\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/b5150f8cfaf435b6-meiyou_ads.js, requires-body=true, max-size=-1, timeout=60
 
-meiyou_ads = type=http-response, pattern=^https:\/\/config-service\.seeyouyima\.com\/api\/configs\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/meiyou/meiyou_ads.js, requires-body=true, max-size=-1, timeout=60
+rewrite.054 = type=http-response, pattern=^https:\/\/config-service\.seeyouyima\.com\/api\/configs\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/b5150f8cfaf435b6-meiyou_ads.js, requires-body=true, max-size=-1, timeout=60
 
-miguvideo_ads = type=http-response, pattern=^https?:\/\/display-sc\.miguvideo\.com\/display\/v3\/static\/PERSONAL_CENTER$, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/refs/heads/main/Scripts/miguvideo/miguvideo_ads.js, requires-body=true, max-size=-1, timeout=60
+miguvideo_ads = type=http-response, pattern=^https?:\/\/display-sc\.miguvideo\.com\/display\/v3\/static\/PERSONAL_CENTER$, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/379472e34e6e55f2-miguvideo_ads.js, requires-body=true, max-size=-1, timeout=60
 
 # 多多买菜 开屏广告
-replaceBody = type=http-response, pattern=^https?:\/\/mobile\.yangkeduo\.com\/proxy\/api\/api\/express\/post\/waybill\/red_packet\/goods_list$, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=%22list%22%3A%5C%5B.%2B%5C%5D-%3E%22list%22%3A%5B%5D
 
-PupuSplashAds = type=http-response, pattern=^https:\/\/j1\.pupuapi\.com\/client\/search\/hot_keywords\/v3, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js, requires-body=true, max-size=-1, timeout=60
+PupuSplashAds = type=http-response, pattern=^https:\/\/j1\.pupuapi\.com\/client\/search\/hot_keywords\/v3, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/86a5c2c779ec6201-PupuSplashAds.js, requires-body=true, max-size=-1, timeout=60
 
-PupuSplashAds = type=http-response, pattern=^https:\/\/j1\.pupuapi\.com\/client\/app_resource\/resource_preload\/list_h5_resource, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js, requires-body=true, max-size=-1, timeout=60
+rewrite.055 = type=http-response, pattern=^https:\/\/j1\.pupuapi\.com\/client\/app_resource\/resource_preload\/list_h5_resource, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/86a5c2c779ec6201-PupuSplashAds.js, requires-body=true, max-size=-1, timeout=60
 
-PupuSplashAds = type=http-response, pattern=^https:\/\/j1\.pupuapi\.com\/client\/marketing\/advertisement\/v1, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js, requires-body=true, max-size=-1, timeout=60
+rewrite.056 = type=http-response, pattern=^https:\/\/j1\.pupuapi\.com\/client\/marketing\/advertisement\/v1, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/86a5c2c779ec6201-PupuSplashAds.js, requires-body=true, max-size=-1, timeout=60
 
 # 搜索结果页信息流横幅广告
-PupuSplashAds = type=http-response, pattern=^https:\/\/j1\.pupuapi\.com\/client\/search\/hub\/search_box\/products\/v6, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js, requires-body=true, max-size=-1, timeout=60
+rewrite.057 = type=http-response, pattern=^https:\/\/j1\.pupuapi\.com\/client\/search\/hub\/search_box\/products\/v6, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/86a5c2c779ec6201-PupuSplashAds.js, requires-body=true, max-size=-1, timeout=60
 
 # 下单页实惠卡开通推荐
-PupuSplashAds = type=http-response, pattern=^https:\/\/j1\.pupuapi\.com\/client\/order_settlement\/detail, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js, requires-body=true, max-size=-1, timeout=60
+rewrite.058 = type=http-response, pattern=^https:\/\/j1\.pupuapi\.com\/client\/order_settlement\/detail, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/86a5c2c779ec6201-PupuSplashAds.js, requires-body=true, max-size=-1, timeout=60
 
 # 订单列表骑手反馈问题推荐
-PupuSplashAds = type=http-response, pattern=^https:\/\/j1\.pupuapi\.com\/client\/order\/orders\/list\/v4, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js, requires-body=true, max-size=-1, timeout=60
+rewrite.059 = type=http-response, pattern=^https:\/\/j1\.pupuapi\.com\/client\/order\/orders\/list\/v4, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/86a5c2c779ec6201-PupuSplashAds.js, requires-body=true, max-size=-1, timeout=60
 
 # 屏蔽广告推送模块，会把“打开小程序”也屏蔽
-replaceBody = type=http-response, pattern=^https?:\/\/www\.pushplus\.plus.*, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=(%3Chead%3E)-%3E%241%3Cstyle%20type%3D%22text%2Fcss%22%3E%20%20div.container.py-3.text-center%20%7Bdisplay%3A%20none!%20important%7D%20%3C%2Fstyle%20%2F%3E
+rewrite.060 = type=http-response, pattern=^https?:\/\/www\.pushplus\.plus.*, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/7e513b7176785a58-replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=(%3Chead%3E)-%3E%241%3Cstyle%20type%3D%22text%2Fcss%22%3E%20%20div.container.py-3.text-center%20%7Bdisplay%3A%20none!%20important%7D%20%3C%2Fstyle%20%2F%3E
 
-qmai = type=http-response, pattern=^https?:\/\/(?>webapi|miniapp)\.qmai\.cn\/web\/catering([0-9]-apiserver)?\/advertising\/ad\/advertiseInfo, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/qmai.js, requires-body=true, max-size=-1, timeout=60
+qmai = type=http-response, pattern=^https?:\/\/(?>webapi|miniapp)\.qmai\.cn\/web\/catering([0-9]-apiserver)?\/advertising\/ad\/advertiseInfo, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/6c23ec663dccbcbc-qmai.js, requires-body=true, max-size=-1, timeout=60
 
 # 起点开屏页广告,每日导读去除,冷启动强制跳转精选页去除,去除发现页弹出的活动弹窗,去除下方(精选 发现 中间的)活动时的tab,去除书架右下角的活动/广告的悬浮icon,搜索页可以搜索用户
-qidian = type=http-response, pattern=^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/(v4\/client\/getsplashscreen|v2\/deeplink\/geturl|v1\/(client\/getconf|adv\/getadvlistbatch\?positions=iOS_tab|dailyrecommend\/getdailyrecommend)), script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/qidian.js, requires-body=true, max-size=-1, timeout=60
+qidian = type=http-response, pattern=^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/(v4\/client\/getsplashscreen|v2\/deeplink\/geturl|v1\/(client\/getconf|adv\/getadvlistbatch\?positions=iOS_tab|dailyrecommend\/getdailyrecommend)), script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/ac2c1ec848a8bd34-qidian.js, requires-body=true, max-size=-1, timeout=60
 
-51job = type=http-response, pattern=^https?:\/\/cupid\.51job(app)?\.com\/open\/noauth\/recommend\/job-tab-dynamic, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/51job.js, requires-body=true, max-size=-1, timeout=60
+51job = type=http-response, pattern=^https?:\/\/cupid\.51job(app)?\.com\/open\/noauth\/recommend\/job-tab-dynamic, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/e388fd2c12c508df-51job.js, requires-body=true, max-size=-1, timeout=60
 
 # 我的页净化
-51job = type=http-response, pattern=^https?:\/\/cupid\.51job(app)?\.com\/open\/my-page\/, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/51job.js, requires-body=true, max-size=-1, timeout=60
+rewrite.061 = type=http-response, pattern=^https?:\/\/cupid\.51job(app)?\.com\/open\/my-page\/, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/e388fd2c12c508df-51job.js, requires-body=true, max-size=-1, timeout=60
 
 # hostname = iqushangwang.8quan.com
-QuDa = type=http-response, pattern=^https?:\/\/iqushangwang\.8quan\.com\/index\.php\/i\/index\/index, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/QuDa.js, requires-body=true, max-size=-1, timeout=60
+QuDa = type=http-response, pattern=^https?:\/\/iqushangwang\.8quan\.com\/index\.php\/i\/index\/index, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/a5bda7e38c3ee744-QuDa.js, requires-body=true, max-size=-1, timeout=60
 
-rrtv_json = type=http-response, pattern=^https?:\/\/api\.rr\.tv\/\w{3}\/level\/info, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js, requires-body=true, max-size=-1, timeout=60
+rrtv_json = type=http-response, pattern=^https?:\/\/api\.rr\.tv\/\w{3}\/level\/info, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/26050e48827affcf-rrtv_json.js, requires-body=true, max-size=-1, timeout=60
 
 # RRTV_去除首頁廣告
-rrtv_json = type=http-response, pattern=https://api.rr.tv/v3plus/index/channel\?pageNum=1&position=CHANNEL_INDEX, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js, requires-body=true, max-size=-1, timeout=60
+rewrite.062 = type=http-response, pattern=https://api.rr.tv/v3plus/index/channel\?pageNum=1&position=CHANNEL_INDEX, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/26050e48827affcf-rrtv_json.js, requires-body=true, max-size=-1, timeout=60
 
 # RRTV_去除廣場tab
-rrtv_json = type=http-response, pattern=^https?:\/\/api\.rr\.tv\/app\/config\/h5NativeBar, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js, requires-body=true, max-size=-1, timeout=60
+rewrite.063 = type=http-response, pattern=^https?:\/\/api\.rr\.tv\/app\/config\/h5NativeBar, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/26050e48827affcf-rrtv_json.js, requires-body=true, max-size=-1, timeout=60
 
 # RRTV_去除商城廣告
-rrtv_json = type=http-response, pattern=^https?:\/\/api\.rr\.tv\/v3plus\/index\/channel\?pageNum=1&position=CHANNEL_MY, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js, requires-body=true, max-size=-1, timeout=60
+rewrite.064 = type=http-response, pattern=^https?:\/\/api\.rr\.tv\/v3plus\/index\/channel\?pageNum=1&position=CHANNEL_MY, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/26050e48827affcf-rrtv_json.js, requires-body=true, max-size=-1, timeout=60
 
 # RRTV_Ad_List
-rrtv_json = type=http-response, pattern=^https?:\/\/api\.rr\.tv\/user\/privilege\/list, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js, requires-body=true, max-size=-1, timeout=60
+rewrite.065 = type=http-response, pattern=^https?:\/\/api\.rr\.tv\/user\/privilege\/list, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/26050e48827affcf-rrtv_json.js, requires-body=true, max-size=-1, timeout=60
 
 # RRTV_Ad_All
-rrtv_json = type=http-response, pattern=^https?:\/\/api\.rr\.tv\/ad\/getAll, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js, requires-body=true, max-size=-1, timeout=60
+rewrite.066 = type=http-response, pattern=^https?:\/\/api\.rr\.tv\/ad\/getAll, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/26050e48827affcf-rrtv_json.js, requires-body=true, max-size=-1, timeout=60
 
 # RRTV_Get_Drama
-rrtv_json = type=http-response, pattern=^https?:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js, requires-body=true, max-size=-1, timeout=60
+rewrite.067 = type=http-response, pattern=^https?:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/26050e48827affcf-rrtv_json.js, requires-body=true, max-size=-1, timeout=60
 
 # RRTV_Watch_V4
-rrtv_json = type=http-response, pattern=https://api.rr.tv/watch/v4, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js, requires-body=true, max-size=-1, timeout=60
+rewrite.068 = type=http-response, pattern=https://api.rr.tv/watch/v4, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/26050e48827affcf-rrtv_json.js, requires-body=true, max-size=-1, timeout=60
 
 # RRTV_User_Info
-rrtv_json = type=http-response, pattern=https://api.rr.tv/user/profile, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js, requires-body=true, max-size=-1, timeout=60
+rewrite.069 = type=http-response, pattern=https://api.rr.tv/user/profile, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/26050e48827affcf-rrtv_json.js, requires-body=true, max-size=-1, timeout=60
 
 # hostname = capi.lkcoffee.com, ecapi.lkcoffee.com, m.lkcoffee.com, img0*.luckincoffeecdn.com
-replaceBody = type=http-response, pattern=^https?:\/\/capi\.lkcoffee\.com\/resource\/m\/sys\/app\/adposNew, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=%5C%7B.%2B%5C%7D-%3E%7B%22status%22%3A%22SUCCESS%22%7D
+rewrite.070 = type=http-response, pattern=^https?:\/\/capi\.lkcoffee\.com\/resource\/m\/sys\/app\/adposNew, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/7e513b7176785a58-replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=%5C%7B.%2B%5C%7D-%3E%7B%22status%22%3A%22SUCCESS%22%7D
 
-replaceBody = type=http-response, pattern=^https?:\/\/(ec|c)api\.lkcoffee\.com\/resource\/m\/eorder\/product\/popAppTagProductList, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=%5C%7B.%2B%5C%7D-%3E%7B%22status%22%3A%22SUCCESS%22%7D
+rewrite.071 = type=http-response, pattern=^https?:\/\/(ec|c)api\.lkcoffee\.com\/resource\/m\/eorder\/product\/popAppTagProductList, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/7e513b7176785a58-replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=%5C%7B.%2B%5C%7D-%3E%7B%22status%22%3A%22SUCCESS%22%7D
 
-replaceBody = type=http-response, pattern=^https?:\/\/m\.lkcoffee\.com\/ecapi\/resource\/m\/member\/exchange\/page, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=%5C%7B.%2B%5C%7D-%3E%7B%22status%22%3A%22SUCCESS%22%7D
+rewrite.072 = type=http-response, pattern=^https?:\/\/m\.lkcoffee\.com\/ecapi\/resource\/m\/member\/exchange\/page, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/7e513b7176785a58-replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=%5C%7B.%2B%5C%7D-%3E%7B%22status%22%3A%22SUCCESS%22%7D
 
-replaceBody = type=http-response, pattern=^https?:\/\/m\.lkcoffee\.com\/capi\/resource\/m\/growUp\/main, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=%22popTitle%22%3A%22.%2B%3F%22-%3E%22popTitle%22%3A%22%22
+rewrite.073 = type=http-response, pattern=^https?:\/\/m\.lkcoffee\.com\/capi\/resource\/m\/growUp\/main, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/7e513b7176785a58-replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=%22popTitle%22%3A%22.%2B%3F%22-%3E%22popTitle%22%3A%22%22
 
-replaceBody = type=http-response, pattern=^https?:\/\/dyncdn\.me\/static\/\d{0,2}\/js\/showads\.js$, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=true-%3Efalse
+rewrite.074 = type=http-response, pattern=^https?:\/\/dyncdn\.me\/static\/\d{0,2}\/js\/showads\.js$, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/7e513b7176785a58-replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=true-%3Efalse
 
 # hostname = gql.reddit.com, gql-fed.reddit.com
-reddit = type=http-response, pattern=^https?:\/\/gql(-fed)?\.reddit\.com, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/reddit.js, requires-body=true, max-size=-1, timeout=60
+reddit = type=http-response, pattern=^https?:\/\/gql(-fed)?\.reddit\.com, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/fc4b214bb4657bd4-reddit.js, requires-body=true, max-size=-1, timeout=60
 
-smzdm_ads = type=http-response, pattern=^https?:\/\/haojia\.m\.smzdm\.com\/detail_modul\/user_related_modul\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/smzdm/smzdm_ads.js, requires-body=true, max-size=-1, timeout=60
+smzdm_ads = type=http-response, pattern=^https?:\/\/haojia\.m\.smzdm\.com\/detail_modul\/user_related_modul\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/2d477c4af29cb5ee-smzdm_ads.js, requires-body=true, max-size=-1, timeout=60
 
-smzdm_ads = type=http-response, pattern=^https?:\/\/haojia-api\.smzdm\.com\/ranking_list\/articles\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/smzdm/smzdm_ads.js, requires-body=true, max-size=-1, timeout=60
+rewrite.075 = type=http-response, pattern=^https?:\/\/haojia-api\.smzdm\.com\/ranking_list\/articles\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/2d477c4af29cb5ee-smzdm_ads.js, requires-body=true, max-size=-1, timeout=60
 
-smzdm_ads = type=http-response, pattern=^https?:\/\/s-api\.smzdm\.com\/sou\/filter\/tags\/hot_tags\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/smzdm/smzdm_ads.js, requires-body=true, max-size=-1, timeout=60
+rewrite.076 = type=http-response, pattern=^https?:\/\/s-api\.smzdm\.com\/sou\/filter\/tags\/hot_tags\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/2d477c4af29cb5ee-smzdm_ads.js, requires-body=true, max-size=-1, timeout=60
 
-smzdm_ads = type=http-response, pattern=^https?:\/\/s-api\.smzdm\.com\/sou\/list_v10\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/smzdm/smzdm_ads.js, requires-body=true, max-size=-1, timeout=60
+rewrite.077 = type=http-response, pattern=^https?:\/\/s-api\.smzdm\.com\/sou\/list_v10\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/2d477c4af29cb5ee-smzdm_ads.js, requires-body=true, max-size=-1, timeout=60
 
-smzdm_ads = type=http-response, pattern=^https?:\/\/user-api\.smzdm\.com\/vip\/creator_user_center, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/smzdm/smzdm_ads.js, requires-body=true, max-size=-1, timeout=60
+rewrite.078 = type=http-response, pattern=^https?:\/\/user-api\.smzdm\.com\/vip\/creator_user_center, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/2d477c4af29cb5ee-smzdm_ads.js, requires-body=true, max-size=-1, timeout=60
 
-Smzdm = type=http-response, pattern=^https?:\/\/user-api\.smzdm\.com\/vip$, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/smzdm/Smzdm.js, requires-body=true, max-size=-1, timeout=60
+Smzdm = type=http-response, pattern=^https?:\/\/user-api\.smzdm\.com\/vip$, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/1ca6ef134b1be9f2-Smzdm.js, requires-body=true, max-size=-1, timeout=60
 
 # 感谢【怎么肥事】分享
-Smzdm = type=http-response, pattern=^https?:\/\/app-api\.smzdm\.com\/util\/loading, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/smzdm/Smzdm.js, requires-body=true, max-size=-1, timeout=60
+rewrite.079 = type=http-response, pattern=^https?:\/\/app-api\.smzdm\.com\/util\/loading, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/1ca6ef134b1be9f2-Smzdm.js, requires-body=true, max-size=-1, timeout=60
 
-Smzdm = type=http-response, pattern=^https?:\/\/app-api\.smzdm\.com\/util\/update, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/smzdm/Smzdm.js, requires-body=true, max-size=-1, timeout=60
+rewrite.080 = type=http-response, pattern=^https?:\/\/app-api\.smzdm\.com\/util\/update, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/1ca6ef134b1be9f2-Smzdm.js, requires-body=true, max-size=-1, timeout=60
 
-Smzdm = type=http-response, pattern=^https?:\/\/user-api\.smzdm\.com\/vip\/bottom_card_list, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/smzdm/Smzdm.js, requires-body=true, max-size=-1, timeout=60
+rewrite.081 = type=http-response, pattern=^https?:\/\/user-api\.smzdm\.com\/vip\/bottom_card_list, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/1ca6ef134b1be9f2-Smzdm.js, requires-body=true, max-size=-1, timeout=60
 
-Smzdm = type=http-response, pattern=^https?:\/\/haojia-api\.smzdm\.com\/home\/list, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/smzdm/Smzdm.js, requires-body=true, max-size=-1, timeout=60
+rewrite.082 = type=http-response, pattern=^https?:\/\/haojia-api\.smzdm\.com\/home\/list, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/1ca6ef134b1be9f2-Smzdm.js, requires-body=true, max-size=-1, timeout=60
 
-Smzdm = type=http-response, pattern=^https?:\/\/homepage-api\.smzdm\.com\/v3\/home, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/smzdm/Smzdm.js, requires-body=true, max-size=-1, timeout=60
+rewrite.083 = type=http-response, pattern=^https?:\/\/homepage-api\.smzdm\.com\/v3\/home, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/1ca6ef134b1be9f2-Smzdm.js, requires-body=true, max-size=-1, timeout=60
 
-Smzdm = type=http-response, pattern=^https?:\/\/article-api\.smzdm\.com\/publish\/get_bubble, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/smzdm/Smzdm.js, requires-body=true, max-size=-1, timeout=60
+rewrite.084 = type=http-response, pattern=^https?:\/\/article-api\.smzdm\.com\/publish\/get_bubble, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/1ca6ef134b1be9f2-Smzdm.js, requires-body=true, max-size=-1, timeout=60
 
-Smzdm = type=http-response, pattern=^https?:\/\/qianbao\.smzdm\.com\/v\d\/app\/home, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/smzdm/Smzdm.js, requires-body=true, max-size=-1, timeout=60
+rewrite.085 = type=http-response, pattern=^https?:\/\/qianbao\.smzdm\.com\/v\d\/app\/home, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/1ca6ef134b1be9f2-Smzdm.js, requires-body=true, max-size=-1, timeout=60
 
 # hostname = api.sodalife.xyz
-soda = type=http-response, pattern=^https?:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AHOME%3ATOP, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soda.js, requires-body=true, max-size=-1, timeout=60
+soda = type=http-response, pattern=^https?:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AHOME%3ATOP, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/cf2c05d120b06d0a-soda.js, requires-body=true, max-size=-1, timeout=60
 
-req_replace_body = type=http-request, pattern=^https:\/\/data-collector\.soulapp\.cn\/api\/data\/report\/v\d, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/template/req_replace_body.js, requires-body=true, max-size=-1, timeout=60
+req_replace_body = type=http-request, pattern=^https:\/\/data-collector\.soulapp\.cn\/api\/data\/report\/v\d, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/c039fffc8a49b3bd-req_replace_body.js, requires-body=true, max-size=-1, timeout=60
 
 # 青少年模式弹窗
-soul_ads = type=http-response, pattern=^https?:\/\/api-account\.soulapp\.cn\/teenager\/config, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, max-size=-1, timeout=60
+soul_ads = type=http-response, pattern=^https?:\/\/api-account\.soulapp\.cn\/teenager\/config, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/b605a47fa7e7a42c-soul_ads.js, requires-body=true, max-size=-1, timeout=60
 
-soul_ads = type=http-response, pattern=^https?:\/\/api-a\.soulapp\.cn\/v2\/post\/gift\/list, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, max-size=-1, timeout=60
+rewrite.086 = type=http-response, pattern=^https?:\/\/api-a\.soulapp\.cn\/v2\/post\/gift\/list, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/b605a47fa7e7a42c-soul_ads.js, requires-body=true, max-size=-1, timeout=60
 
-soul_ads = type=http-response, pattern=^https?:\/\/api-a\.soulapp\.cn\/official\/scene\/module, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, max-size=-1, timeout=60
+rewrite.087 = type=http-response, pattern=^https?:\/\/api-a\.soulapp\.cn\/official\/scene\/module, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/b605a47fa7e7a42c-soul_ads.js, requires-body=true, max-size=-1, timeout=60
 
-soul_ads = type=http-response, pattern=^https?:\/\/api-user\.soulapp\.cn\/furion\/position\/content, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, max-size=-1, timeout=60
+rewrite.088 = type=http-response, pattern=^https?:\/\/api-user\.soulapp\.cn\/furion\/position\/content, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/b605a47fa7e7a42c-soul_ads.js, requires-body=true, max-size=-1, timeout=60
 
-soul_ads = type=http-response, pattern=^https?:\/\/api-user\.soulapp\.cn\/v\d\/planet\/config, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, max-size=-1, timeout=60
+rewrite.089 = type=http-response, pattern=^https?:\/\/api-user\.soulapp\.cn\/v\d\/planet\/config, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/b605a47fa7e7a42c-soul_ads.js, requires-body=true, max-size=-1, timeout=60
 
-soul_ads = type=http-response, pattern=^https?:\/\/api-chat\.soulapp\.cn\/chat\/limitInfo, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, max-size=-1, timeout=60
+rewrite.090 = type=http-response, pattern=^https?:\/\/api-chat\.soulapp\.cn\/chat\/limitInfo, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/b605a47fa7e7a42c-soul_ads.js, requires-body=true, max-size=-1, timeout=60
 
-soul_ads = type=http-response, pattern=^https?:\/\/post\.soulapp\.cn\/hot\/soul\/rank, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, max-size=-1, timeout=60
+rewrite.091 = type=http-response, pattern=^https?:\/\/post\.soulapp\.cn\/hot\/soul\/rank, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/b605a47fa7e7a42c-soul_ads.js, requires-body=true, max-size=-1, timeout=60
 
-soul_ads = type=http-response, pattern=^https?:\/\/post\.soulapp\.cn\/v\d\/post\/homepage\/guide\/card, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, max-size=-1, timeout=60
+rewrite.092 = type=http-response, pattern=^https?:\/\/post\.soulapp\.cn\/v\d\/post\/homepage\/guide\/card, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/b605a47fa7e7a42c-soul_ads.js, requires-body=true, max-size=-1, timeout=60
 
-soul_ads = type=http-response, pattern=^https?:\/\/post\.soulapp\.cn\/v\d\/post\/recSquare\/subTabs, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, max-size=-1, timeout=60
+rewrite.093 = type=http-response, pattern=^https?:\/\/post\.soulapp\.cn\/v\d\/post\/recSquare\/subTabs, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/b605a47fa7e7a42c-soul_ads.js, requires-body=true, max-size=-1, timeout=60
 
-soul_ads = type=http-response, pattern=^https?:\/\/chat-live\.soulapp\.cn\/chatroom\/chatClassifyRoomList, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, max-size=-1, timeout=60
+rewrite.094 = type=http-response, pattern=^https?:\/\/chat-live\.soulapp\.cn\/chatroom\/chatClassifyRoomList, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/b605a47fa7e7a42c-soul_ads.js, requires-body=true, max-size=-1, timeout=60
 
-soul_ads = type=http-response, pattern=^https?:\/\/gateway-mobile-gray\.soulapp\.cn\/mobile\/app\/version\/queryIos, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, max-size=-1, timeout=60
+rewrite.095 = type=http-response, pattern=^https?:\/\/gateway-mobile-gray\.soulapp\.cn\/mobile\/app\/version\/queryIos, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/b605a47fa7e7a42c-soul_ads.js, requires-body=true, max-size=-1, timeout=60
 
-soul_ads = type=http-response, pattern=^https?:\/\/47\.110\.187\.87\/winterfell\/v2\/getIpByDomain, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, max-size=-1, timeout=60
+rewrite.096 = type=http-response, pattern=^https?:\/\/47\.110\.187\.87\/winterfell\/v2\/getIpByDomain, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/b605a47fa7e7a42c-soul_ads.js, requires-body=true, max-size=-1, timeout=60
 
 # hostname = spclient.wg.spotify.com, *spclient.spotify.com
-spotify-qx-header = type=http-request, pattern=^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/user-customization-service\/v1\/customize$, script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-qx-header.js, timeout=60
+spotify-qx-header = type=http-request, pattern=^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/user-customization-service\/v1\/customize$, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/d075fa04e43daa6e-spotify-qx-header.js, timeout=60
 
-spotify-proto = type=http-response, pattern=^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$, script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js, requires-body=true, binary-body-mode=true, max-size=-1, timeout=60
+spotify-proto = type=http-response, pattern=^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/99449675fd0d0002-spotify-proto.js, requires-body=true, binary-body-mode=true, max-size=-1, timeout=60
 
-spotify-json = type=http-request, pattern=^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/, script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js, timeout=60
+spotify-json = type=http-request, pattern=^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/02086290c7c6ac68-spotify-json.js, timeout=60
 
 # hostname = www.tailgdd.com
-replaceBody = type=http-response, pattern=^https://www\.tailgdd\.com/v8/smart/app/config/get$, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=%22data%22%3A%5C%7B.%2B%5C%7D-%3E%22data%22%3A%7B%7D
+rewrite.097 = type=http-response, pattern=^https://www\.tailgdd\.com/v8/smart/app/config/get$, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/7e513b7176785a58-replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=%22data%22%3A%5C%7B.%2B%5C%7D-%3E%22data%22%3A%7B%7D
 
-myBlockAds = type=http-response, pattern=^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get), script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js, requires-body=true, max-size=-1, timeout=60
 
-myBlockAds = type=http-response, pattern=^https?:\/\/poplayer\.template\.alibaba\.com\/\w+\.json, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js, requires-body=true, max-size=-1, timeout=60
 
-qq-news = type=http-response, pattern=^https?:\/\/(news\.ssp\.qq\.com\/app|r\.inews\.qq\.com\/(get(QQNewsUnreadList|TagFeedList)|gw\/page\/event_detail|news_feed\/hot_module_list)), script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/qq-news.js, requires-body=true, max-size=-1, timeout=60
+qq-news = type=http-response, pattern=^https?:\/\/(news\.ssp\.qq\.com\/app|r\.inews\.qq\.com\/(get(QQNewsUnreadList|TagFeedList)|gw\/page\/event_detail|news_feed\/hot_module_list)), script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/a4ac231868fb4ed3-qq-news.js, requires-body=true, max-size=-1, timeout=60
 
-replaceBody = type=http-response, pattern=^https?:\/\/tft-app\.cdtft\.cn\/gateway-customer\/tftapp\/tft-ams\/api\/appAd, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=officialAdvertResultVo-%3Erandom-response
+rewrite.098 = type=http-response, pattern=^https?:\/\/tft-app\.cdtft\.cn\/gateway-customer\/tftapp\/tft-ams\/api\/appAd, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/7e513b7176785a58-replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=officialAdvertResultVo-%3Erandom-response
 
 # hostname = chl.tf.cn, wechat.tf.cn
-replaceBody = type=http-response, pattern=^https?:\/\/chl\.tf\.cn\/channelmg\/sys\/socso\/order\/queryOrderInfo, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=%22imgUrl%22-%3E%22imgUrl0%22
+rewrite.099 = type=http-response, pattern=^https?:\/\/chl\.tf\.cn\/channelmg\/sys\/socso\/order\/queryOrderInfo, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/7e513b7176785a58-replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=%22imgUrl%22-%3E%22imgUrl0%22
 
-tuhu = type=http-response, pattern=^https?:\/\/(cl-)?gateway\.tuhu\.cn(\/cl)?\/cl-common-api\/api\/personalCenter\/getCmsModuleList, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/tuhu.js, requires-body=true, max-size=-1, timeout=60
+tuhu = type=http-response, pattern=^https?:\/\/(cl-)?gateway\.tuhu\.cn(\/cl)?\/cl-common-api\/api\/personalCenter\/getCmsModuleList, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/75dcaa1d45273ed3-tuhu.js, requires-body=true, max-size=-1, timeout=60
 
-tuhu = type=http-response, pattern=^https?:\/\/(cl-)?gateway\.tuhu\.cn(\/cl)?\/[a-z-]+\/homePage\/getHomePageInfo, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/tuhu.js, requires-body=true, max-size=-1, timeout=60
+rewrite.100 = type=http-response, pattern=^https?:\/\/(cl-)?gateway\.tuhu\.cn(\/cl)?\/[a-z-]+\/homePage\/getHomePageInfo, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/75dcaa1d45273ed3-tuhu.js, requires-body=true, max-size=-1, timeout=60
 
-tuhu = type=http-response, pattern=^https?:\/\/(cl-)?gateway\.tuhu\.cn(\/cl)?\/cl-shop-api\/shopTab\/getModuleForC, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/tuhu.js, requires-body=true, max-size=-1, timeout=60
+rewrite.101 = type=http-response, pattern=^https?:\/\/(cl-)?gateway\.tuhu\.cn(\/cl)?\/cl-shop-api\/shopTab\/getModuleForC, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/75dcaa1d45273ed3-tuhu.js, requires-body=true, max-size=-1, timeout=60
 
-replaceBody = type=http-response, pattern=^https?:\/\/client\.tujia\.com\/bnbapp-node\/app\/portal\/getportalconfig\/bnb\/v2, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=%22banners%22%3A%5C%5B.%2B%5C%5D%2C-%3E%22banners%22%3A%5B%5D%2C
+rewrite.102 = type=http-response, pattern=^https?:\/\/client\.tujia\.com\/bnbapp-node\/app\/portal\/getportalconfig\/bnb\/v2, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/7e513b7176785a58-replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=%22banners%22%3A%5C%5B.%2B%5C%5D%2C-%3E%22banners%22%3A%5B%5D%2C
 
 # hostname = app02.vgtime.com
-vgtime = type=http-response, pattern=^https?:\/\/app02\.vgtime\.com:8080\/vgtime-app\/api\/v2\/init\/ad\.json, script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/vgtime.js, requires-body=true, max-size=-1, timeout=60
+vgtime = type=http-response, pattern=^https?:\/\/app02\.vgtime\.com:8080\/vgtime-app\/api\/v2\/init\/ad\.json, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/03e37ba50a09e20b-vgtime.js, requires-body=true, max-size=-1, timeout=60
 
 # 小程序弹窗广告
-replaceBody = type=http-response, pattern=^https?:\/\/misc-api-prd-mx\.wandafilm\.com\/commend\/common_banner_batch\.api\?bannerInfos=%5B%7B%22cinemaI, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=%22WX_index_mp-%26-boxAD%22-%3E%22WX_index_mp-%26-boxAD0%22
+rewrite.103 = type=http-response, pattern=^https?:\/\/misc-api-prd-mx\.wandafilm\.com\/commend\/common_banner_batch\.api\?bannerInfos=%5B%7B%22cinemaI, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/7e513b7176785a58-replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=%22WX_index_mp-%26-boxAD%22-%3E%22WX_index_mp-%26-boxAD0%22
 
 # hostname = dict.youdao.com, api-overmind.youdao.com, cdke.youdao.com, dictvip-business.youdao.com, dsp-impr2.youdao.com, impservice.dictapp.youdao.com, oral.youdao.com, oimage*.ydstatic.com
-dict-youdao-ad = type=http-response, pattern=^https?:\/\/dict\.youdao\.com\/(homepage\/promotion|course\/tab\/home|homepage\/tile), script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/youdao/dict-youdao-ad.js, requires-body=true, max-size=-1, timeout=60
+dict-youdao-ad = type=http-response, pattern=^https?:\/\/dict\.youdao\.com\/(homepage\/promotion|course\/tab\/home|homepage\/tile), script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/3b4e680772277ff3-dict-youdao-ad.js, requires-body=true, max-size=-1, timeout=60
 
-wyres = type=http-response, pattern=https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/(batch|v\d\/resource\/comment\/floor\/get), script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body=true, max-size=-1, timeout=60
+wyres = type=http-response, pattern=https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/(batch|v\d\/resource\/comment\/floor\/get), script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/9f029b3f48e03451-wyres.js, requires-body=true, max-size=-1, timeout=60
 
-wyres = type=http-response, pattern=https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/home\/framework\/tab, script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body=true, max-size=-1, timeout=60
+rewrite.104 = type=http-response, pattern=https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/home\/framework\/tab, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/9f029b3f48e03451-wyres.js, requires-body=true, max-size=-1, timeout=60
 
-wyres = type=http-response, pattern=https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/(homepage\/block\/page|link\/page\/rcmd\/(resource\/show|block\/resource\/multi\/refresh)), script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body=true, max-size=-1, timeout=60
+rewrite.105 = type=http-response, pattern=https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/(homepage\/block\/page|link\/page\/rcmd\/(resource\/show|block\/resource\/multi\/refresh)), script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/9f029b3f48e03451-wyres.js, requires-body=true, max-size=-1, timeout=60
 
-wyres = type=http-response, pattern=https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/page\/discovery\/resource\/show, script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body=true, max-size=-1, timeout=60
+rewrite.106 = type=http-response, pattern=https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/page\/discovery\/resource\/show, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/9f029b3f48e03451-wyres.js, requires-body=true, max-size=-1, timeout=60
 
-wyres = type=http-response, pattern=https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/song\/play\/more\/list\/v\d, script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body=true, max-size=-1, timeout=60
+rewrite.107 = type=http-response, pattern=https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/song\/play\/more\/list\/v\d, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/9f029b3f48e03451-wyres.js, requires-body=true, max-size=-1, timeout=60
 
-wyres = type=http-response, pattern=https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/position\/show\/resource, script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body=true, max-size=-1, timeout=60
+rewrite.108 = type=http-response, pattern=https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/position\/show\/resource, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/9f029b3f48e03451-wyres.js, requires-body=true, max-size=-1, timeout=60
 
-wyres = type=http-response, pattern=https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/user\/follow\/users\/mixed\/get, script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body=true, max-size=-1, timeout=60
+rewrite.109 = type=http-response, pattern=https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/user\/follow\/users\/mixed\/get, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/9f029b3f48e03451-wyres.js, requires-body=true, max-size=-1, timeout=60
 
 # hostname = mp.weixin.qq.com
-replaceBody = type=http-response, pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=advertisement-%3Efmz200
+rewrite.110 = type=http-response, pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/7e513b7176785a58-replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=advertisement-%3Efmz200
 
 # hostname = weixin110.qq.com, security.wechat.com
 
 # hostname = vue3-api.zhixiny.cn
-wnbz = type=http-response, pattern=^https:\/\/vue3-api\.zhixiny\.cn\/v1\/initui\?key=index, script-path=https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/AdBlock/xmApp/wnbz.js, requires-body=true, max-size=-1, timeout=60
+wnbz = type=http-response, pattern=^https:\/\/vue3-api\.zhixiny\.cn\/v1\/initui\?key=index, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/8cd9d9503c513067-wnbz.js, requires-body=true, max-size=-1, timeout=60
 
 # 商品信息流广告
-goofish = type=http-response, pattern=^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.nextfresh\/, script-path=https://raw.githubusercontent.com/ishowshu/qx/refs/heads/main/script/goofish.js, requires-body=true, max-size=-1, timeout=60
 
 # 定位地区页面的信息流广告
-goofish = type=http-response, pattern=^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.home\/, script-path=https://raw.githubusercontent.com/ishowshu/qx/refs/heads/main/script/goofish.js, requires-body=true, max-size=-1, timeout=60
 
 # 个人主页
-goofish = type=http-response, pattern=^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.idle\.user\.page\.my\.adapter\/, script-path=https://raw.githubusercontent.com/ishowshu/qx/refs/heads/main/script/goofish.js, requires-body=true, max-size=-1, timeout=60
 
 # 首页顶部频道菜单
-goofish = type=http-response, pattern=^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.circle\.list\/1\.0, script-path=https://raw.githubusercontent.com/ishowshu/qx/refs/heads/main/script/goofish.js, requires-body=true, max-size=-1, timeout=60
 
 # 商品详情页周边推荐
-goofish = type=http-response, pattern=^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.nearby\.itemdetail\.enter\/1\.0, script-path=https://raw.githubusercontent.com/ishowshu/qx/refs/heads/main/script/goofish.js, requires-body=true, max-size=-1, timeout=60
 
 # 搜索结果信息流广告
-goofish = type=http-response, pattern=^https:\/\/g-acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\/, script-path=https://raw.githubusercontent.com/ishowshu/qx/refs/heads/main/script/goofish.js, requires-body=true, max-size=-1, timeout=60
 
 # 同城页横幅广告
-goofish = type=http-response, pattern=^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.flow\.plat\.section, script-path=https://raw.githubusercontent.com/ishowshu/qx/refs/heads/main/script/goofish.js, requires-body=true, max-size=-1, timeout=60
 
 # hostname = *.pipiapps.com, *.fuliapps.com, *.xiangjiaoapps.com, *.xiangxiangapps.com
-xjsp = type=http-response, pattern=^https?:\/\/.+?\.(pipi|fuli|xiang(jiao|xiang))apps\.com\/(ucp\/index|getGlobalData|(\/|)vod\/reqplay\/), script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/xjsp.js, requires-body=true, max-size=-1, timeout=60
+xjsp = type=http-response, pattern=^https?:\/\/.+?\.(pipi|fuli|xiang(jiao|xiang))apps\.com\/(ucp\/index|getGlobalData|(\/|)vod\/reqplay\/), script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/15cb41bf88f26d12-xjsp.js, requires-body=true, max-size=-1, timeout=60
 
 # 搜索页
 
@@ -5561,52 +5414,52 @@ xjsp = type=http-response, pattern=^https?:\/\/.+?\.(pipi|fuli|xiang(jiao|xiang)
 # 评论区用户id置空 (实验功能可能无效)
 
 # 主页广告
-xmApp = type=http-response, pattern=https://mgesq.api.mgtv.com/dsl/index.+, script-path=https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/AdBlock/xmApp/xmApp.js, requires-body=true, max-size=-1, timeout=60
+xmApp = type=http-response, pattern=https://mgesq.api.mgtv.com/dsl/index.+, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/deda39243f57d797-xmApp.js, requires-body=true, max-size=-1, timeout=60
 
 # hostname = api.m.mi.com
-myBlockAds = type=http-response, pattern=^https?:\/\/api\.m\.mi\.com\/v1\/app\/start, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js, requires-body=true, max-size=-1, timeout=60
+myBlockAds = type=http-response, pattern=^https?:\/\/api\.m\.mi\.com\/v1\/app\/start, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/99c1f7a94b665bd1-myBlockAds.js, requires-body=true, max-size=-1, timeout=60
 
 # hostname = lcen.xiaote.net
-replaceBody = type=http-response, pattern=^https?:\/\/lcen\.xiaote\.net\/api\/graphql, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=screenSplashAd-%3Erandom-response
+rewrite.111 = type=http-response, pattern=^https?:\/\/lcen\.xiaote\.net\/api\/graphql, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/7e513b7176785a58-replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=screenSplashAd-%3Erandom-response
 
-xiaotucc = type=http-response, pattern=^https?:\/\/mapi\.xiaotucc\.com\/(mall\/main|main_page\/index\/getActivity), script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaotucc.js, requires-body=true, max-size=-1, timeout=60
+xiaotucc = type=http-response, pattern=^https?:\/\/mapi\.xiaotucc\.com\/(mall\/main|main_page\/index\/getActivity), script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/5123ae634fe0813c-xiaotucc.js, requires-body=true, max-size=-1, timeout=60
 
 # 我的页推广
-usmile = type=http-response, pattern=^https?:\/\/www\.myusmile\.online\/user\/plaqueTopic\/selectByType, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/usmile.js, requires-body=true, max-size=-1, timeout=60
+usmile = type=http-response, pattern=^https?:\/\/www\.myusmile\.online\/user\/plaqueTopic\/selectByType, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/39b651a656f6ea84-usmile.js, requires-body=true, max-size=-1, timeout=60
 
 # host-suffix, ykrec.youku.com, reject
-cnftp = type=http-response, pattern=^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.(gateway\.new\.execute|home\.feed|home\.query|uc\.query|ycp\.query), script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, max-size=-1, timeout=60
+rewrite.112 = type=http-response, pattern=^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.(gateway\.new\.execute|home\.feed|home\.query|uc\.query|ycp\.query), script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/47c242029d83452d-cnftp.js, requires-body=true, max-size=-1, timeout=60
 
 # 底部tab
-cnftp = type=http-response, pattern=^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.haidai\.lantern\.appconfig\.get, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, max-size=-1, timeout=60
+rewrite.113 = type=http-response, pattern=^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.haidai\.lantern\.appconfig\.get, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/47c242029d83452d-cnftp.js, requires-body=true, max-size=-1, timeout=60
 
 # 青少年模式弹窗
-cnftp = type=http-response, pattern=^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.huluwa\.dispatcher\.youthmode\.config2, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, max-size=-1, timeout=60
+rewrite.114 = type=http-response, pattern=^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.huluwa\.dispatcher\.youthmode\.config2, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/47c242029d83452d-cnftp.js, requires-body=true, max-size=-1, timeout=60
 
 # 搜索列表
-cnftp = type=http-response, pattern=^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.soku\.yksearch, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, max-size=-1, timeout=60
+rewrite.115 = type=http-response, pattern=^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.soku\.yksearch, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/47c242029d83452d-cnftp.js, requires-body=true, max-size=-1, timeout=60
 
 # 热剧弹窗
-cnftp = type=http-response, pattern=^https?:\/\/push\.m\.youku\.com\/collect-api\/get_push_interval_config_wx\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, max-size=-1, timeout=60
+rewrite.116 = type=http-response, pattern=^https?:\/\/push\.m\.youku\.com\/collect-api\/get_push_interval_config_wx\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/47c242029d83452d-cnftp.js, requires-body=true, max-size=-1, timeout=60
 
 # 开屏广告
-cnftp = type=http-response, pattern=^https?:\/\/un-acs\.youku\.com\/gw\/mtop\.youku\.play\.ups\.appinfo\.get, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, max-size=-1, timeout=60
+rewrite.117 = type=http-response, pattern=^https?:\/\/un-acs\.youku\.com\/gw\/mtop\.youku\.play\.ups\.appinfo\.get, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/47c242029d83452d-cnftp.js, requires-body=true, max-size=-1, timeout=60
 
-yx = type=http-response, pattern=^https?:\/\/api\.ulife\.group\/market\/homeIconDetail\/list\/v7, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/yx.js, requires-body=true, max-size=-1, timeout=60
+yx = type=http-response, pattern=^https?:\/\/api\.ulife\.group\/market\/homeIconDetail\/list\/v7, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/9aefdaf10b336424-yx.js, requires-body=true, max-size=-1, timeout=60
 
 # hostname = rr*.googlevideo.com, youtubei.googleapis.com
 
 # 小程序广告
-zhangshanggongjiao = type=http-response, pattern=^https?:\/\/wx\.mygolbs\.com\/WxBusServer\/ApiData\.do, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhangshanggongjiao.js, requires-body=true, max-size=-1, timeout=60
+zhangshanggongjiao = type=http-response, pattern=^https?:\/\/wx\.mygolbs\.com\/WxBusServer\/ApiData\.do, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/bfec7c5588dc4bba-zhangshanggongjiao.js, requires-body=true, max-size=-1, timeout=60
 
 # hostname = marketing.cmschina.com
-cmschina = type=http-response, pattern=^https:\/\/marketing\.cmschina\.com\/mkt\/api\/v1\?.*, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cmschina/cmschina.js, requires-body=true, max-size=-1, timeout=60
+cmschina = type=http-response, pattern=^https:\/\/marketing\.cmschina\.com\/mkt\/api\/v1\?.*, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/a110f9b20814ed17-cmschina.js, requires-body=true, max-size=-1, timeout=60
 
 # hostname = portal.zjzwfw.gov.cn
-replaceBody = type=http-response, pattern=^https?:\/\/portal\.zjzwfw\.gov\.cn\/app_api\/appHome\/selectStartPic, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=%22data%22%3A%5C%7B.%2B%5C%7D-%3E%22data%22%3A%7B%7D
+rewrite.118 = type=http-response, pattern=^https?:\/\/portal\.zjzwfw\.gov\.cn\/app_api\/appHome\/selectStartPic, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/7e513b7176785a58-replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=%22data%22%3A%5C%7B.%2B%5C%7D-%3E%22data%22%3A%7B%7D
 
 # hostname = app-izz.zhengzhou.gov.cn
-replaceBody = type=http-response, pattern=^https?:\/\/app-izz\.zhengzhou\.gov\.cn:10019\/bizgw\/gateway\.do, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=%22imgUrl19_5x9%22%3A%22.%2B%3F%22-%3E%22imgUrl19_5x9%22%3A%22%22
+rewrite.119 = type=http-response, pattern=^https?:\/\/app-izz\.zhengzhou\.gov\.cn:10019\/bizgw\/gateway\.do, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/7e513b7176785a58-replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=%22imgUrl19_5x9%22%3A%22.%2B%3F%22-%3E%22imgUrl19_5x9%22%3A%22%22
 
 
 # 首页 悬浮图标,顶部横幅,开屏广告,关注页推荐,推荐信息流,热榜信息流,热榜直播,回答底部卡片
@@ -5622,20 +5475,20 @@ replaceBody = type=http-response, pattern=^https?:\/\/app-izz\.zhengzhou\.gov\.c
 
 
 # hostname = m.airchina.com.cn
-airchina = type=http-response, pattern=^https:\/\/m\.airchina\.com\.cn\/airchina\/gateway\/v\d(\.\d)*\/api\/services, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/airchina.js, timeout=60
+airchina = type=http-response, pattern=^https:\/\/m\.airchina\.com\.cn\/airchina\/gateway\/v\d(\.\d)*\/api\/services, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/ef523f718bdc0ef5-airchina.js, timeout=60
 
 # 主页面
-picc_ads = type=http-response, pattern=^https?:\/\/zgrb\.epicc\.com\.cn\/G-HAPP\/a\/config\/homeInit\/v, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/picc/picc_ads.js, requires-body=true, max-size=-1, timeout=60
+picc_ads = type=http-response, pattern=^https?:\/\/zgrb\.epicc\.com\.cn\/G-HAPP\/a\/config\/homeInit\/v, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/224bd1ed6acc12dd-picc_ads.js, requires-body=true, max-size=-1, timeout=60
 
 # 我的页面
-picc_ads = type=http-response, pattern=^https?:\/\/zgrb\.epicc\.com\.cn\/G-HAPP\/mpageconfig\/myPageConfigList\/v, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/picc/picc_ads.js, requires-body=true, max-size=-1, timeout=60
+rewrite.120 = type=http-response, pattern=^https?:\/\/zgrb\.epicc\.com\.cn\/G-HAPP\/mpageconfig\/myPageConfigList\/v, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/224bd1ed6acc12dd-picc_ads.js, requires-body=true, max-size=-1, timeout=60
 
-replaceBody = type=http-response, pattern=^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getfeedflowinfo\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=userRed-%3Efmz200
+rewrite.121 = type=http-response, pattern=^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getfeedflowinfo\?, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/7e513b7176785a58-replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=userRed-%3Efmz200
 
 # “我的”页面去除冗余的模块
-zhuanzhuan = type=http-response, pattern=^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/getmyprofilev3, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhuanzhuan/zhuanzhuan.js, requires-body=true, max-size=-1, timeout=60
+zhuanzhuan = type=http-response, pattern=^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/getmyprofilev3, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/5af7cfca554d6c20-zhuanzhuan.js, requires-body=true, max-size=-1, timeout=60
 
-replaceBody = type=http-response, pattern=^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getchoicegoodsinfos, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=infoData-%3Efmz200
+rewrite.122 = type=http-response, pattern=^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getchoicegoodsinfos, script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/7e513b7176785a58-replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=infoData-%3Efmz200
 
 [MITM]
-hostname = %APPEND% gab.122.gov.cn, ad.12306.cn, api.21jingji.com, tianqi.2345.com, ad.life.360.cn, gateway.36kr.com, evs.500.com, api.u51.com, vip7.fzwdyy.cn, *.qyfxgd.cn, *.weilai555.com, *.ecoliving168.com, *.58cdn.com.cn, app.58.com, aes.acfun.cn, api-new.app.acfun.cn, gw.aihuishou.com, api.bjxkhc.com, b2baifanfan.baidu.com, manager.aiqiangua.com, list-app-m.i4.cn, mapi.txcmapp.com, icc.one, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, api.alipan.com, member.alipan.com, api-cslp-emt.amazon.cn, www.ahzs10000.com, interface.aomiapp.com, sso.ifanr.com, www.onstar.com.cn, api.shanghaionstar.com, -i.vip.iqiyi.com, *.iqiyi.com, cache.bydauto.com.cn, aimg.babytreeimg.com, plough.babytree.com, mapiweb.babytree.com, go.babytree.com, www.baidu.com, fcvbjbcebos.baidu.com, cover.baidu.com, baichuan.baidu.com, api*.tuisong.baidu.com, afd.baidu.com, mobads.baidu.com, issuecdn.baidupcs.com, update.pan.baidu.com, sa*.tuisong.baidu.com, m.baidu.com, sofire.baidu.com, r6.mo.baidu.com, res.mi.baidu.com, mime.baidu.com, mbd.baidu.com, dss0.bdstatic.com, tb1.bdstatic.com, tb2.bdstatic.com, ss0.bdstatic.com, gss0.bdstatic.com, newclient.map.baidu.com, pan.baidu.com, ndstatic.cdn.bcebos.com, staticsns.cdn.bcebos.com, fc-video.cdn.bcebos.com, rp.hpplay.cn, tiebac.baidu.com, appwk.baidu.com, mres.aibank.com, www.banyuetanapp.com, cdnmobibank.bankofbeijing.com.cn, apps.api.ke.com, gateway.shouqiev.com, channel.beitaichufang.com, iapi.bishijie.com, pan-api.bitqiu.com, www.binance.info, www.yingwangtech.net, www.binance.com, social.blued.cn, bd-api.kuwo.cn, h5app.kuwo.cn, bodianimgcdn.kuwo.cn, api.boohee.com, bohe.sfo-tx-shanghai-01.saas.sensorsdata.cn, lego.boohee.com, status.boohee.com, api.sfacg.com, lens.leoao.com, res.pizzahut.com.cn, cdn-xyk-app.bankofbeijing.com.cn, api.caijingmobile.com, api3.cls.cn, cn-acs.m.cainiao.com, amdc.m.taobao.com, gg.caixin.com, ptmpcap.caocaokeji.cn, cap.caocaokeji.cn, fintechappdr.cgws.com, 182.92.244.70, ad.myfriday.cn, ios-api.lucklyworld.com, learn.chaoxing.com, pic1.chelaile.net.cn, api.chelaile.net.cn, atrace.chelaile.net.cn, web.chelaile.net.cn, cdn.*.chelaileapp.cn, gw.chuangkit.com, app.hbooker.com, clubmed.bd.clubmedmnp.com, beta-api.crunchyroll.com, js-ad.ayximgs.com, app-gw.csdn.net, gw.csdn.net, ap.dongqiudi.com, app.ceair.com, se-api.djiits.com, dudian-oss.oss-cn-shenzhen.aliyuncs.com, imagepc.ctaiot.com, delivery-api.imdada.cn, sdk.alibaba.com.ailbaba.me, adservice.sigmob.cn, ssp.dzh.com.cn, e.dangdang.com, api.dangdang.com, mapi.dangdang.com, appdmkj.5idream.net, app.dewu.com, cdn.poizon.com, capis*.didapinche.com, adx-cn.anythinktech.com, www.didapinche.com, pt-starimg.didistatic.com, omgup*.xiaojukeji.com, res.xiaojukeji.com, common.diditaxi.com.cn, hd.xiaojukeji.com, freight.xiaojukeji.com, daijia.kuaidadi.com, ct.xiaojukeji.com, conf.diditaxi.com.cn, as.xiaojukeji.com, img.ddrk.me, ddrk.me, app.95598pay.com, 103.37.155.60, *.dianping.com, img.meituan.net, p.meituan.com, rms.meituan.com, www.dpfile.com, awp-assets.meituan.net, s3plus.meituan.net, p*.meituan.net, ddplus.meituan.net, api.gaoqingdianshi.com, cdn.dianshihome.com, app-v1.ecoliving168.com, img.admobile.top, webcdn.m.qq.com, *.pglstatp-toutiao.com, api.htp.ad-scope.com.cn, appgw.ddpai.com, init.sms.mob.com, apphw.ddpai.com, maicai.api.ddxq.mobi, gw.api.ddxq.mobi, user.api.ddxq.mobi, gw.alicdn.com, img.alicdn.com, dxy.com, dq.dxy.cn, emdcadvertise.eastmoney.com, api.gamer.com.tw, ump.sz.creditcard.ecitic.com, m.creditcard.ecitic.com, api.douban.com, daoyu.sdo.com, rtbapi.douyucdn.cn, staticlive.douyucdn.cn, capi.douyucdn.cn, douyucdn.cn, ec.ems.com.cn, ump.ems.com.cn, elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, www1.elecfans.com, nr-op.elemecdn.com, cdn-evone-ceph.echargenet.com, pic.edaijia.cn, static.95508.com, gateway-api.dushu365.com, l*.51fanli.net, *.pangolin-sdk-toutiao.com, *.pangolin-sdk-toutiao.*, *.pstatp.com, *.pstatp.com.*, *.pglstatp-toutiao.com.*, gurd.snssdk.com, gurd.snssdk.com.*, i-lq.snssdk.com, i-lq.snssdk.com.*, *default.ixigua.com, api.flydigi.com, app.flymodem.com.cn, tiku.fenbi.com, fm.fenqile.com, external.fcbox.com, dsp.fcbox.com, consumer.fcbox.com, rtm.fcbox.com, dsa-mfp.fengshows.cn, api.fengshows.com, mobile.flightradar24.com, ecloud.tppension.cntaiping.com, apis.folidaymall.com, api*.futunn.com, app.variflight.com, m*.amap.com, optimus-ads.amap.com, amap-aos-info-nogw.amap.com, mobile.cebbank.com, yghsh.cebbank.com, mps.95508.com, gha.ghac.cn, gsp.gacmotor.com, zone.guiderank-app.com, cdn.133.cn, jt.rsscc.com, jp.rsscc.com, prom.mobile.gome.com.cn, api.gongkaoleida.com, yun.tuitiger.com, mi.gdt.qq.com, open.e.kuaishou.com, pagead2.googlesyndication.com, kano.guahao.cn, app.wy.guahao.com, awg.enmonster.com, aag.enmonster.com, guanyu.longfor.com, mbank.grcbank.com, dl.app.gtja.com, dl*.app.gtja.com, v.icbc.com.cn, pv.elife.icbc.com.cn, elife.icbc.com.cn, fuwu.nhsa.gov.cn, gugongmini.dpm.org.cn, m.prod.app.hsbcfts.com.cn, emisdatacenteraws.hafoo.com, hmbaby.simshine.cn, *.townmalls.cn, www.haixue.com, service.haiersmarthomes.com, gfp.veta.naver.com, api.hanju.koudaibaobao.com, home.umetrip.com, discardrp.umetrip.com, startup.umetrip.com, oss.umetrip.com, m.ibuscloud.com, ads.iconntech.com, smkmp.96225.com, api.haohaozhu.cn, notch.qdaily.com, app3.qdaily.com, open.fitdays.cn, hfapp-service.qweather.net, promote-trx.helipay.com, acs-m.freshippo.com, api.hengdianfilm.com, fbchina.flipchina.cn, api.touker.com, static.creditcard.hxb.com.cn, cmsapi.wifi8.com, cmsfile.wifi8.com, interface.hstong.com, res.hongyibo.com.cn, api4.bybutter.com, appapi.huazhu.com, hweb-hotel.huazhu.com, hweb-manager.huazhu.com, mcsp.cloudpnr.com, saas-ad.cloudpnr.com, api.huomao.com, games.mobileapi.hupu.com, du.hupucdn.com, i*.hoopchina.com.cn, goblin.hupu.com, api-ad-product.huxiu.com, cdn.wup.huya.com, business.msstatic.com, cdnfile1.msstatic.com, live-ads.huya.com, api-one-wscn.awtmt.com, api.wallstreetcn.com, napi.ithome.com, www.i3zh.com, mbank5.jsbchina.cn, cdn.jlbank.com.cn, yunbusiness.ccb.com, g.alicdn.com, waimai-guide.ele.me, api.m.jd.com, dns.jd.com, router-app-api.jdcloud.com, m.360buyimg.com, bdsp-x.jd.com, dsp-x.jd.com, ms.jr.jd.com, appconf.mail.163.com, support.you.163.com, jdread-api.jd.com, www.gcores.com, explorer.tratao.com, *.kakamobi.cn, smart.789.image.mucang.cn, richmanrules.ksedt.com, api.jxedt.com, richmanapi.jxedt.com, img.gdoil.cn, api.tipsoon.com, s.jiediankeji.com, img.jiemian.com, booking.bestwehotel.com, api.sogaha.cn, p*.pstatp.com, jad-api.jin10.com, jiucaigongshe.oss-cn-beijing.aliyuncs.com, dict-mobile.iciba.com, mobile-pic.cache.iciba.com, service.iciba.com, *.kingsoft-office-service.com, api-access.pangolin-sdk-toutiao.com, api.coolapk.com, res.kfc.com.cn, bp-api.bestv.com.cn, bp-api.bestv.cn, api.vistopia.com.cn, open3.vistastory.com, pocketuni.net, cdn.kuaidi100.com, p.kuaidi100.com, api.kkmh.com, az4-api.ksapisrv.com, az4-api-idc.ksapisrv.com, az2-api.ksapisrv.com, az2-api-idc.ksapisrv.com, apissl.gifshow.com, apissl.ksapisrv.com, az2-api-js.gifshow.com, az2-live.ksapisrv.com, audiobookpay.kuwo.cn, mgxhtj.kuwo.cn, nmobi.kuwo.cn, searchrecterm.kuwo.cn, musicpay.kuwo.cn, vip1.kuwo.cn, www.oschina.net, open-cms-api.uc.cn, open-cms-api.quark.cn, api.gotokeep.com, kad.gotokeep.com, static1.keepcdn.com, cdn-oss.00bang.cn, api.00bang.cn, mobile.laichon.com, shop.laichon.com, mobile-api.imlaidian.com, api.laifeng.com, gmp.lakala.com, wallet.lakala.com, tk.lanjiyin.com.cn, tagit.hyhuo.com, 118.178.214.118, dapis.mting.info, display.wting.info, ios.lantouzi.com, tbgapplet.carlsberg.asia, dl-cu-hz.lechange.cn, api.club.lenovo.cn, abcapi.lenovoimage.com, helper.2bulu.com, api-ac.liepin.com, api-wanda.liepin.com, a.line.me, ad.line-scdn.net, w.line.me, gw.line.naver.jp, lan.line.me, buy.line.me, crs-event.line.me, obs.line-scdn.net, d.line-scdn.net, scdn.line-apps.com, sch.line.me, static.line-scdn.net, nelo2-col.linecorp.com, uts-front.line-apps.com, cix.line-apps.com, legy.line-apps.com, ec-bot-obs.line-scdn.net, app.aa-ab.com, ad.lofter.com, images.pinduoduo.com, lofter.lf127.net, order-app-api.lbdj.com, plt.yorentown.com, lawsonapi.yorentown.com, www.iyingdi.cn, www.1314zhilv.com, api.internetofcity.cn, www.cmbc.com.cn, rs.creditcard.cmbc.com.cn, dispatcher.camera360.com, mada-travel.17u.cn, ebk.17u.cn, app.api.versa-ai.com, static01.versa-ai.com, qimg.cdnmama.com, mapi.mafengwo.cn, creditcardapp.bankcomm.cn, creditcardapp.bankcomm.com, creditcard.bankcomm.cn, creditcard.bankcomm.com, sfo.mddcloud.com.cn, mob.mddcloud.com.cn, toblog.ctobsnssdk.com, t-dsp.pinduoduo.com, mobads-pre-config.cdn.bcebos.com, sdk1xyajs.data.kuiniuca.com, conf-darwin.xycdn.com, *.ubixioe.com, open.taou.com, h3.open.taou.com, mangaapi.manhuaren.com, *mangaapi.manhuaren.*, *.mgtv.com, app.missevan.com, p0.pipi.cn, api.mcd.cn, api.bevol.com, j-image.missfresh.cn, capi.mwee.cn, mea.meitudata.com, adui.tg.meitu.com, flowplus.meituan.net, cdb.meituan.com, peisongapi.meituan.com, x.seeyouyima.com, axxd.xmseeyouyima.com, b-api.ins.miaopai.com, ggc.miguvideo.com, public-deliver9.miguvideo.com, display*-sc.miguvideo.com, recommend-dy.miguvideo.com, app-sc.miguvideo.com, common-sc.miguvideo.com, ggx*.miguvideo.com, ggic*.miguvideo.com, home.mi.com, api.mgzf.com, midc.cdn-static.abchina.com.cn, enjoy.cdn-static.abchina.com, 3g.csair.com, blog.nilbt.com, www.nfmovies.com, api.nj.nbtv.cn, gateway.benewtech.cn, ntt-app.benewtech.cn, oxadmin.cp.com.cn, v3.wufazhuce.com, app.api.d3yuiw4.com, api.21ec74.com, slapi.oray.net, supportda.ofo.com, ma.ofo.com, activity2.api.ofo.com, 103.91.210.141, adapi.izuiyou.com, *.pipix.com, pss.txffp.com, appapi.caiyicloud.com, api.pinduoduo.com, api.yangkeduo.com, mobile.yangkeduo.com, iobs.pingan.com.cn, hcz-member.pingan.com.cn, cdn.sdb.com.cn, pacdn.m.stock.pingan.com, mobile.1qianbao.com, image.spdbccc.com.cn, j1.pupuapi.com, image.pushplus.plus, www.pushplus.plus, lban.spdb.com.cn, wap.spdb.com.cn, adpai.thepaper.cn, access.mypikpak.com, img01.51jobcdn.com, appapi.51job*.com, cupid.51job*.com, adproxy.autohome.com.cn, app2.autoimg.cn, fmapp.chinafamilymart.com.cn, facade-api.black-unique.com, us.l.qq.com, y.gtimg.cn, m.qianbao.qq.com, qidian.qpic.cn, mage.if.qidian.com, magev6.if.qidian.com, webapi.qmai.cn, miniapp.qmai.cn, open.e.kuaishou.cn, api-access.pangolin-sdk-toutiao-b.com, api-access.pangolin-sdk-toutiao1.com, api-cfg.wtzw.com, p1-lm.adukwai.com, lf-cdn-tos.bytescm.com, webcast-open.douyin.com, ether-pack.pangolin-sdk-toutiao.com, api-access.pangolin-sdk-toutiao?.com, sf*-fe-tos.pglstatp-toutiao.com, api.qbb6.com, open.qyer.com, media.qyer.com, a.qiumibao.com, iqushangwang.8quan.com, qde.qunar.com, homefront.qunar.com, client.qunar.com, capi.lkcoffee.com, ecapi.lkcoffee.com, m.lkcoffee.com, img0*.luckincoffeecdn.com, oneapph5.dongfeng-nissan.com.cn, app.peopleapp.com, stat.peopleapp.com, adstatic.peopleapp.com, dyncdn.me, gql.reddit.com, gql-fed.reddit.com, api.rr.tv, cms.daydaycook.com.cn, api.daydaycook.com.cn, app.meruki.cn, app.homeinns.com, api.mos.csvw.com, mapi.sfbest.com, ccsp-egmas.sf-express.com, ucmp.sf-express.com, mcs-mimp-web.sf-express.com, homepage-api.smzdm.com, haojia-api.smzdm.com, app-api.smzdm.com, user-api.smzdm.com, article-api.smzdm.com, qianbao.smzdm.com, s-api.smzdm.com, haojia.m.smzdm.com, api-sams.walmartmobile.cn, apis.lifeweek.com.cn, api.huachenjie.com, ad.shunchangzhixing.com, zlsdk.1rtb.net, api.gameplus.qq.com, ios.sspai.com, editor.sm.cn, img01.10101111cdn.com, www.ymm56.com, ecard.shenzhentong.com, sh-gateway.shihuo.cn, static.shihuocdn.cn, gw-passenger.01zhuanche.com, img.yun.01zhuanche, ut2.shuqistat.com, dsp.toutiao.com, sf3-be-pack.pglstatp-toutiao.com, sq.sljkj.com, ocean.shuqireader.com, img-tailor.11222.cn, message.shuqireader.com, feedback.uc.cn, *.shuqireader.com, 101.91.69.26, service.4gtv.tv, mapi.sichuanair.com, business-cdn.shouji.sogou.com, ios.sogou.com, android.sogou.com, h5api.sginput.qq.com, *.souhu.com, wxs-weixin.sd.zhumanggroup.com, spclient.wg.spotify.com, *spclient.spotify.com, api.shenyin.name, api.sodalife.xyz, api.bwton.com, szdmobile.suzhou.gov.cn, mpcs.suning.com, image.suning.com, luckman.suning.com, 47.110.187.87, ssp.soulapp.cn, chat-live.soulapp.cn, api-account.soulapp.cn, api-global.soulapp.me, api-a.soulapp.cn, api-pay.soulapp.cn, gateway-mobile-gray.soulapp.cn, api-chat.soulapp.cn, post.soulapp.cn, api-user.soulapp.cn, mrobot.pconline.com.cn, mrobot.pcauto.com.cn, agent-count.pconline.com.cn, ga-album-cdnqn.52tt.com, www.tailgdd.com, alt-r.my.com, imgx.jampp.com, bid.adview.cn, api.taptapdada.com, btrace.qq.com, api2.helper.qq.com, *.beacon.qq.com, lives.l.qq.com, imgcache.qq.com, mtteve.beacon.qq.com, vv.video.qq.com, qt.qq.com, 3gimg.qq.com, splashqqlive.gtimg.com, qzonestyle.gtimg.cn, discuz.gtimg.cn, bla.gtimg.com, mmgr.gtimg.com, bk.bingo.qq.com, static.gameplus.qq.com, 4gimg.map.qq.com, otheve.beacon.qq.com, r.inews.qq.com, news.ssp.qq.com, ccmsupport-sz.tenpay.com, sports3.gtimg.com, images.client.vip.xunlei.com, api-shoulei-ssl.xunlei.com, chl.tf.cn, wechat.tf.cn, cgbank.oss-cn-shenzhen.aliyuncs.com, tfsmy.chengdu.gov.cn, tft-app.cdtft.cn, ams-cdn.cdtft.cn, www.tsytv.com.cn, j5.dfcfw.com, appactive.1234567.com.cn, t1.market.xiaomi.com, api.cloud.189.cn, api.ncarzone.com, ossgw.alicdn.com, zconfig.alibabausercontent.com, *.ly.com, *.17usoft.com, *.17u.cn, mobilehotelapi.elong.com, quic-tcmapi.elong.com, truthsocial.com, *.i18n-pglstatp.com, mkt-gateway.tuhu.cn, cl-gateway.tuhu.cn, gateway.tuhu.cn, m.pvp.xoyo.com, client.tujia.com, m.tuniu.com, adm.10jqka.com.cn, iphone.ac.qq.com, stat.10jqka.com.cn, top-widgets-api.xiaozujian.com, api-marketing.zhinengxiyifang.cn, adsoss.zhinengxiyifang.cn, ads.zhinengxiyifang.cn, pubads.g.doubleclick.net, pagead2.googleadservices.com, app02.vgtime.com, img0*.benlailife.com, qiye.gaoding.com, *.music.126.net, img1.126.net, www.icourse163.org, nex.163.com, g1.163.com, client.mail.163.com, c.m.163.com, interface*.music.163.com, interface.music.163.com, interface?.music.163.com, ipv4.music.163.com, god.gameyw.netease.com, ok.166.net, kaola-haitao.oss.kaolacdn.com, sp.kaola.com, gw.kaola.com, analytics.163.com, easyreadfs.nosdn.127.net, p.du.163.com, m.you.163.com, yanxuan.nosdn.127.net, dict.youdao.com, api-overmind.youdao.com, cdke.youdao.com, dictvip-business.youdao.com, dsp-impr2.youdao.com, impservice.dictapp.youdao.com, oral.youdao.com, oimage*.ydstatic.com, api.wmpvp.com, snailsleep.net, b.appsimg.com, mapi.appvipshop.com, ios.wps.cn, wanciwangdata.oss-cn-beijing.aliyuncs.com, recite.perfectlingo.com, misc-api-prd-mx.wandafilm.com, osg-static.sgcc.com.cn, osg-service.sgcc.com.cn, mp.weixin.qq.com, security.wechat.com, api.wfdata.club, overseas.weico.cc, thor.weidian.com, cds.wifi188.com, vue3-api.zhixiny.cn, api.51credit.com, img.wukongtv.com, api-release.wuta-cam.com, res-release.wuta-cam.com, *.pipiapps.com, *.fuliapps.com, *.xiangjiaoapps.com, *.xiangxiangapps.com, m.ctrip.com, ma-adx.ctrip.com, wcprd.hilton.com.cn, images.cib.com.cn, apiwz.midukanshu.com, upload-bbs.mihoyo.com, cstore-en-public-tx.seewo.com, edit.sinaapp.com, app.chinahxzq.com.cn, client-api-v2.oray.com, lchttpapi.xczim.com, pzoap.moedot.net, vapp.tmuyun.com, res1.hubcloud.com.cn, api.xiachufang.com, mobileapi.xiamenair.com, acs.m.goofish.com, g-acs.m.goofish.com, info.mina.xiaoaisound.com, marketing-aibox.v.mitvos.com, api.xbxxhz.com, shcss.suning.com, web2.realtech-inc.com, sdk.1rtb.net, gw.xiaocantech.com, smarket.dian.so, file.dian.so, xhtz.oss-cn-guangzhou.aliyuncs.com, mpos-pic.helipay.com, mgesq.api.mgtv.com, *.hitv.com, app-api.niu.com, api.petkit.cn, myusmile.online, wemallh5.usmile.com, www.myusmile.online, api.psy-1.com, lcen.xiaote.net, ad.xiaotucc.com, mapi.xiaotucc.com, portal-portm.meituan.com, mall.meituan.com, xxyx-client-api.xiaoxiaoyouxuan.com, statistic.live.126.net, www.xiaoxiongmeishu.com, spamblocker-api.zeekstudio.com, api.xiaoyi.com, api.xiaoyuzhoufm.com, api.jr.mi.com, api.m.mi.com, api-miprint.hannto.com, api.indeedpower.com, api-mifit*.huami.com, shopapi.io.mi.com, gslbali.ximalaya.com, search.ximalaya.com, searchwsa.ximalaya.com, mobile.ximalaya.com, mobilehera.ximalaya.com, mobwsa.ximalaya.com, m.ximalaya.com, mwsa.ximalaya.com, app.xinpianchang.com, bgw.xinyue.qq.com, operationapi.fosunhanig.com, api*.sparke.cn, static.xyzq.cn, file.cibfintech.com, static.api.m.panda.tv, api.xueqiu.com, open.xueqiu.com, stock.xueqiu.com, 39.103.79.14, 39.106.97.84, 47.95.49.75, 101.201.62.20, 101.201.62.26, 101.201.175.228, 124.250.48.3, 182.92.145.50, 182.92.251.113, portal-xunyou.qingcdn.com, imeclient.openspeech.cn, e-static.aia.com.cn, api2.yaduo.com, www.cntv.cn, cdn.cmgadx.com, mobile-api2011.elong.com, webboot.zhangyue.com, saad.ms.zhangyue.net, app.yinxiang.com, i.ys7.com, oneapp-api.faw-vw.com, www.vgtime.com, *.gamersky.com, service.busi.inke.cn, static.psbc.com, mcc.psbc.com, static.mobile-bank.psbc.com, d.psbc.com, wallet.95516.com, tysdk.95516.com, ads.95516.com, pipi.4kya.com, m.yap.yahoo.com, patient-api.suh.cn, userpms-api.suh.cn, venus.yhd.com, a.sinopecsales.com, ocrifs.ejoy.sinopec.com, api.yikaobang.com.cn, api.17kjs.com, compus.xiaofubao.com, mapi-app.bestpay.com.cn, api.ycapp.yiche.com, cheyouapi.ycapp.yiche.com, ad.ysepay.com, ads.ysepay.com, api.winbull8.com, hz.yxzq.com, api5.youonbike.com, api.yonghuivip.com, new-app-api.ylyk.com, gongdu.youshu.cc, img.dailmo.com, img.allahall.com, app.zhoudamozi.com, api.ulife.group, acs.youku.com, push.m.youku.com, un-acs.youku.com, *.yuxueyuan.cn, xyst.yuanfudao.com, nnapp.cloudbae.cn, gw3.ykccn.com, restapi.iyunmai.com, m.airchina.com.cn, openapi.boc.cn, amemv.com, musical.com, snssdk.com, tiktokv.com, xyz.cnki.net, app.10099.com.cn, wap.bank.ecitic.com, imcs.citicbank.com, ecssmobile.e-chinalife.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, marketing.cmschina.com, client.app.coc.10086.cn, app.10086.cn, mcmm.caiyun.feixin.10086.cn, mrp.mcloud.139.com, ad.mcloud.139.com, middle.yun.139.com, cloud.189.cn, zt-app.go189.cn, m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn, e.weather.com.cn, zgrb.epicc.com.cn, apicloud.zol.com.cn, c.zhangle.com, live.inst-service.htsc.com, geetest.htsc.com, 119.29.29.98, djcapp.game.qq.com, quanguo.mygolbs.com, wx.mygolbs.com, ossweb-img.qq.com, mlol.qt.qq.com, mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bas.cmbchina.com, intellicc.bcs.cmbchina.com, beehiveapi.58.com, portal.zjzwfw.gov.cn, app-izz.zhengzhou.gov.cn, apio.zhengqi100.com, zua.zhidiantianxia.cn, preprod.cdzghome.com, direct.z-bank.com, hdgateway.zto.com, minipro.95504.net, sichuan.95504.net, app.badmintoncn.com, fastbuyer.zbj.com, z.onewo.com, app.zhuanzhuan.com, zjdr666.com, ztoread.ziroom.com, api.izuiyou.com, syh.zybang.com, www.zybang.com, ih2.ireader.com, book.img.ireader.com
+hostname = %APPEND% gab.122.gov.cn, ad.12306.cn, api.21jingji.com, tianqi.2345.com, ad.life.360.cn, gateway.36kr.com, evs.500.com, api.u51.com, vip7.fzwdyy.cn, *.qyfxgd.cn, *.weilai555.com, *.ecoliving168.com, *.58cdn.com.cn, app.58.com, aes.acfun.cn, api-new.app.acfun.cn, gw.aihuishou.com, api.bjxkhc.com, b2baifanfan.baidu.com, manager.aiqiangua.com, list-app-m.i4.cn, mapi.txcmapp.com, icc.one, heic.alicdn.com, api.alipan.com, member.alipan.com, api-cslp-emt.amazon.cn, www.ahzs10000.com, interface.aomiapp.com, sso.ifanr.com, www.onstar.com.cn, api.shanghaionstar.com, -i.vip.iqiyi.com, *.iqiyi.com, cache.bydauto.com.cn, aimg.babytreeimg.com, plough.babytree.com, mapiweb.babytree.com, go.babytree.com, www.baidu.com, fcvbjbcebos.baidu.com, cover.baidu.com, baichuan.baidu.com, api*.tuisong.baidu.com, afd.baidu.com, mobads.baidu.com, issuecdn.baidupcs.com, update.pan.baidu.com, sa*.tuisong.baidu.com, m.baidu.com, sofire.baidu.com, r6.mo.baidu.com, res.mi.baidu.com, mime.baidu.com, mbd.baidu.com, dss0.bdstatic.com, tb1.bdstatic.com, tb2.bdstatic.com, ss0.bdstatic.com, gss0.bdstatic.com, newclient.map.baidu.com, pan.baidu.com, ndstatic.cdn.bcebos.com, staticsns.cdn.bcebos.com, fc-video.cdn.bcebos.com, rp.hpplay.cn, tiebac.baidu.com, appwk.baidu.com, mres.aibank.com, www.banyuetanapp.com, cdnmobibank.bankofbeijing.com.cn, apps.api.ke.com, gateway.shouqiev.com, channel.beitaichufang.com, iapi.bishijie.com, pan-api.bitqiu.com, www.binance.info, www.yingwangtech.net, www.binance.com, social.blued.cn, bd-api.kuwo.cn, h5app.kuwo.cn, bodianimgcdn.kuwo.cn, api.boohee.com, bohe.sfo-tx-shanghai-01.saas.sensorsdata.cn, lego.boohee.com, status.boohee.com, api.sfacg.com, lens.leoao.com, res.pizzahut.com.cn, cdn-xyk-app.bankofbeijing.com.cn, api.caijingmobile.com, api3.cls.cn, gg.caixin.com, ptmpcap.caocaokeji.cn, cap.caocaokeji.cn, fintechappdr.cgws.com, 182.92.244.70, ad.myfriday.cn, ios-api.lucklyworld.com, learn.chaoxing.com, pic1.chelaile.net.cn, api.chelaile.net.cn, atrace.chelaile.net.cn, web.chelaile.net.cn, cdn.*.chelaileapp.cn, gw.chuangkit.com, app.hbooker.com, clubmed.bd.clubmedmnp.com, beta-api.crunchyroll.com, js-ad.ayximgs.com, app-gw.csdn.net, gw.csdn.net, ap.dongqiudi.com, app.ceair.com, se-api.djiits.com, dudian-oss.oss-cn-shenzhen.aliyuncs.com, imagepc.ctaiot.com, delivery-api.imdada.cn, adservice.sigmob.cn, ssp.dzh.com.cn, e.dangdang.com, api.dangdang.com, mapi.dangdang.com, appdmkj.5idream.net, app.dewu.com, cdn.poizon.com, capis*.didapinche.com, adx-cn.anythinktech.com, www.didapinche.com, pt-starimg.didistatic.com, omgup*.xiaojukeji.com, res.xiaojukeji.com, common.diditaxi.com.cn, hd.xiaojukeji.com, freight.xiaojukeji.com, daijia.kuaidadi.com, ct.xiaojukeji.com, conf.diditaxi.com.cn, as.xiaojukeji.com, img.ddrk.me, ddrk.me, app.95598pay.com, 103.37.155.60, *.dianping.com, img.meituan.net, p.meituan.com, rms.meituan.com, www.dpfile.com, awp-assets.meituan.net, s3plus.meituan.net, p*.meituan.net, ddplus.meituan.net, api.gaoqingdianshi.com, cdn.dianshihome.com, app-v1.ecoliving168.com, img.admobile.top, webcdn.m.qq.com, *.pglstatp-toutiao.com, api.htp.ad-scope.com.cn, appgw.ddpai.com, init.sms.mob.com, apphw.ddpai.com, maicai.api.ddxq.mobi, gw.api.ddxq.mobi, user.api.ddxq.mobi, gw.alicdn.com, img.alicdn.com, dxy.com, dq.dxy.cn, emdcadvertise.eastmoney.com, api.gamer.com.tw, ump.sz.creditcard.ecitic.com, m.creditcard.ecitic.com, api.douban.com, daoyu.sdo.com, rtbapi.douyucdn.cn, staticlive.douyucdn.cn, capi.douyucdn.cn, douyucdn.cn, ec.ems.com.cn, ump.ems.com.cn, elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, www1.elecfans.com, nr-op.elemecdn.com, cdn-evone-ceph.echargenet.com, pic.edaijia.cn, static.95508.com, gateway-api.dushu365.com, l*.51fanli.net, *.pangolin-sdk-toutiao.com, *.pangolin-sdk-toutiao.*, *.pstatp.com, *.pstatp.com.*, *.pglstatp-toutiao.com.*, gurd.snssdk.com, gurd.snssdk.com.*, i-lq.snssdk.com, i-lq.snssdk.com.*, *default.ixigua.com, api.flydigi.com, app.flymodem.com.cn, tiku.fenbi.com, fm.fenqile.com, external.fcbox.com, dsp.fcbox.com, consumer.fcbox.com, rtm.fcbox.com, dsa-mfp.fengshows.cn, api.fengshows.com, mobile.flightradar24.com, ecloud.tppension.cntaiping.com, apis.folidaymall.com, api*.futunn.com, app.variflight.com, m*.amap.com, optimus-ads.amap.com, amap-aos-info-nogw.amap.com, mobile.cebbank.com, yghsh.cebbank.com, mps.95508.com, gha.ghac.cn, gsp.gacmotor.com, zone.guiderank-app.com, cdn.133.cn, jt.rsscc.com, jp.rsscc.com, prom.mobile.gome.com.cn, api.gongkaoleida.com, yun.tuitiger.com, mi.gdt.qq.com, open.e.kuaishou.com, pagead2.googlesyndication.com, kano.guahao.cn, app.wy.guahao.com, awg.enmonster.com, aag.enmonster.com, guanyu.longfor.com, mbank.grcbank.com, dl.app.gtja.com, dl*.app.gtja.com, v.icbc.com.cn, pv.elife.icbc.com.cn, elife.icbc.com.cn, fuwu.nhsa.gov.cn, gugongmini.dpm.org.cn, m.prod.app.hsbcfts.com.cn, emisdatacenteraws.hafoo.com, hmbaby.simshine.cn, *.townmalls.cn, www.haixue.com, service.haiersmarthomes.com, gfp.veta.naver.com, api.hanju.koudaibaobao.com, home.umetrip.com, discardrp.umetrip.com, startup.umetrip.com, oss.umetrip.com, m.ibuscloud.com, ads.iconntech.com, smkmp.96225.com, api.haohaozhu.cn, notch.qdaily.com, app3.qdaily.com, open.fitdays.cn, hfapp-service.qweather.net, promote-trx.helipay.com, acs-m.freshippo.com, api.hengdianfilm.com, fbchina.flipchina.cn, api.touker.com, static.creditcard.hxb.com.cn, cmsapi.wifi8.com, cmsfile.wifi8.com, interface.hstong.com, res.hongyibo.com.cn, api4.bybutter.com, appapi.huazhu.com, hweb-hotel.huazhu.com, hweb-manager.huazhu.com, mcsp.cloudpnr.com, saas-ad.cloudpnr.com, api.huomao.com, games.mobileapi.hupu.com, du.hupucdn.com, i*.hoopchina.com.cn, goblin.hupu.com, api-ad-product.huxiu.com, cdn.wup.huya.com, business.msstatic.com, cdnfile1.msstatic.com, live-ads.huya.com, api-one-wscn.awtmt.com, api.wallstreetcn.com, napi.ithome.com, www.i3zh.com, mbank5.jsbchina.cn, cdn.jlbank.com.cn, yunbusiness.ccb.com, g.alicdn.com, waimai-guide.ele.me, router-app-api.jdcloud.com, m.360buyimg.com, appconf.mail.163.com, support.you.163.com, www.gcores.com, explorer.tratao.com, *.kakamobi.cn, smart.789.image.mucang.cn, richmanrules.ksedt.com, api.jxedt.com, richmanapi.jxedt.com, img.gdoil.cn, api.tipsoon.com, s.jiediankeji.com, img.jiemian.com, booking.bestwehotel.com, api.sogaha.cn, p*.pstatp.com, jad-api.jin10.com, jiucaigongshe.oss-cn-beijing.aliyuncs.com, dict-mobile.iciba.com, mobile-pic.cache.iciba.com, service.iciba.com, *.kingsoft-office-service.com, api-access.pangolin-sdk-toutiao.com, api.coolapk.com, res.kfc.com.cn, bp-api.bestv.com.cn, bp-api.bestv.cn, api.vistopia.com.cn, open3.vistastory.com, pocketuni.net, cdn.kuaidi100.com, p.kuaidi100.com, api.kkmh.com, az4-api.ksapisrv.com, az4-api-idc.ksapisrv.com, az2-api.ksapisrv.com, az2-api-idc.ksapisrv.com, apissl.gifshow.com, apissl.ksapisrv.com, az2-api-js.gifshow.com, az2-live.ksapisrv.com, audiobookpay.kuwo.cn, mgxhtj.kuwo.cn, nmobi.kuwo.cn, searchrecterm.kuwo.cn, musicpay.kuwo.cn, vip1.kuwo.cn, www.oschina.net, open-cms-api.uc.cn, open-cms-api.quark.cn, api.gotokeep.com, kad.gotokeep.com, static1.keepcdn.com, cdn-oss.00bang.cn, api.00bang.cn, mobile.laichon.com, shop.laichon.com, mobile-api.imlaidian.com, api.laifeng.com, gmp.lakala.com, wallet.lakala.com, tk.lanjiyin.com.cn, tagit.hyhuo.com, 118.178.214.118, dapis.mting.info, display.wting.info, ios.lantouzi.com, tbgapplet.carlsberg.asia, dl-cu-hz.lechange.cn, api.club.lenovo.cn, abcapi.lenovoimage.com, helper.2bulu.com, api-ac.liepin.com, api-wanda.liepin.com, a.line.me, ad.line-scdn.net, w.line.me, gw.line.naver.jp, lan.line.me, buy.line.me, crs-event.line.me, obs.line-scdn.net, d.line-scdn.net, scdn.line-apps.com, sch.line.me, static.line-scdn.net, nelo2-col.linecorp.com, uts-front.line-apps.com, cix.line-apps.com, legy.line-apps.com, ec-bot-obs.line-scdn.net, app.aa-ab.com, ad.lofter.com, lofter.lf127.net, order-app-api.lbdj.com, plt.yorentown.com, lawsonapi.yorentown.com, www.iyingdi.cn, www.1314zhilv.com, api.internetofcity.cn, www.cmbc.com.cn, rs.creditcard.cmbc.com.cn, dispatcher.camera360.com, mada-travel.17u.cn, ebk.17u.cn, app.api.versa-ai.com, static01.versa-ai.com, qimg.cdnmama.com, mapi.mafengwo.cn, creditcardapp.bankcomm.cn, creditcardapp.bankcomm.com, creditcard.bankcomm.cn, creditcard.bankcomm.com, sfo.mddcloud.com.cn, mob.mddcloud.com.cn, toblog.ctobsnssdk.com, mobads-pre-config.cdn.bcebos.com, sdk1xyajs.data.kuiniuca.com, conf-darwin.xycdn.com, *.ubixioe.com, open.taou.com, h3.open.taou.com, mangaapi.manhuaren.com, *mangaapi.manhuaren.*, *.mgtv.com, app.missevan.com, p0.pipi.cn, api.mcd.cn, api.bevol.com, j-image.missfresh.cn, capi.mwee.cn, mea.meitudata.com, adui.tg.meitu.com, flowplus.meituan.net, cdb.meituan.com, peisongapi.meituan.com, x.seeyouyima.com, axxd.xmseeyouyima.com, b-api.ins.miaopai.com, ggc.miguvideo.com, public-deliver9.miguvideo.com, display*-sc.miguvideo.com, recommend-dy.miguvideo.com, app-sc.miguvideo.com, common-sc.miguvideo.com, ggx*.miguvideo.com, ggic*.miguvideo.com, home.mi.com, api.mgzf.com, midc.cdn-static.abchina.com.cn, enjoy.cdn-static.abchina.com, 3g.csair.com, blog.nilbt.com, www.nfmovies.com, api.nj.nbtv.cn, gateway.benewtech.cn, ntt-app.benewtech.cn, oxadmin.cp.com.cn, v3.wufazhuce.com, app.api.d3yuiw4.com, api.21ec74.com, slapi.oray.net, supportda.ofo.com, ma.ofo.com, activity2.api.ofo.com, 103.91.210.141, adapi.izuiyou.com, *.pipix.com, pss.txffp.com, appapi.caiyicloud.com, iobs.pingan.com.cn, hcz-member.pingan.com.cn, cdn.sdb.com.cn, pacdn.m.stock.pingan.com, mobile.1qianbao.com, image.spdbccc.com.cn, j1.pupuapi.com, image.pushplus.plus, www.pushplus.plus, lban.spdb.com.cn, wap.spdb.com.cn, adpai.thepaper.cn, access.mypikpak.com, img01.51jobcdn.com, appapi.51job*.com, cupid.51job*.com, adproxy.autohome.com.cn, app2.autoimg.cn, fmapp.chinafamilymart.com.cn, facade-api.black-unique.com, us.l.qq.com, y.gtimg.cn, m.qianbao.qq.com, qidian.qpic.cn, mage.if.qidian.com, magev6.if.qidian.com, webapi.qmai.cn, miniapp.qmai.cn, open.e.kuaishou.cn, api-access.pangolin-sdk-toutiao-b.com, api-access.pangolin-sdk-toutiao1.com, api-cfg.wtzw.com, p1-lm.adukwai.com, lf-cdn-tos.bytescm.com, webcast-open.douyin.com, ether-pack.pangolin-sdk-toutiao.com, api-access.pangolin-sdk-toutiao?.com, sf*-fe-tos.pglstatp-toutiao.com, api.qbb6.com, open.qyer.com, media.qyer.com, a.qiumibao.com, iqushangwang.8quan.com, qde.qunar.com, homefront.qunar.com, client.qunar.com, capi.lkcoffee.com, ecapi.lkcoffee.com, m.lkcoffee.com, img0*.luckincoffeecdn.com, oneapph5.dongfeng-nissan.com.cn, app.peopleapp.com, stat.peopleapp.com, adstatic.peopleapp.com, dyncdn.me, gql.reddit.com, gql-fed.reddit.com, api.rr.tv, cms.daydaycook.com.cn, api.daydaycook.com.cn, app.meruki.cn, app.homeinns.com, api.mos.csvw.com, mapi.sfbest.com, ccsp-egmas.sf-express.com, ucmp.sf-express.com, mcs-mimp-web.sf-express.com, homepage-api.smzdm.com, haojia-api.smzdm.com, app-api.smzdm.com, user-api.smzdm.com, article-api.smzdm.com, qianbao.smzdm.com, s-api.smzdm.com, haojia.m.smzdm.com, api-sams.walmartmobile.cn, apis.lifeweek.com.cn, api.huachenjie.com, ad.shunchangzhixing.com, zlsdk.1rtb.net, api.gameplus.qq.com, ios.sspai.com, editor.sm.cn, img01.10101111cdn.com, www.ymm56.com, ecard.shenzhentong.com, sh-gateway.shihuo.cn, static.shihuocdn.cn, gw-passenger.01zhuanche.com, img.yun.01zhuanche, ut2.shuqistat.com, dsp.toutiao.com, sf3-be-pack.pglstatp-toutiao.com, sq.sljkj.com, ocean.shuqireader.com, img-tailor.11222.cn, message.shuqireader.com, feedback.uc.cn, *.shuqireader.com, 101.91.69.26, service.4gtv.tv, mapi.sichuanair.com, business-cdn.shouji.sogou.com, ios.sogou.com, android.sogou.com, h5api.sginput.qq.com, *.souhu.com, wxs-weixin.sd.zhumanggroup.com, spclient.wg.spotify.com, *spclient.spotify.com, api.shenyin.name, api.sodalife.xyz, api.bwton.com, szdmobile.suzhou.gov.cn, mpcs.suning.com, image.suning.com, luckman.suning.com, 47.110.187.87, ssp.soulapp.cn, chat-live.soulapp.cn, api-account.soulapp.cn, api-global.soulapp.me, api-a.soulapp.cn, api-pay.soulapp.cn, gateway-mobile-gray.soulapp.cn, api-chat.soulapp.cn, post.soulapp.cn, api-user.soulapp.cn, mrobot.pconline.com.cn, mrobot.pcauto.com.cn, agent-count.pconline.com.cn, ga-album-cdnqn.52tt.com, www.tailgdd.com, alt-r.my.com, imgx.jampp.com, bid.adview.cn, api.taptapdada.com, btrace.qq.com, api2.helper.qq.com, *.beacon.qq.com, lives.l.qq.com, imgcache.qq.com, mtteve.beacon.qq.com, vv.video.qq.com, qt.qq.com, 3gimg.qq.com, splashqqlive.gtimg.com, qzonestyle.gtimg.cn, discuz.gtimg.cn, bla.gtimg.com, mmgr.gtimg.com, bk.bingo.qq.com, static.gameplus.qq.com, 4gimg.map.qq.com, otheve.beacon.qq.com, r.inews.qq.com, news.ssp.qq.com, ccmsupport-sz.tenpay.com, sports3.gtimg.com, images.client.vip.xunlei.com, api-shoulei-ssl.xunlei.com, chl.tf.cn, wechat.tf.cn, cgbank.oss-cn-shenzhen.aliyuncs.com, tfsmy.chengdu.gov.cn, tft-app.cdtft.cn, ams-cdn.cdtft.cn, www.tsytv.com.cn, j5.dfcfw.com, appactive.1234567.com.cn, t1.market.xiaomi.com, api.cloud.189.cn, api.ncarzone.com, ossgw.alicdn.com, *.ly.com, *.17usoft.com, *.17u.cn, mobilehotelapi.elong.com, quic-tcmapi.elong.com, truthsocial.com, *.i18n-pglstatp.com, mkt-gateway.tuhu.cn, cl-gateway.tuhu.cn, gateway.tuhu.cn, m.pvp.xoyo.com, client.tujia.com, m.tuniu.com, adm.10jqka.com.cn, iphone.ac.qq.com, stat.10jqka.com.cn, top-widgets-api.xiaozujian.com, api-marketing.zhinengxiyifang.cn, adsoss.zhinengxiyifang.cn, ads.zhinengxiyifang.cn, pubads.g.doubleclick.net, pagead2.googleadservices.com, app02.vgtime.com, img0*.benlailife.com, qiye.gaoding.com, *.music.126.net, img1.126.net, www.icourse163.org, nex.163.com, g1.163.com, client.mail.163.com, c.m.163.com, interface*.music.163.com, interface.music.163.com, interface?.music.163.com, ipv4.music.163.com, god.gameyw.netease.com, ok.166.net, kaola-haitao.oss.kaolacdn.com, sp.kaola.com, gw.kaola.com, analytics.163.com, easyreadfs.nosdn.127.net, p.du.163.com, m.you.163.com, yanxuan.nosdn.127.net, dict.youdao.com, api-overmind.youdao.com, cdke.youdao.com, dictvip-business.youdao.com, dsp-impr2.youdao.com, impservice.dictapp.youdao.com, oral.youdao.com, oimage*.ydstatic.com, api.wmpvp.com, snailsleep.net, b.appsimg.com, mapi.appvipshop.com, ios.wps.cn, wanciwangdata.oss-cn-beijing.aliyuncs.com, recite.perfectlingo.com, misc-api-prd-mx.wandafilm.com, osg-static.sgcc.com.cn, osg-service.sgcc.com.cn, mp.weixin.qq.com, security.wechat.com, api.wfdata.club, overseas.weico.cc, thor.weidian.com, cds.wifi188.com, vue3-api.zhixiny.cn, api.51credit.com, img.wukongtv.com, api-release.wuta-cam.com, res-release.wuta-cam.com, *.pipiapps.com, *.fuliapps.com, *.xiangjiaoapps.com, *.xiangxiangapps.com, m.ctrip.com, ma-adx.ctrip.com, wcprd.hilton.com.cn, images.cib.com.cn, apiwz.midukanshu.com, upload-bbs.mihoyo.com, cstore-en-public-tx.seewo.com, edit.sinaapp.com, app.chinahxzq.com.cn, client-api-v2.oray.com, lchttpapi.xczim.com, pzoap.moedot.net, vapp.tmuyun.com, res1.hubcloud.com.cn, api.xiachufang.com, mobileapi.xiamenair.com, info.mina.xiaoaisound.com, marketing-aibox.v.mitvos.com, api.xbxxhz.com, shcss.suning.com, web2.realtech-inc.com, sdk.1rtb.net, gw.xiaocantech.com, smarket.dian.so, file.dian.so, xhtz.oss-cn-guangzhou.aliyuncs.com, mpos-pic.helipay.com, mgesq.api.mgtv.com, *.hitv.com, app-api.niu.com, api.petkit.cn, myusmile.online, wemallh5.usmile.com, www.myusmile.online, api.psy-1.com, lcen.xiaote.net, ad.xiaotucc.com, mapi.xiaotucc.com, portal-portm.meituan.com, mall.meituan.com, xxyx-client-api.xiaoxiaoyouxuan.com, statistic.live.126.net, www.xiaoxiongmeishu.com, spamblocker-api.zeekstudio.com, api.xiaoyi.com, api.xiaoyuzhoufm.com, api.jr.mi.com, api.m.mi.com, api-miprint.hannto.com, api.indeedpower.com, api-mifit*.huami.com, shopapi.io.mi.com, gslbali.ximalaya.com, search.ximalaya.com, searchwsa.ximalaya.com, mobile.ximalaya.com, mobilehera.ximalaya.com, mobwsa.ximalaya.com, m.ximalaya.com, mwsa.ximalaya.com, app.xinpianchang.com, bgw.xinyue.qq.com, operationapi.fosunhanig.com, api*.sparke.cn, static.xyzq.cn, file.cibfintech.com, static.api.m.panda.tv, api.xueqiu.com, open.xueqiu.com, stock.xueqiu.com, 39.103.79.14, 39.106.97.84, 47.95.49.75, 101.201.62.20, 101.201.62.26, 101.201.175.228, 124.250.48.3, 182.92.145.50, 182.92.251.113, portal-xunyou.qingcdn.com, imeclient.openspeech.cn, e-static.aia.com.cn, api2.yaduo.com, www.cntv.cn, cdn.cmgadx.com, mobile-api2011.elong.com, webboot.zhangyue.com, saad.ms.zhangyue.net, app.yinxiang.com, i.ys7.com, oneapp-api.faw-vw.com, www.vgtime.com, *.gamersky.com, service.busi.inke.cn, static.psbc.com, mcc.psbc.com, static.mobile-bank.psbc.com, d.psbc.com, wallet.95516.com, tysdk.95516.com, ads.95516.com, pipi.4kya.com, m.yap.yahoo.com, patient-api.suh.cn, userpms-api.suh.cn, venus.yhd.com, a.sinopecsales.com, ocrifs.ejoy.sinopec.com, api.yikaobang.com.cn, api.17kjs.com, compus.xiaofubao.com, mapi-app.bestpay.com.cn, api.ycapp.yiche.com, cheyouapi.ycapp.yiche.com, ad.ysepay.com, ads.ysepay.com, api.winbull8.com, hz.yxzq.com, api5.youonbike.com, api.yonghuivip.com, new-app-api.ylyk.com, gongdu.youshu.cc, img.dailmo.com, img.allahall.com, app.zhoudamozi.com, api.ulife.group, acs.youku.com, push.m.youku.com, un-acs.youku.com, *.yuxueyuan.cn, xyst.yuanfudao.com, nnapp.cloudbae.cn, gw3.ykccn.com, restapi.iyunmai.com, m.airchina.com.cn, openapi.boc.cn, amemv.com, musical.com, snssdk.com, xyz.cnki.net, app.10099.com.cn, wap.bank.ecitic.com, imcs.citicbank.com, ecssmobile.e-chinalife.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, marketing.cmschina.com, client.app.coc.10086.cn, app.10086.cn, mcmm.caiyun.feixin.10086.cn, mrp.mcloud.139.com, ad.mcloud.139.com, middle.yun.139.com, cloud.189.cn, zt-app.go189.cn, m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn, e.weather.com.cn, zgrb.epicc.com.cn, apicloud.zol.com.cn, c.zhangle.com, live.inst-service.htsc.com, geetest.htsc.com, 119.29.29.98, djcapp.game.qq.com, quanguo.mygolbs.com, wx.mygolbs.com, ossweb-img.qq.com, mlol.qt.qq.com, mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bas.cmbchina.com, intellicc.bcs.cmbchina.com, beehiveapi.58.com, portal.zjzwfw.gov.cn, app-izz.zhengzhou.gov.cn, apio.zhengqi100.com, zua.zhidiantianxia.cn, preprod.cdzghome.com, direct.z-bank.com, hdgateway.zto.com, minipro.95504.net, sichuan.95504.net, app.badmintoncn.com, fastbuyer.zbj.com, z.onewo.com, app.zhuanzhuan.com, zjdr666.com, ztoread.ziroom.com, api.izuiyou.com, syh.zybang.com, www.zybang.com, ih2.ireader.com, book.img.ireader.com

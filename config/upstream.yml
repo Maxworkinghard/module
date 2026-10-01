@@ -2,7 +2,7 @@
 # 使用域名/脚本中的关键词，兼容 api\.(bilibili|biliapi) 等组合正则。
 filters:
   dedicated_apps:
-    desc: "B站、小红书、知乎、YouTube、彩云及微信外链使用对应专用模块"
+    desc: "日用合集统一加入视频、购物专用模块，综合开屏来源不重复处理这些 App"
     patterns:
       - "bilibili|biliapi|hdslb|bilivideo"
       - "xiaohongshu|redbook"
@@ -10,11 +10,35 @@ filters:
       - "youtube|googlevideo|ytimg"
       - "cyapi|caiyunapp|caiyuntianqi|colorfulclouds"
       - 'weixin110|support\.weixin\.qq\.com|UnblockURLinWeChat'
+      - 'goofish|xianyu|taobao|alibaba|cainiao'
+      - 'pinduoduo|yangkeduo|jingdong|jd\.com'
+      - 'tiktok|byteoversea|tik-tokapi'
   bilibili_optional_features:
     desc: "不改动账户会员字段和整套导航布局，仅保留广告接口处理"
     patterns:
       - 'account/(mine|myinfo)'
       - 'x/resource/show/tab/v2'
+  xianyu_preserve_tools:
+    patterns:
+      - 'idle\.user\.page\.my\.adapter'
+      - 'idlehome\.home\.circle\.list'
+      - 'idle\.fun\.follow\.often\.visit'
+      - 'idle\.circle\.visited'
+      - 'mobileDispatch'
+  jd_no_private_dns_changes:
+    patterns:
+      - 'dns\.jd\.com|101\.124\.19\.122|2402:db40:5100:1011'
+  pinduoduo_preserve_home:
+    patterns:
+      - 'aquarius/hungary/global/homepage'
+  cainiao_preserve_services:
+    patterns:
+      - 'mobileDispatch'
+      - 'nbfriend\.message\.conversation'
+      - 'nbpresentation\.(pickup|protocol)'
+      - 'nbpresentation\.\(pickup'
+      - 'nbpresentation\.\(homepage'
+      - 'cncommunity\.my\.station'
 
 modules:
   # 作者当前网站版本，替代 bai1zi 的旧快照；保留 Adblock 原订阅地址。
@@ -22,7 +46,7 @@ modules:
     desc: "APP 开屏去广告 (yfamilys / ddgksf2013 / deezertidal)"
     url: "https://yfamilys.com/module/startingad.module"
     display_name: "Adblock · 开屏去广告"
-    module_desc: "通用开屏去广告；B站、小红书、知乎、YouTube、彩云及微信外链请单独启用对应模块"
+    module_desc: "其他 App 通用开屏去广告；视频、购物 App 使用专用模块，DailyAds 已统一包含"
     filter: dedicated_apps
 
   # QX 重写由工作流内 Script-Hub 服务转换。与 Adblock 二选一。
@@ -58,6 +82,66 @@ modules:
         displayUpList: "show"
         purifyComment: true
         sponsorBlock: false
+
+  - name: GeneralAds
+    url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Shadowrocket-Only.Ads.module"
+    display_name: "GeneralAds · 通用广告域名拦截"
+    module_desc: "AWAvenue Only.Ads 广告域名规则；无需 HTTPS 解密，遵循 GPL-3.0"
+
+  - name: BiliSplash
+    file: "config/templates/BiliSplash.module"
+
+  - name: TikTokAds
+    file: "config/templates/TikTokAds.module"
+
+  - name: YouTube
+    url: "https://raw.githubusercontent.com/Maasea/sgmodule/master/YouTube.Enhance.sgmodule"
+    display_name: "YouTube · 广告与播放接口处理"
+    module_author: "Maasea"
+    module_desc: "Maasea；字幕翻译关闭，保留 Shorts、上传与选段按钮；Shadowrocket 需设备验证"
+    script_arguments:
+      youtube.response:
+        captionLang: "off"
+        blockUpload: false
+        blockImmersive: false
+        blockShorts: false
+        debug: false
+      youtube.request.init:
+        captionLang: "off"
+
+  - name: XianYu
+    url: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Shadowrocket/module/split/partX/XianYu.srmodule"
+    display_name: "闲鱼 · 广告与推荐净化"
+    module_desc: "fmz200 / ishowshu；开屏、首页及搜索广告和推荐净化；保留个人工具栏，不处理频道接口"
+    filter: xianyu_preserve_tools
+
+  - name: Taobao
+    url: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Shadowrocket/module/split/partT/Taobao.srmodule"
+    display_name: "淘宝 · 开屏去广告"
+    module_desc: "fmz200；开屏图片、视频、活动弹层及广告域名"
+
+  - name: JD
+    url: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Shadowrocket/module/split/partJ/JD.com.srmodule"
+    display_name: "京东 · 广告与推广净化"
+    module_desc: "fmz200；开屏、浮窗和订单/物流页推广净化；不阻断私有 DNS"
+    filter: jd_no_private_dns_changes
+
+  - name: Pinduoduo
+    url: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Shadowrocket/module/split/partP/Pinduoduo.srmodule"
+    display_name: "拼多多 · 开屏去广告"
+    module_desc: "fmz200；开屏与物流红包商品广告，保留首页接口"
+    filter: pinduoduo_preserve_home
+
+  - name: CaiNiao
+    url: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Shadowrocket/module/split/partC/CaiNiaoGuoGuo.srmodule"
+    display_name: "菜鸟 · 广告与推广净化"
+    module_desc: "fmz200；广告、商品推广与问卷净化，保留取件及消息接口"
+    filter: cainiao_preserve_services
+
+bundles:
+  - name: DailyAds
+    desc: "B站开屏、其他 App 开屏、通用广告、YouTube、TikTok、闲鱼、淘宝、京东、拼多多与菜鸟；请勿叠加组成模块"
+    members: [GeneralAds, Adblock, BiliSplash, YouTube, TikTokAds, XianYu, Taobao, JD, Pinduoduo, CaiNiao]
 
 # 停用模块保留同名提示文件，让已经导入旧地址的客户端在刷新后移除旧规则。
 retired_modules:

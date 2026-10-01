@@ -1,12 +1,13 @@
-#!name=YouTube
-#!desc=YouTube 去广告、画中画(PiP)、后台播放 (Maasea)
+#!raw-url=https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/YouTube.module
 #!author=Maasea
-#!category=媒体影音
+#!name=YouTube · 广告与播放接口处理
+#!desc=Maasea；字幕翻译关闭，保留 Shorts、上传与选段按钮；Shadowrocket 需设备验证
+
 
 [Script]
-youtube.response = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/(youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch|log_event|config))(\?(.*))?$,requires-body=1,max-size=-1,binary-body-mode=1,script-path=https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/scripts/youtube.response.js,argument="{"captionLang":"off","blockUpload":true,"blockImmersive":true,"blockShorts":false,"debug":false}"
-youtube.request.init = type=http-request,pattern=^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&ack.*,requires-body=1,max-size=-1,binary-body-mode=1,script-path=https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/scripts/youtube.request.js,argument="{"captionLang":"off"}"
-youtube.request.log_event = type=http-request,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/log_event,requires-body=1,max-size=-1,binary-body-mode=1,script-path=https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/scripts/youtube.request.js
+youtube.response = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/(youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch|log_event|config))(\?(.*))?$,requires-body=1,max-size=-1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/youtube.response.js, argument="{"captionLang":"off","blockUpload":false,"blockImmersive":false,"blockShorts":false,"debug":false}"
+youtube.request.init = type=http-request,pattern=^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&ack.*,requires-body=1,max-size=-1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/youtube.request.js, argument="{"captionLang":"off"}"
+youtube.request.log_event = type=http-request,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/log_event,requires-body=1,max-size=-1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/youtube.request.js
 
 [MITM]
 hostname = %APPEND% *.googlevideo.com, youtubei.googleapis.com

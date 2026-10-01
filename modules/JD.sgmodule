@@ -1,0 +1,33 @@
+#!name=京东 · 广告与推广净化
+#!desc=fmz200；开屏、浮窗和订单/物流页推广净化；不阻断私有 DNS
+#!author=奶思
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/JD.module
+#!tg-channel=https://t.me/inaisi
+
+[Rule]
+DOMAIN-SUFFIX,jzt.jd.com,REJECT
+DOMAIN-SUFFIX,img-x.jd.com,REJECT
+DOMAIN-SUFFIX,du.jd.com,REJECT
+DOMAIN-SUFFIX,c-nfa.jd.com,REJECT
+DOMAIN-SUFFIX,cm.jd.com,REJECT
+DOMAIN-SUFFIX,jddebug.com,REJECT
+DOMAIN-SUFFIX,policy.jd.com,REJECT
+DOMAIN-SUFFIX,kepler.jd.com,REJECT
+DOMAIN-SUFFIX,bdsp.x.jd.com,REJECT
+DOMAIN-SUFFIX,keplerapi.jd.com,REJECT
+DOMAIN-SUFFIX,mapi.m.jd.com,REJECT
+DOMAIN-SUFFIX,ad.3.cn,REJECT
+DOMAIN-SUFFIX,jd.c-ptsp.com.cn,REJECT
+# 屏蔽DNS, REJECT
+
+[URL Rewrite]
+# 禁京东直播小窗
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getWidgetV1052 - reject
+
+[Script]
+京东 = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome), script-path=https://raw.githubusercontent.com/Maxworkinghard/module/main/scripts/mirrors/644b98230e1f80b6-jingdong.js, requires-body=true, timeout=60
+
+[MITM]
+hostname = %APPEND% api.m.jd.com

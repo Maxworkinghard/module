@@ -1,0 +1,18 @@
+#!name=拼多多 · 开屏去广告
+#!desc=fmz200；开屏与物流红包商品广告，保留首页接口
+#!author=奶思
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/Pinduoduo.module
+#!tg-channel=https://t.me/inaisi
+
+[URL Rewrite]
+^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash - reject
+
+[Body Rewrite]
+http-response ^https?:\/\/mobile\.yangkeduo\.com\/proxy\/api\/api\/express\/post\/waybill\/red_packet\/goods_list$ "list":\[.+\] "list":[]
+
+[Map Local]
+
+[MITM]
+hostname = %APPEND% api.pinduoduo.com, api.yangkeduo.com, mobile.yangkeduo.com
