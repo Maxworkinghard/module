@@ -25,6 +25,8 @@
 
 **启用 DailyAds 后，停用它包含的十个拆分模块、rewrite 及旧 TikTok 模块。也不要同时启用 bilibili 完整模块，它与 BiliSplash 的开屏规则有重叠。** 拆分模块的用途是按 App 选择功能或排查问题，不能与同一合集重复启用。
 
+如果原先依赖 TikTok 的免拔卡换区，在停用旧 TikTok 组合模块后，另启用 [TikTokRegion](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/TikTokRegion.module)。它只处理换区请求，可与 DailyAds / TikTokAds 搭配，默认地区 US；地区选择还需合适的代理节点。
+
 小红书、知乎、微信外链和 Sub-Store 可按需单独启用，DailyAds 不包含它们。cleanup 覆盖更多 App / 小程序界面净化，容易与开屏处理交叉，建议确认需要后再启用。HTTPDNS 可用于有明确分流绕过问题的场景。
 
 已停用 **FuckAppsAD、RevenueCat**，请在客户端删除或关闭。旧订阅地址保留停用提示文件，更新后不再加载旧脚本。
@@ -41,6 +43,7 @@
 | **GeneralAds** | AWAvenue Only.Ads；仅域名阻断，无需 HTTPS 解密 | [导入](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/GeneralAds.module) | [CDN](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/GeneralAds.module) |
 | **BiliSplash** | B 站开屏专用；无需 JS，需要 HTTPS 解密 | [导入](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/BiliSplash.module) | [CDN](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/BiliSplash.module) |
 | **TikTokAds** | 保守 JSON 信息流广告过滤，无换区 / 水印处理 | [导入](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/TikTokAds.module) | [CDN](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/TikTokAds.module) |
+| **TikTokRegion（按需）** | Keywos 免拔卡换区，默认 US；可与 DailyAds / TikTokAds 搭配 | [导入](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/TikTokRegion.module) | [CDN](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/TikTokRegion.module) |
 | **闲鱼** | 开屏、信息流广告及部分推荐净化 | [导入](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/XianYu.module) | [CDN](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/XianYu.module) |
 | **淘宝** | 开屏图片 / 视频、活动弹层和广告域名 | [导入](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/Taobao.module) | [CDN](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/Taobao.module) |
 | **京东** | 开屏、浮窗和订单 / 物流页推广 | [导入](https://raw.githubusercontent.com/Maxworkinghard/module/main/modules/JD.module) | [CDN](https://fastly.jsdelivr.net/gh/Maxworkinghard/module@main/modules/JD.module) |
@@ -81,6 +84,7 @@ BoxJs 启用后可通过 Safari 访问 [http://boxjs.com](http://boxjs.com) 或 
 - 新增 DailyAds，合并十个功能模块，合并 MITM 域名、去除完全重复的规则并生成独立脚本名称。
 - 综合开屏来源中省略中间占位符的 reject 行，统一补为 Shadowrocket 的 `URL - reject` 三字段格式。
 - 新增 AWAvenue 通用广告域名、B 站开屏专用、TikTok 广告专用及五个购物 / 物流专用模块。
+- 单独提供 TikTokRegion，保留需要免拔卡换区的用户的可选方案，可与日用广告合集搭配。
 - YouTube 改为同步当前 YouTube Enhance 模块与脚本，关闭翻译并保留操作按钮。
 - 闲鱼过滤个人工具栏和频道接口的裁剪；拼多多移除整段首页接口阻断；菜鸟过滤取件、消息、首页导航及 AMDC 处理；京东过滤私有 DNS 阻断。
 - 所有 script-path 均改为本仓库 Raw 链接，镜像脚本保留内容与作者注释，来源和 SHA-256 记录在 [scripts/upstream.json](scripts/upstream.json)。镜像每轮从作者地址更新，失效来源会使整轮发布失败。

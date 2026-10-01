@@ -267,6 +267,14 @@ class BundleTests(unittest.TestCase):
 
 
 class SelectedSourceTests(unittest.TestCase):
+    def test_tiktok_region_is_optional_and_has_no_response_rewrite(self):
+        cfg = yaml.safe_load(sync.CONFIG_PATH.read_text())
+        self.assertNotIn("TikTokRegion", cfg["bundles"][0]["members"])
+        region = (sync.ROOT / "config/templates/TikTokRegion.module").read_text()
+        self.assertIn("type=http-request", region)
+        self.assertNotIn("type=http-response", region)
+        self.assertIn("argument=US", region)
+
     def test_real_cainiao_grouped_patterns_preserve_services_and_keep_ads(self):
         cfg = yaml.safe_load(sync.CONFIG_PATH.read_text())
         patterns = sync.compile_filters(cfg["filters"])["cainiao_preserve_services"]

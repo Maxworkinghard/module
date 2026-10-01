@@ -94,6 +94,9 @@ modules:
   - name: TikTokAds
     file: "config/templates/TikTokAds.module"
 
+  - name: TikTokRegion
+    file: "config/templates/TikTokRegion.module"
+
   - name: YouTube
     url: "https://raw.githubusercontent.com/Maasea/sgmodule/master/YouTube.Enhance.sgmodule"
     display_name: "YouTube · 广告与播放接口处理"
